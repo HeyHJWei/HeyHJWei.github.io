@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>HTML笔记 | WELLS Blog</title><meta name="keywords" content="开发"><meta name="author" content="Wells"><meta name="copyright" content="Wells"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="HTML笔记"><meta name="application-name" content="HTML笔记"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="HTML笔记"><meta property="og:url" content="https://heyhjwei.github.io/posts/2607722179/index.html"><meta property="og:site_name" content="WELLS Blog"><meta property="og:description" content="HTML简介HTML（HyperText Markup Language）是用来描述网页的一种语言。 HTML标签 HTML 标签是由尖括号包围的关键词，比如 &amp;lt;html&amp;gt; HTML 标签通常是成对出现的，比如 &amp;lt;b&amp;gt; 和 &amp;lt;&amp;#x2F;b&amp;gt; 标签对中的第一个标签是开始标签"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://img.hijwei.top/1/24/65a7f9c6d6416.png"><meta property="article:author" content="Wells"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://img.hijwei.top/1/24/65a7f9c6d6416.png"><meta name="description" content="HTML简介HTML（HyperText Markup Language）是用来描述网页的一种语言。 HTML标签 HTML 标签是由尖括号包围的关键词，比如 &amp;lt;html&amp;gt; HTML 标签通常是成对出现的，比如 &amp;lt;b&amp;gt; 和 &amp;lt;&amp;#x2F;b&amp;gt; 标签对中的第一个标签是开始标签"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://heyhjwei.github.io/posts/2607722179/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w人呢人呢！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: {"enable":"flase","ck":null,"LingQueMonitorID":null},
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技","🔍 脑洞大开"]},
+  algolia: {"appId":"XZZFOXRZJR","apiKey":"da83ae5a0fad24bbc3e09450519a41bb","indexName":"hexo","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Wells","link":"链接: ","source":"来源: WELLS Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'WELLS Blog',
+  title: 'HTML笔记',
+  postAI: '',
+  pageFillDescription: 'HTML简介, HTML标签, HTML声明, HTML基础构成, 标题, 段落, 水平线, 注释, 折行x2F换行, 空格的使用, HTML文本格式化标签, 文本加粗, 文字放大与缩小, 文字斜体, 上下标, 定义预格式文本, 定义缩写, 文字方向, 引用, 短引用, 长引用, 下划线(插入线)与删除线, 标签所对应的全拼, HTML元素, 语法, HTML 元素的嵌套, 无结束标签, HTML属性, HTML 头部, lttitlegt 元素, ltbasegt 元素, ltlinkgt 元素, ltstylegt 元素, ltmetagt 元素, HTML ltscriptgt 元素, 链接, 语法, 使用实例, 图像, 语法, Alt属性, 设置图像的高度与宽度, 表格, 表格和边框属性, 列表, 无序列表, 有序列表, 自定义列表, HTML 区块, 区块元素和内联元素, HTML 区块元素, HTML 内联元素, 表单和输入, HTML 表单 - 输入元素, 文本域, 密码字段, 单选按钮, 复选框, 提交按钮, 框架, iframe - 设置高度与宽度, iframe - 移除边框, 使用 iframe 来显示目标链接页面, 文章引用简介是用来描述网页的一种语言标签标签是由尖括号包围的关键词比如标签通常是成对出现的比如和标签对中的第一个标签是开始标签第二个标签是结束标签注标签和元素通常都是描述同样的意思声明声明有助于浏览器中正确显示网页声明是不区分大小写的实例声明为文档页面开始头部元素开始头部元素结束可见的页面内容开始我的第一个标题我的第一个段落可见的页面内容结束页面结束基础构成标题标题是通过标签来定义的这是标题这是标题这是标题这是标题这是标题这是标题段落段落是通过标签来定义的这是一个段落这是一个段落这是一个段落水平线标签在页面中创建水平线可用于分隔内容这是一个段落这是一个段落这是一个段落注释语法这是一个注释折行换行在不产生一个新段落的情况下进行换行新行请使用标签这个段落演示了分行的效果注意元素是一个空的元素由于关闭标签没有任何意义因此它没有结束标签空格的使用对于无法通过在代码中添加额外的空格或换行来改变输出的效果当显示页面时浏览器会移除源代码中多余的空格和空行所有连续的空格或空行都会被算作一个空格需要注意的是代码中的所有连续的空行换行也被显示为一个空格春眠不觉晓处处闻啼鸟夜来风雨声花落知多少注意浏览器忽略了源代码中的排版省略了多余的空格和换行文本格式化标签文本加粗这个文本是加粗的这个文本是加粗的文字放大与缩小这个文本字体放大这个文本是缩小的文字斜体这个文本是斜体的这个文本是斜体的上下标这个文本包含下标这个文本包含上标定义预格式文本此例演示如何使用标签对空行和空格进行控制注未对此处的空格和换行进行处理为一个空格定义缩写在某些浏览器中当您把鼠标移至缩略词语上时可用于展示表达的完整版本仅对于中的元素有效对于中的和元素都有效文字方向该段落文字从左到右显示该段落文字从右到左显示引用短引用长引用下划线插入线与删除线标签所对应的全拼元素开始标签常被称为起始标签结束标签常称为闭合标签语法元素以开始标签起始元素以结束标签终止元素的内容是开始标签与结束标签之间的内容某些元素具有空内容空元素在开始标签中进行关闭以开始标签的结束而结束大多数元素可拥有属性元素的嵌套大多数元素可以嵌套元素可以包含其他元素无结束标签即使忘记了使用结束标签大多数浏览器也会正确地显示忘记使用结束标签会产生不可预料的结果或错误属性属性是元素提供的附加信息实例这是一个链接使用了属性链接由标签定义链接的地址在属性中指定引用属性值的方法属性值应该始终被包括在引号内双引号是最常用的不过使用单引号也没有问题在某些个别的情况下比如属性值本身就含有双引号那么您必须使用单引号例如注意属性和属性值尽量小写本来这样做也方便些属性可以多用引号里面可以填入多个属性属性只能单独设置只能填写一个多个无效大多数元素的属性属性目的和用途可使用的元素可以用于选择和样式化元素可以在中使用类选择器来选择具有特定类名的元素并应用样式规则适用于大多数元素如等等用于为元素指定唯一的标识符可以使用或来选择具有特定的元素并对其进行操作或样式化适用于大多数元素如等等内联样式适用于大多数元素如等等指定外部资源的等等用于创建超链接指定链接的等等为图像元素提供替代文本当图像无法加载或无法显示时浏览器会显示属性中的文本元素的宽度等等元素的高度等等禁用元素例如可以将按钮元素的属性设置为以禁用按钮防止用户点击它等等将元素设置为只读等等输入字段的占位符文本等等设置元素为必填等等元素的值等等设置复选框或单选按钮的选中状态等等输入字段的最大字符数等等输入字段的最小值和最大值等等为输入字段提供占位符文本用于提示用户输入的内容例如您可以在文本输入字段中使用属性来提供示例输入头部元素包含了所有的头部标签元素在元素中你可以插入脚本样式文件及各种信息可以添加在头部区域的元素标签为和元素标签定义了不同文档的标题在文档中是必需的定义了浏览器工具栏的标题当网页添加到收藏夹时显示在收藏夹中的标题显示在搜索引擎结果页面的标题元素不仅可以显示文本也可以在左侧显示等图片显示时要将标签放入里元素标签描述了基本的链接地址链接目标该标签作为文档中所有的链接标签的默认链接元素标签定义了文档与外部资源之间的关系标签通常用于链接到样式表元素标签定义了文档的样式文件引用地址在元素中你也可以直接添加样式来渲染文档元素标签描述了一些基本的元数据元数据也不显示在页面上但会被浏览器解析元数据可以使用于浏览器如何显示内容或重新加载页面搜索引擎关键词或其他服务元素通常用于指定网页的描述关键词文件的最后修改时间作者和其他元数据一般放置于区域使用实例为搜索引擎定义关键词为网页定义描述内容免费编程教程定义网页作者每秒钟刷新当前页面元素标签用于加载脚本文件如链接链接是通过标签来定义的超链接可以是一个字一个词或者一组词也可以是一幅图像可以点击这些内容来跳转到新的文档或者当前文档中的某个部分语法以下是中创建链接的基本语法和属性元素创建链接的主要元素是锚元素元素具有以下属性指定链接目标的这是链接的最重要属性可以是另一个网页的文件的或其他资源的可选指定链接如何在浏览器中打开常见的值包括在新标签或窗口中打开链接和在当前标签或窗口中打开链接可选提供链接的额外信息通常在鼠标悬停在链接上时显示为工具提示可选指定与链接目标的关系如等使用实例文本链接最常见的链接类型是文本链接它使用元素将一段文本转化为可点击的链接例如访问示例网站图像链接您还可以使用图像作为链接在这种情况下元素包围着元素例如示例图片锚点链接除了链接到其他网页外您还可以在同一页面内创建内部链接这称为锚点链接要创建锚点链接需要在目标位置使用元素定义一个标记并使用符号引用该标记例如跳转到第二部分在页面中的某个位置下载链接如果您希望链接用于下载文件而不是导航到另一个网页可以使用属性例如下载文档跳转链接属性可用于创建一个文档书签提示书签不会以任何特殊方式显示即在页面中是不显示的所以对于读者来说是隐藏的在文档中创建一个链接到有用的提示部分访问有用的提示部分或者从另一个页面创建一个链接到有用的提示部分访问有用的提示部分邮箱链接案例案例发送邮件案例可设置指定的收件内容以及内容图像图像是通过标签来定义的是空标签意思是说它只包含属性并且没有闭合标签语法属性属性用来为图像定义一串预备的可替换的文本替换文本属性的值是用户定义的在浏览器无法载入图像时此时浏览器将显示这个替代性的文本而不是图像设置图像的高度与宽度高度与宽度属性用于设置图像的高度与宽度属性值默认单位为像素实例实现效果表格表格由标签来定义表格是一种用于展示结构化数据的标记语言元素元素表示整个表格它包含两个主要部分和用于定义表格的标题部分在中使用元素定义列的标题以上实例中列标题分别为列标题列标题和列标题用于定义表格的主体部分在中使用元素定义行并在每行中使用元素定义单元格数据以上实例中有两行数据每行包含三个单元格每个表格均有若干行由标签定义每行被分割为若干单元格由标签定义表格可以包含标题行用于定义列的标题是的缩写表示表格的一行是的缩写表示表格的数据单元格是的缩写表示表格的表头单元格数据单元格可以包含文本图片列表段落表单水平线表格等等表格和边框属性如果不定义边框属性表格将不显示边框有时这很有用但是大多数时候我们希望显示边框使用边框属性来显示一个带有边框的表格后面加入列表列表项内部可以使用段落换行符图片链接以及其他列表等等无序列表无序列表是一个项目的列表此列项目使用粗体圆点典型的小黑圆圈进行标记无序列表使用标签有序列表同样有序列表也是一列项目列表项目使用数字进行标记有序列表始于标签每个列表项始于标签列表项使用数字来标记自定义列表自定义列表不仅仅是一列项目而是项目及其注释的组合自定义列表以标签开始每个自定义列表项以开始每个自定义列表项的定义以开始区块区块元素和内联元素区块元素大多数元素被定义为块级元素或内联元素块级元素在浏览器显示时通常会以新行来开始和结束实例内联元素内联元素在显示时通常不会以新行开始实例与是块级元素它独占一行可以设置宽度高度以及边距等样式属性它适合用于创建页面的大块结构例如页面的主体区域容器布局等是行内元素它不会独占一行宽度默认由其内容决定它适合用于对文本或其他行内元素进行样式化标记或包裹嵌套关系可以容纳其他块级元素和行内元素包括其他的和元素通常被用来包裹文本或其他行内元素比如用来设置特定文本的样式表单和输入表单用于收集用户的输入信息表单元素是允许用户在表单中输入内容比如文本域下拉列表单选框复选框等等我们可以使用标签来创建表单表单输入元素多数情况下被用到的表单标签是输入标签输入类型是由属性定义接下来我们介绍几种常用的输入类型文本域文本域通过标签来设定当用户要在表单中键入字母数字等内容时就会用到文本域注意表单本身并不可见同时在大多数浏览器中文本域的默认宽度是个字符密码字段密码字段通过标签来定义注意密码字段字符不会明文显示而是以星号或圆点替代单选按钮标签定义了表单的单选框选项男女复选框定义了复选框复选框可以选取一个或多个选项我喜欢自行车我喜欢小汽车提交按钮定义了提交按钮当用户单击确认按钮时表单的内容会被传送到服务器表单的动作属性定义了服务端的文件名属性会对接收到的用户输入数据进行相关的处理框架语法该指向不同的网页设置高度与宽度和属性用来定义标签的高度与宽度属性默认以像素为单位但是你可以指定其按比例显示如移除边框属性用于定义表示是否显示边框设置属性值为移除的边框使用来显示目标链接页面可以显示一个目标链接的页面目标链接的属性必须使用的属性如下实例文章引用引用菜鸟教程的文章原文链接',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-29 21:35:36',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 8 || hour >= 22
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="WELLS Blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">WELLS Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/summarize/"><i class="anzhiyufont anzhiyu-icon-list-ul faa-tada" style="font-size: 0.9em;"></i><span> 总结</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 神秘隧道</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/copyright/"><i class="anzhiyufont anzhiyu-icon-copyright-line faa-tada" style="font-size: 0.9em;"></i><span> 版权</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src="/null"/></a><div class="post-qr-code-desc"></div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CTF-Web/" style="font-size: 1.05rem;">CTF-Web<sup>13</sup></a><a href="/tags/CTF-WriteUp/" style="font-size: 1.05rem;">CTF-WriteUp<sup>1</sup></a><a href="/tags/Tools/" style="font-size: 1.05rem;">Tools<sup>1</sup></a><a href="/tags/Web-FileUpload/" style="font-size: 1.05rem;">Web-FileUpload<sup>1</sup></a><a href="/tags/Web-PHP/" style="font-size: 1.05rem;">Web-PHP<sup>2</sup></a><a href="/tags/Web-SQL/" style="font-size: 1.05rem;">Web-SQL<sup>4</sup></a><a href="/tags/Web-XSS/" style="font-size: 1.05rem;">Web-XSS<sup>3</sup></a><a href="/tags/Web-unserialize/" style="font-size: 1.05rem;">Web-unserialize<sup>1</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 1.05rem;">开发<sup>5</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url">开发</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%BC%80%E5%8F%91/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>开发</span></a></span></div></div><h1 class="post-title" itemprop="name headline">HTML笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-09-23T07:37:47.000Z" title="发表于 2023-09-23 15:37:47">2023-09-23</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-01-29T13:35:36.834Z" title="更新于 2024-01-29 21:35:36">2024-01-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">5.7k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>22分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="HTML笔记"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为China"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>China</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://img.hijwei.top/1/24/65a7f9c6d6416.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://heyhjwei.github.io/posts/2607722179/"><header><a class="post-meta-categories" href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url">开发</a><a href="/tags/%E5%BC%80%E5%8F%91/" tabindex="-1" itemprop="url">开发</a><h1 id="CrawlerTitle" itemprop="name headline">HTML笔记</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Wells</span><time itemprop="dateCreated datePublished" datetime="2023-09-23T07:37:47.000Z" title="发表于 2023-09-23 15:37:47">2023-09-23</time><time itemprop="dateCreated datePublished" datetime="2024-01-29T13:35:36.834Z" title="更新于 2024-01-29 21:35:36">2024-01-29</time></header><h2 id="HTML简介"><a href="#HTML简介" class="headerlink" title="HTML简介"></a>HTML简介</h2><p>HTML（<strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage）是用来描述网页的一种语言。</p>
+<h2 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h2><ul>
+<li>HTML 标签是由<strong>尖括号</strong>包围的关键词，比如 <code>&lt;html&gt;</code></li>
+<li>HTML 标签通常是<strong>成对出现</strong>的，比如 <code>&lt;b&gt;</code> 和 <code>&lt;/b&gt;</code></li>
+<li>标签对中的第一个标签是<em>开始标签</em>，第二个标签是<em>结束标签</em></li>
+</ul>
+<p><strong>注：”HTML 标签” 和 “HTML 元素” 通常都是描述同样的意思。</strong></p>
+<h2 id="HTML声明"><a href="#HTML声明" class="headerlink" title="HTML声明"></a>HTML声明</h2><p><code>&lt;!DOCTYPE&gt;</code>声明有助于浏览器中正确显示网页。doctype 声明是<strong>不区分大小写</strong>的</p>
+<p><strong>HTML实例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>   <span class="comment">&lt;!-- 声明为HTML5文档 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- HTML页面开始 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 头部元素开始 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 头部元素结束 --&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">&lt;!-- 可见的页面内容开始 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>我的第一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>我的第一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 可见的页面内容结束 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- HTML页面结束 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTML基础构成"><a href="#HTML基础构成" class="headerlink" title="HTML基础构成"></a>HTML基础构成</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>HTML 标题（Heading）是通过<code>&lt;h1&gt; - &lt;h6&gt;</code> 标签来定义的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是标题 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>这是标题 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>这是标题 3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>这是标题 4<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span>这是标题 5<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>这是标题 6<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>HTML 段落是通过标签 <code>&lt;p&gt;</code> 来定义的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="水平线"><a href="#水平线" class="headerlink" title="水平线"></a>水平线</h3><p><code>&lt;hr&gt;</code> 标签在 HTML 页面中创建水平线,可用于分隔内容。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这是一个注释 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="折行-换行"><a href="#折行-换行" class="headerlink" title="折行&#x2F;换行"></a>折行&#x2F;换行</h3><p>在不产生一个新段落的情况下进行换行（新行），请使用 <code>&lt;br&gt;</code> 标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这个<span class="tag">&lt;<span class="name">br</span>&gt;</span>段落<span class="tag">&lt;<span class="name">br</span>&gt;</span>演示了分行的效果<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：<code>&lt;br&gt;</code> 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此<strong>它没有结束标签</strong>。</p>
+<h3 id="空格的使用"><a href="#空格的使用" class="headerlink" title="空格的使用"></a>空格的使用</h3><p>对于 HTML，无法通过在 HTML 代码中<strong>添加额外的空格或换行来改变输出的效果</strong>。</p>
+<p>当显示页面时，浏览器会<strong>移除源代码中多余的空格和空行</strong>。<strong>所有连续的空格或空行都会被算作一个空格</strong>。需要注意的是，HTML 代码中的<strong>所有连续的空行（换行）也被显示为一个空格</strong>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">    春眠不觉晓，</span><br><span class="line">      处处闻啼鸟。</span><br><span class="line">        夜来风雨声，</span><br><span class="line">          花落知多少。</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;注意，浏览器忽略了源代码中的排版（省略了多余的空格和换行）。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTML文本格式化标签"><a href="#HTML文本格式化标签" class="headerlink" title="HTML文本格式化标签"></a>HTML文本格式化标签</h2><h3 id="文本加粗"><a href="#文本加粗" class="headerlink" title="文本加粗"></a>文本加粗</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;b&gt;这个文本是加粗的&lt;/b&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;strong&gt;这个文本是加粗的&lt;/strong&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="文字放大与缩小"><a href="#文字放大与缩小" class="headerlink" title="文字放大与缩小"></a>文字放大与缩小</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;big&gt;这个文本字体放大&lt;/big&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;small&gt;这个文本是缩小的&lt;/small&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="文字斜体"><a href="#文字斜体" class="headerlink" title="文字斜体"></a>文字斜体</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;em&gt;这个文本是斜体的&lt;/em&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i&gt;这个文本是斜体的&lt;/i&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个文本包含&lt;sub&gt;下标&lt;/sub&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个文本包含&lt;sup&gt;上标&lt;/sup&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="定义预格式文本"><a href="#定义预格式文本" class="headerlink" title="定义预格式文本"></a>定义预格式文本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre&gt;</span><br><span class="line">此例演示如何使用 pre 标签</span><br><span class="line">对空行和    空格</span><br><span class="line">进行控制</span><br><span class="line">&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>注：HTML未对此处的空格和换行进行处理为一个空格</strong></p>
+<h3 id="定义缩写"><a href="#定义缩写" class="headerlink" title="定义缩写"></a>定义缩写</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;abbr title=&quot;etcetera&quot;&gt;etc.&lt;/abbr&gt;</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">&lt;acronym title=&quot;World Wide Web&quot;&gt;WWW&lt;/acronym&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;仅对于 IE 5 中的 acronym 元素有效。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="文字方向"><a href="#文字方向" class="headerlink" title="文字方向"></a>文字方向</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;该段落文字从左到右显示。&lt;/p&gt;  </span><br><span class="line">&lt;p&gt;&lt;bdo dir=&quot;rtl&quot;&gt;该段落文字从右到左显示。&lt;/bdo&gt;&lt;/p&gt;  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="短引用"><a href="#短引用" class="headerlink" title="短引用"></a>短引用</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="长引用"><a href="#长引用" class="headerlink" title="长引用"></a>长引用</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;</span><br><span class="line">For 50 years, WWF has been protecting the future of nature. The worlds leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</span><br><span class="line">&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="下划线-插入线-与删除线"><a href="#下划线-插入线-与删除线" class="headerlink" title="下划线(插入线)与删除线"></a>下划线(插入线)与删除线</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="标签所对应的全拼"><a href="#标签所对应的全拼" class="headerlink" title="标签所对应的全拼"></a>标签所对应的全拼</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;b&gt;---bold</span><br><span class="line"></span><br><span class="line">&lt;em&gt;---emphasize</span><br><span class="line"></span><br><span class="line">&lt;i&gt;---italic</span><br><span class="line"></span><br><span class="line">&lt;sub&gt;---subscript</span><br><span class="line"></span><br><span class="line">&lt;sup&gt;---superscript</span><br><span class="line"></span><br><span class="line">&lt;ins&gt;---insert</span><br><span class="line"></span><br><span class="line">&lt;del&gt;---delete</span><br><span class="line"></span><br><span class="line">&lt;kbd&gt;---keyboard</span><br><span class="line"></span><br><span class="line">&lt;bdo&gt;---Bi-Directional Override</span><br><span class="line"></span><br><span class="line">&lt;q&gt;---quote</span><br><span class="line"></span><br><span class="line">&lt;dfn&gt;---define</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTML元素"><a href="#HTML元素" class="headerlink" title="HTML元素"></a><strong>HTML元素</strong></h2><p>开始标签常被称为<strong>起始标签（opening tag）</strong>，结束标签常称为<strong>闭合标签（closing tag</strong>)</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
+<li>HTML 元素以<strong>开始标签</strong>起始</li>
+<li>HTML 元素以<strong>结束标签</strong>终止</li>
+<li><strong>元素的内容</strong>是开始标签与结束标签之间的内容</li>
+<li>某些 HTML 元素具有<strong>空内容（empty content）</strong></li>
+<li>空元素<strong>在开始标签中进行关闭</strong>（以开始标签的结束而结束）</li>
+<li>大多数 HTML 元素可拥有<strong>属性</strong></li>
+</ul>
+<h3 id="HTML-元素的嵌套"><a href="#HTML-元素的嵌套" class="headerlink" title="HTML 元素的嵌套"></a>HTML 元素的嵌套</h3><p>大多数 HTML 元素可以嵌套（HTML 元素可以包含其他 HTML 元素）。</p>
+<h3 id="无结束标签"><a href="#无结束标签" class="headerlink" title="无结束标签"></a><strong>无结束标签</strong></h3><p>即使忘记了使用结束标签，大多数浏览器也会正确地显示 HTML。忘记使用结束标签会<strong>产生不可预料的结果或错误</strong>。</p>
+<h2 id="HTML属性"><a href="#HTML属性" class="headerlink" title="HTML属性"></a>HTML属性</h2><p>属性是 HTML 元素提供的附加信息。</p>
+<p><strong>实例</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://heyhjwei.github.io/&quot;</span>&gt;</span>这是一个链接使用了 href 属性<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>HTML 链接由 <code>&lt;a&gt;</code> 标签定义。链接的地址在 <strong>href 属性</strong>中指定</p>
+<p><strong>引用属性值的方法</strong></p>
+<ul>
+<li>属性值应该始终被<strong>包括在引号内</strong>。</li>
+<li>双引号是最常用的，不过使用单引号也没有问题。</li>
+<li><strong>在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号</strong></li>
+</ul>
+<p>例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=&#x27;John &quot;ShotGun&quot; Nelson&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li>属性和属性值，尽量小写，本来这样做也方便些。</li>
+<li>class 属性可以多用 <strong><code>class=&quot; &quot;</code></strong> （引号里面可以填入多个class属性）</li>
+<li>id 属性只能单独设置 **<code>id=&quot; &quot;</code>**（只能填写一个，多个无效）</li>
+</ul>
+<p><strong>大多数 HTML 元素的属性</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">目的和用途</th>
+<th align="left">可使用的元素</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">class</td>
+<td align="left">可以用于选择和样式化元素。可以在 CSS 中使用类选择器来选择具有特定类名的元素，并应用样式规则。</td>
+<td align="left">适用于大多数 HTML 元素，如<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;h1&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">id</td>
+<td align="left">用于为元素指定唯一的标识符。可以使用 JavaScript 或 CSS 来选择具有特定 id 的元素，并对其进行操作或样式化。</td>
+<td align="left">适用于大多数 HTML 元素，如<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;h1&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">style</td>
+<td align="left">内联样式</td>
+<td align="left">适用于大多数 HTML 元素，如<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;h1&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">src</td>
+<td align="left">指定外部资源的 URL</td>
+<td align="left"><code>&lt;img&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">href</td>
+<td align="left">用于创建超链接,指定链接的 URL</td>
+<td align="left"><code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;area&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">alt</td>
+<td align="left">为图像元素提供替代文本。当图像无法加载或无法显示时，浏览器会显示 <code>alt</code> 属性中的文本。</td>
+<td align="left"><code>&lt;img&gt;</code></td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">元素的宽度</td>
+<td align="left"><code>&lt;img&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;table&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">元素的高度</td>
+<td align="left"><code>&lt;img&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;table&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">disabled</td>
+<td align="left">禁用元素，例如，可以将按钮元素 (<code>&lt;button&gt;</code>) 的 <code>disabled</code> 属性设置为 <code>true</code>，以禁用按钮，防止用户点击它。</td>
+<td align="left"><code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">readonly</td>
+<td align="left">将元素设置为只读</td>
+<td align="left"><code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">placeholder</td>
+<td align="left">输入字段的占位符文本</td>
+<td align="left"><code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">required</td>
+<td align="left">设置元素为必填</td>
+<td align="left"><code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">value</td>
+<td align="left">元素的值</td>
+<td align="left"><code>&lt;input&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;textarea&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">checked</td>
+<td align="left">设置复选框或单选按钮的选中状态</td>
+<td align="left"><code>&lt;input type=&quot;checkbox&quot;&gt;</code>, <code>&lt;input type=&quot;radio&quot;&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">maxlength</td>
+<td align="left">输入字段的最大字符数</td>
+<td align="left"><code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">min, max</td>
+<td align="left">输入字段的最小值和最大值</td>
+<td align="left"><code>&lt;input type=&quot;number&quot;&gt;</code>, <code>&lt;input type=&quot;date&quot;&gt;</code>, <code>&lt;input type=&quot;time&quot;&gt;</code>, 等等</td>
+</tr>
+<tr>
+<td align="left">placeholder</td>
+<td align="left">为输入字段提供占位符文本，用于提示用户输入的内容。例如，您可以在文本输入字段 (<code>&lt;input type=&quot;text&quot;&gt;</code>) 中使用 <code>placeholder</code> 属性来提供示例输入。</td>
+<td align="left"><code>&lt;input type=&quot;text&quot;&gt;</code></td>
+</tr>
+</tbody></table>
+<h2 id="HTML-头部"><a href="#HTML-头部" class="headerlink" title="HTML 头部"></a>HTML 头部</h2><p><code>&lt;head&gt;</code> 元素包含了所有的头部标签元素。在 <code>&lt;head&gt;</code>元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。</p>
+<p>可以添加在头部区域的元素标签为: <code>&lt;title&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;noscript&gt;</code> 和 <code>&lt;base&gt;</code>。</p>
+<h3 id="元素"><a href="#元素" class="headerlink" title="&lt;title&gt; 元素"></a><strong><code>&lt;title&gt;</code> 元素</strong></h3><p><code>&lt;title&gt;</code> 标签定义了不同文档的标题。<code>&lt;title&gt;</code> 在 HTML&#x2F;XHTML 文档中是必需的。</p>
+<ul>
+<li>定义了浏览器工具栏的标题</li>
+<li>当网页添加到收藏夹时，显示在收藏夹中的标题</li>
+<li>显示在搜索引擎结果页面的标题</li>
+</ul>
+<p>HTML<code>&lt;title&gt;</code>元素不仅可以显示文本，也可以在左侧显示logo等图片。显示时，要将<code>&lt;link&gt;</code>标签放入<code>&lt;head&gt;</code>里。</p>
+<h3 id="元素-1"><a href="#元素-1" class="headerlink" title="&lt;base&gt; 元素"></a><strong><code>&lt;base&gt;</code> 元素</strong></h3><p><code>&lt;base&gt;</code> 标签描述了基本的链接地址&#x2F;链接目标，该标签作为HTML文档中所有的链接标签的默认链接:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://www.runoob.com/images/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="元素-2"><a href="#元素-2" class="headerlink" title="&lt;link&gt; 元素"></a><strong><code>&lt;link&gt;</code> 元素</strong></h3><p><code>&lt;link&gt;</code> 标签定义了文档与外部资源之间的关系。</p>
+<p><code>&lt;link&gt;</code> 标签通常用于链接到样式表:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="元素-3"><a href="#元素-3" class="headerlink" title="&lt;style&gt; 元素"></a><strong><code>&lt;style&gt;</code> 元素</strong></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"> 标签定义了<span class="selector-tag">HTML</span>文档的样式文件引用地址.</span></span><br></pre></td></tr></table></figure>
+
+<p>在<code>&lt;style&gt;</code> 元素中你也可以直接添加样式来渲染 HTML 文档:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span> <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"> <span class="selector-tag">body</span> &#123;    <span class="attribute">background-color</span>:yellow; &#125; <span class="selector-tag">p</span> &#123;    <span class="attribute">color</span>:blue &#125; </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="元素-4"><a href="#元素-4" class="headerlink" title="&lt;meta&gt; 元素"></a><strong><code>&lt;meta&gt;</code> 元素</strong></h3><p>meta标签描述了一些基本的元数据。元数据也不显示在页面上，但会被浏览器解析。元数据可以使用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他Web服务。META 元素通常用于指定网页的描述，关键词，文件的最后修改时间，作者，和其他元数据。</p>
+<p><code>&lt;meta&gt;</code> 一般放置于 <code>&lt;head&gt;</code> 区域</p>
+<p> <strong>使用实例</strong></p>
+<p>为搜索引擎定义关键词:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;keywords&quot; content=&quot;HTML, CSS, XML, XHTML, JavaScript&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>为网页定义描述内容:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;description&quot; content=&quot;免费 Web &amp; 编程 教程&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>定义网页作者:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;author&quot; content=&quot;Runoob&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>每30秒钟刷新当前页面:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="HTML-元素"><a href="#HTML-元素" class="headerlink" title="HTML &lt;script&gt; 元素"></a><strong>HTML <code>&lt;script&gt;</code> 元素</strong></h3><p><code>&lt;script&gt;</code>标签用于加载脚本文件，如： JavaScript。</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>HTML 链接是通过标签 <code>&lt;a&gt;</code> 来定义的。</p>
+<p>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>以下是 HTML 中创建链接的基本语法和属性：<code>code&gt;&lt;a&gt;</code> 元素：创建链接的主要HTML元素是<code>&lt;a&gt;</code>（锚）元素。<code>&lt;a&gt;</code>元素具有以下属性：</p>
+<ul>
+<li><code>href</code>：指定链接目标的URL，这是链接的最重要属性。可以是另一个网页的URL、文件的URL或其他资源的URL。</li>
+<li><code>target</code>（可选）：指定链接如何在浏览器中打开。常见的值包括 <code>_blank</code>（在新标签或窗口中打开链接）和 <code>_self</code>（在当前标签或窗口中打开链接）。</li>
+<li><code>title</code>（可选）：提供链接的额外信息，通常在鼠标悬停在链接上时显示为工具提示。</li>
+<li><code>rel</code>（可选）：指定与链接目标的关系，如 nofollow、noopener 等。</li>
+</ul>
+<h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong>文本链接：</strong>最常见的链接类型是文本链接，它使用 <code>&lt;a&gt;</code> 元素将一段文本转化为可点击的链接，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://www.example.com&quot;&gt;访问示例网站&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>图像链接：</strong>您还可以使用图像作为链接。在这种情况下，<code>&lt;a&gt;</code> 元素包围着 <code>&lt;img&gt;</code> 元素。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://www.example.com&quot;&gt;</span><br><span class="line">  &lt;img src=&quot;example.jpg&quot; alt=&quot;示例图片&quot;&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>锚点链接：</strong>除了链接到其他网页外，您还可以在同一页面内创建内部链接，这称为锚点链接。要创建锚点链接，需要在目标位置使用 <code>&lt;a&gt;</code> 元素定义一个标记，并使用#符号引用该标记。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#section2&quot;&gt;跳转到第二部分&lt;/a&gt;</span><br><span class="line">&lt;!-- 在页面中的某个位置 --&gt;</span><br><span class="line">&lt;a name=&quot;section2&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>下载链接：</strong>如果您希望链接用于下载文件而不是导航到另一个网页，可以使用 download 属性。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;document.pdf&quot; download&gt;下载文档&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>跳转id链接</strong> </p>
+<p>id 属性可用于创建一个 HTML 文档书签。</p>
+<p><strong>提示:</strong> 书签不会以任何特殊方式显示，即在 HTML 页面中是不显示的，所以对于读者来说是隐藏的。</p>
+<p>在HTML文档中创建一个链接到”有用的提示部分(id&#x3D;”tips”）”：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者，从另一个页面创建一个链接到”有用的提示部分(id&#x3D;”tips”）”：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://www.runoob.com/html/html-links.html#tips&quot;&gt;</span><br><span class="line">访问有用的提示部分&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>邮箱链接</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;--案例1 --&gt;&lt;/--&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:someone@example.com?Subject=Hello%20again&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_top&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> &lt;--案例2 --&gt;&lt;/--&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=You%20are%20invited%20to%20a%20big%20summer%20party!&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_top&quot;</span>&gt;</span>发送邮件!<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>案例2可设置指定的收件内容以及内容</p>
+<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><p>HTML 图像是通过标签 <code>&lt;img&gt;</code> 来定义的.<code>&lt;img&gt;</code> 是空标签，意思是说，它只包含属性，并且没有闭合标签。</p>
+<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a><strong>语法</strong></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;url&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;some_text&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Alt属性"><a href="#Alt属性" class="headerlink" title="Alt属性"></a><strong>Alt属性</strong></h3><p><code>alt</code> 属性用来为图像定义一串预备的可替换的文本。</p>
+<p>替换文本属性的值是用户定义的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;boat.gif&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Big Boat&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在浏览器无法载入图像时，此时，浏览器将显示这个替代性的文本而不是图像。</p>
+<h3 id="设置图像的高度与宽度"><a href="#设置图像的高度与宽度" class="headerlink" title="设置图像的高度与宽度"></a>设置图像的高度与宽度</h3><p>height（高度） 与 width（宽度）属性用于设置图像的高度与宽度。</p>
+<p>属性值默认单位为像素:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;pulpit.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Pulpit rock&quot;</span> <span class="attr">width</span>=<span class="string">&quot;304&quot;</span> <span class="attr">height</span>=<span class="string">&quot;228&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://hijwei.top/images/redefine-avatar.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;cola&quot;</span> <span class="attr">width</span>=<span class="string">&quot;39&quot;</span> <span class="attr">height</span>=<span class="string">&quot;39&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实现效果</p>
+<img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://hijwei.top/images/redefine-avatar.jpg" alt="cola" width="39" height="39" />
+
+
+
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>HTML 表格由 <strong><code>&lt;table&gt;</code></strong> 标签来定义。HTML 表格是一种用于展示结构化数据的标记语言元素。</p>
+<p><code>&lt;table&gt;</code> 元素表示整个表格，它包含两个主要部分：<code>&lt;thead&gt;</code> 和 <code>&lt;tbody&gt;</code>。</p>
+<ul>
+<li><strong><code>&lt;thead &gt;</code> 用于定义表格的标题部分:</strong> 在 <code>&lt;thead &gt;</code> 中，使用 <code>&lt;th &gt;</code> 元素定义列的标题，以上实例中列标题分别为”列标题1”，”列标题2”和”列标题3”。</li>
+<li><strong><code>&lt;tbody &gt;</code> 用于定义表格的主体部分:</strong> 在 <code>&lt;tbody &gt;</code> 中，使用 <code>&lt;tr &gt;</code> 元素定义行，并在每行中使用 <code>&lt;td &gt;</code> 元素定义单元格数据，以上实例中有两行数据，每行包含三个单元格。</li>
+</ul>
+<p>每个表格均有若干行（由 <strong><code>&lt;tr&gt;</code></strong> 标签定义），每行被分割为若干单元格（由 <strong><code>&lt;td&gt;</code></strong> 标签定义），表格可以包含标题行（**<code>&lt;th&gt;</code>**）用于定义列的标题。</p>
+<ul>
+<li><strong>tr</strong>：tr 是 table row 的缩写，表示表格的一行。</li>
+<li><strong>td</strong>：td 是 table data 的缩写，表示表格的数据单元格。</li>
+<li><strong>th</strong>：th 是 table header的缩写，表示表格的表头单元格。</li>
+</ul>
+<p>数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。</p>
+<h3 id="表格和边框属性"><a href="#表格和边框属性" class="headerlink" title="表格和边框属性"></a>表格和边框属性</h3><p>如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。使用边框属性来显示一个带有边框的表格<code>table</code>后面加入<code>border=&quot;1&quot;</code></p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。</p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。</p>
+<p>无序列表使用 <code>&lt;ul&gt;</code> 标签</p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>同样，有序列表也是一列项目，列表项目使用数字进行标记。 有序列表始于 <code>&lt;ol&gt;</code> 标签。每个列表项始于 <code>&lt;li&gt;</code> 标签。</p>
+<p>列表项使用数字来标记。</p>
+<h3 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h3><p>自定义列表不仅仅是一列项目，而是项目及其注释的组合。自定义列表以 <code>&lt;dl&gt;</code> 标签开始。每个自定义列表项以 <code>&lt;dt&gt;</code> 开始。每个自定义列表项的定义以 <code>&lt;dd&gt;</code> 开始。</p>
+<h2 id="HTML-区块"><a href="#HTML-区块" class="headerlink" title="HTML 区块"></a>HTML 区块</h2><h3 id="区块元素和内联元素"><a href="#区块元素和内联元素" class="headerlink" title="区块元素和内联元素"></a>区块元素和内联元素</h3><h3 id="HTML-区块元素"><a href="#HTML-区块元素" class="headerlink" title="HTML 区块元素"></a>HTML 区块元素</h3><p>大多数 HTML 元素被定义为<strong>块级元素</strong>或<strong>内联元素</strong>。</p>
+<p>块级元素在浏览器显示时，通常会以新行来开始（和结束）。</p>
+<p>实例: <code>&lt;div&gt;</code>、<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code></p>
+<h3 id="HTML-内联元素"><a href="#HTML-内联元素" class="headerlink" title="HTML 内联元素"></a>HTML 内联元素</h3><p>内联元素在显示时通常不会以新行开始。</p>
+<p>实例: <code>&lt;span&gt;</code>,<code>&lt;b&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code></p>
+<p><strong><code>&lt;div&gt;</code>与 <code>&lt;span&gt;</code></strong></p>
+<p><code>&lt;div&gt;</code> 是块级元素，它独占一行，可以设置宽度、高度以及边距等样式属性。它适合用于创建页面的大块结构，例如页面的主体区域、容器、布局等。</p>
+<p><code>&lt;span&gt;</code> 是行内元素，它不会独占一行，宽度默认由其内容决定。它适合用于对文本或其他行内元素进行样式化、标记或包裹。</p>
+<p><strong>嵌套关系：</strong></p>
+<ul>
+<li><code>&lt;div&gt;</code> 可以容纳其他块级元素和行内元素，包括其他的 <code>&lt;div&gt;</code> 和 <code>&lt;span&gt;</code> 元素。</li>
+<li><code>&lt;span&gt;</code>通常被用来包裹文本或其他行内元素，比如用来设置特定文本的样式。</li>
+</ul>
+<h2 id="表单和输入"><a href="#表单和输入" class="headerlink" title="表单和输入"></a>表单和输入</h2><p>HTML 表单用于收集用户的输入信息。</p>
+<p>表单元素是允许用户在表单中输入内容，比如：文本域（textarea）、下拉列表（select）、单选框（radio-buttons）、复选框（checkbox） 等等。</p>
+<p>我们可以使用 <code>&lt;form&gt;</code> 标签来创建表单:</p>
+<h3 id="HTML-表单-输入元素"><a href="#HTML-表单-输入元素" class="headerlink" title="HTML 表单 - 输入元素"></a>HTML 表单 - 输入元素</h3><p>多数情况下被用到的表单标签是输入标签 **<code>&lt;input&gt;</code>**。输入类型是由type属性定义。接下来我们介绍几种常用的输入类型。</p>
+<h4 id="文本域"><a href="#文本域" class="headerlink" title="文本域"></a><strong>文本域</strong></h4><p>文本域通过 <strong><code>&lt;input type=&quot;text&quot;&gt;</code></strong> 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;firstname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;lastname&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意:表单本身并不可见。同时，在大多数浏览器中，文本域的默认宽度是 20 个字符。</p>
+<h4 id="密码字段"><a href="#密码字段" class="headerlink" title="密码字段"></a><strong>密码字段</strong></h4><p>密码字段通过标签 <code>&lt;input type=&quot;password&quot;&gt;</code> 来定义:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">Password: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;pwd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>密码字段字符不会明文显示，而是以星号 ***** 或圆点 <strong>.</strong> 替代。</p>
+<h4 id="单选按钮"><a href="#单选按钮" class="headerlink" title="单选按钮"></a><strong>单选按钮</strong></h4><p><strong><code>&lt;input type=&quot;radio&quot;&gt;</code></strong> 标签定义了表单的单选框选项:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;male&quot;</span>&gt;</span>男<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;female&quot;</span>&gt;</span>女</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a><strong>复选框</strong></h4><p><strong><code>&lt;input type=&quot;checkbox&quot;&gt;</code></strong> 定义了复选框。</p>
+<p>复选框可以选取一个或多个选项：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;vehicle&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Bike&quot;</span>&gt;</span>我喜欢自行车<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;vehicle&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Car&quot;</span>&gt;</span>我喜欢小汽车</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="提交按钮"><a href="#提交按钮" class="headerlink" title="提交按钮"></a><strong>提交按钮</strong></h4><p><strong><code>&lt;input type=&quot;submit&quot;&gt;</code></strong> 定义了提交按钮。</p>
+<p>当用户单击确认按钮时，表单的内容会被传送到服务器。表单的动作属性 <strong>action</strong> 定义了服务端的文件名。<strong>action</strong> 属性会对接收到的用户输入数据进行相关的处理:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">&quot;input&quot;</span> <span class="attr">action</span>=<span class="string">&quot;html_form_action.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">Username: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;user&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><strong>iframe语法:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;URL&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>该URL指向不同的网页。</p>
+<h3 id="iframe-设置高度与宽度"><a href="#iframe-设置高度与宽度" class="headerlink" title="iframe - 设置高度与宽度"></a><strong>iframe - 设置高度与宽度</strong></h3><p>height 和 width 属性用来定义iframe标签的高度与宽度。</p>
+<p>属性默认以像素为单位, 但是你可以指定其按比例显示 (如：”80%”)。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;demo_iframe.htm&quot;</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;200&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="iframe-移除边框"><a href="#iframe-移除边框" class="headerlink" title="iframe - 移除边框"></a><strong>iframe - 移除边框</strong></h3><p>frameborder 属性用于定义iframe表示是否显示边框。</p>
+<p>设置属性值为 “0” 移除iframe的边框:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;demo_iframe.htm&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-iframe-来显示目标链接页面"><a href="#使用-iframe-来显示目标链接页面" class="headerlink" title="使用 iframe 来显示目标链接页面"></a><strong>使用 iframe 来显示目标链接页面</strong></h3><p>iframe 可以显示一个目标链接的页面</p>
+<p>目标链接的属性必须使用 iframe 的属性，如下实例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;demo_iframe.htm&quot;</span> <span class="attr">name</span>=<span class="string">&quot;iframe_a&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span> <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://1.top&quot;</span> <span class="attr">target</span>=<span class="string">&quot;iframe_a&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>HIJWEI.TOP<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="文章引用"><a href="#文章引用" class="headerlink" title="文章引用"></a><strong>文章引用</strong></h1><p>1.引用<strong>菜鸟教程</strong>的文章<br>    原文链接：<a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-tutorial.html">https://www.runoob.com/html/html-tutorial.html</a></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/avatar.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/avatar.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Wells</div><div class="post-copyright__author_desc">Learning Web Security....</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://heyhjwei.github.io/posts/2607722179/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://heyhjwei.github.io/posts/2607722179/')">HTML笔记</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://heyhjwei.github.io/posts/2607722179/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=HTML笔记&amp;url=https://heyhjwei.github.io/posts/2607722179/&amp;pic=https://img.hijwei.top/1/24/65a7f9c6d6416.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://heyhjwei.github.io" target="_blank">WELLS Blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%BC%80%E5%8F%91/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>开发<span class="tagsPageCount">5</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://img.hijwei.top/1/24/65d5eed41e905.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/3276277813/"><img class="next-cover" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://img.hijwei.top/1/24/65a00feec63ae.jpg" onerror="onerror=null;src='/img/image404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C Primer Plus笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/firend404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/c0f1977daac9a.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);"><b style="color:#fff">WELLS BLOG</b></div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这里存放着我学习<b style="color:#fff">CTF</b>和<b style="color:#fff">编程</b>的相关笔记</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">希望这里的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>能对你有所帮助。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Wells</h1><div class="author-info__desc">Learning Web Security....</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/HeyHJWei" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">HTML简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%A0%87%E7%AD%BE"><span class="toc-number">2.</span> <span class="toc-text">HTML标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%A3%B0%E6%98%8E"><span class="toc-number">3.</span> <span class="toc-text">HTML声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%9F%BA%E7%A1%80%E6%9E%84%E6%88%90"><span class="toc-number">4.</span> <span class="toc-text">HTML基础构成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">4.1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">4.2.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E7%BA%BF"><span class="toc-number">4.3.</span> <span class="toc-text">水平线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">4.4.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E8%A1%8C-%E6%8D%A2%E8%A1%8C"><span class="toc-number">4.5.</span> <span class="toc-text">折行&#x2F;换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E6%A0%BC%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">4.6.</span> <span class="toc-text">空格的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">5.</span> <span class="toc-text">HTML文本格式化标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%8A%A0%E7%B2%97"><span class="toc-number">5.1.</span> <span class="toc-text">文本加粗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%94%BE%E5%A4%A7%E4%B8%8E%E7%BC%A9%E5%B0%8F"><span class="toc-number">5.2.</span> <span class="toc-text">文字放大与缩小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%96%9C%E4%BD%93"><span class="toc-number">5.3.</span> <span class="toc-text">文字斜体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="toc-number">5.4.</span> <span class="toc-text">上下标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E9%A2%84%E6%A0%BC%E5%BC%8F%E6%96%87%E6%9C%AC"><span class="toc-number">5.5.</span> <span class="toc-text">定义预格式文本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%BC%A9%E5%86%99"><span class="toc-number">5.6.</span> <span class="toc-text">定义缩写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%96%B9%E5%90%91"><span class="toc-number">5.7.</span> <span class="toc-text">文字方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">5.8.</span> <span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E5%BC%95%E7%94%A8"><span class="toc-number">5.8.1.</span> <span class="toc-text">短引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%95%BF%E5%BC%95%E7%94%A8"><span class="toc-number">5.8.2.</span> <span class="toc-text">长引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF-%E6%8F%92%E5%85%A5%E7%BA%BF-%E4%B8%8E%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-number">5.9.</span> <span class="toc-text">下划线(插入线)与删除线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E6%89%80%E5%AF%B9%E5%BA%94%E7%9A%84%E5%85%A8%E6%8B%BC"><span class="toc-number">5.10.</span> <span class="toc-text">标签所对应的全拼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%85%83%E7%B4%A0"><span class="toc-number">6.</span> <span class="toc-text">HTML元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B5%8C%E5%A5%97"><span class="toc-number">6.2.</span> <span class="toc-text">HTML 元素的嵌套</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E7%BB%93%E6%9D%9F%E6%A0%87%E7%AD%BE"><span class="toc-number">6.3.</span> <span class="toc-text">无结束标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%B1%9E%E6%80%A7"><span class="toc-number">7.</span> <span class="toc-text">HTML属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-%E5%A4%B4%E9%83%A8"><span class="toc-number">8.</span> <span class="toc-text">HTML 头部</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0"><span class="toc-number">8.1.</span> <span class="toc-text">&lt;title&gt; 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0-1"><span class="toc-number">8.2.</span> <span class="toc-text">&lt;base&gt; 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0-2"><span class="toc-number">8.3.</span> <span class="toc-text">&lt;link&gt; 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0-3"><span class="toc-number">8.4.</span> <span class="toc-text">&lt;style&gt; 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0-4"><span class="toc-number">8.5.</span> <span class="toc-text">&lt;meta&gt; 元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%85%83%E7%B4%A0"><span class="toc-number">8.6.</span> <span class="toc-text">HTML &lt;script&gt; 元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95-1"><span class="toc-number">9.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-number">9.2.</span> <span class="toc-text">使用实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="toc-number">10.</span> <span class="toc-text">图像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95-2"><span class="toc-number">10.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alt%E5%B1%9E%E6%80%A7"><span class="toc-number">10.2.</span> <span class="toc-text">Alt属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%9B%BE%E5%83%8F%E7%9A%84%E9%AB%98%E5%BA%A6%E4%B8%8E%E5%AE%BD%E5%BA%A6"><span class="toc-number">10.3.</span> <span class="toc-text">设置图像的高度与宽度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">11.</span> <span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%92%8C%E8%BE%B9%E6%A1%86%E5%B1%9E%E6%80%A7"><span class="toc-number">11.1.</span> <span class="toc-text">表格和边框属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">12.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">12.1.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">12.2.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E8%A1%A8"><span class="toc-number">12.3.</span> <span class="toc-text">自定义列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-%E5%8C%BA%E5%9D%97"><span class="toc-number">13.</span> <span class="toc-text">HTML 区块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E5%85%83%E7%B4%A0%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="toc-number">13.1.</span> <span class="toc-text">区块元素和内联元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%8C%BA%E5%9D%97%E5%85%83%E7%B4%A0"><span class="toc-number">13.2.</span> <span class="toc-text">HTML 区块元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="toc-number">13.3.</span> <span class="toc-text">HTML 内联元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E5%92%8C%E8%BE%93%E5%85%A5"><span class="toc-number">14.</span> <span class="toc-text">表单和输入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E8%A1%A8%E5%8D%95-%E8%BE%93%E5%85%A5%E5%85%83%E7%B4%A0"><span class="toc-number">14.1.</span> <span class="toc-text">HTML 表单 - 输入元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="toc-number">14.1.1.</span> <span class="toc-text">文本域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%AD%97%E6%AE%B5"><span class="toc-number">14.1.2.</span> <span class="toc-text">密码字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE"><span class="toc-number">14.1.3.</span> <span class="toc-text">单选按钮</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E9%80%89%E6%A1%86"><span class="toc-number">14.1.4.</span> <span class="toc-text">复选框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E6%8C%89%E9%92%AE"><span class="toc-number">14.1.5.</span> <span class="toc-text">提交按钮</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-number">15.</span> <span class="toc-text">框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iframe-%E8%AE%BE%E7%BD%AE%E9%AB%98%E5%BA%A6%E4%B8%8E%E5%AE%BD%E5%BA%A6"><span class="toc-number">15.1.</span> <span class="toc-text">iframe - 设置高度与宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iframe-%E7%A7%BB%E9%99%A4%E8%BE%B9%E6%A1%86"><span class="toc-number">15.2.</span> <span class="toc-text">iframe - 移除边框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-iframe-%E6%9D%A5%E6%98%BE%E7%A4%BA%E7%9B%AE%E6%A0%87%E9%93%BE%E6%8E%A5%E9%A1%B5%E9%9D%A2"><span class="toc-number">15.3.</span> <span class="toc-text">使用 iframe 来显示目标链接页面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%BC%95%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">文章引用</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/1041826382/" title="XSS-Lab题解"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://img.hijwei.top/1/24/65d5eed41e905.jpg" onerror="this.onerror=null;this.src='/img/image404.png'" alt="XSS-Lab题解"/></a><div class="content"><a class="title" href="/posts/1041826382/" title="XSS-Lab题解">XSS-Lab题解</a><time datetime="2024-03-05T11:38:03.000Z" title="发表于 2024-03-05 19:38:03">2024-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1946610579/" title="XSS绕过篇"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://img.hijwei.top/1/24/65d5eed41e905.jpg" onerror="this.onerror=null;this.src='/img/image404.png'" alt="XSS绕过篇"/></a><div class="content"><a class="title" href="/posts/1946610579/" title="XSS绕过篇">XSS绕过篇</a><time datetime="2024-03-05T11:35:40.000Z" title="发表于 2024-03-05 19:35:40">2024-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/416548136/" title="SSTI漏洞-基础篇"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/defualt/1.jpg" onerror="this.onerror=null;this.src='/img/image404.png'" alt="SSTI漏洞-基础篇"/></a><div class="content"><a class="title" href="/posts/416548136/" title="SSTI漏洞-基础篇">SSTI漏洞-基础篇</a><time datetime="2024-03-05T11:26:19.000Z" title="发表于 2024-03-05 19:26:19">2024-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/154257042/" title="文件上传漏洞"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://img.hijwei.top/1/24/65e1d4b1e7df3.jpg" onerror="this.onerror=null;this.src='/img/image404.png'" alt="文件上传漏洞"/></a><div class="content"><a class="title" href="/posts/154257042/" title="文件上传漏洞">文件上传漏洞</a><time datetime="2024-03-01T12:33:11.000Z" title="发表于 2024-03-01 20:33:11">2024-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2255213327/" title="反序列化漏洞-入门"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://img.hijwei.top/1/24/65e1cf3263876.jpg" onerror="this.onerror=null;this.src='/img/image404.png'" alt="反序列化漏洞-入门"/></a><div class="content"><a class="title" href="/posts/2255213327/" title="反序列化漏洞-入门">反序列化漏洞-入门</a><time datetime="2024-02-18T12:29:15.000Z" title="发表于 2024-02-18 20:29:15">2024-02-18</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:jwei_h@outlook.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/avatar.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/HeyHJWei" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo" title="博客框架为Hexo"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/badge/frame-hexo.svg" alt="博客框架为Hexo"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/badge/theme.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/badge/source-github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/badge/copyright.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2023 - 2024 By <a class="footer-bar-link" href="/" title="Wells" target="_blank">Wells</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/null"></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">5</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.hijwei.top/" title="博客"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://pan.hijwei.top/" title="云盘"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://pan.hijwei.top/static/img/logo192.png" alt="云盘"/><span class="back-menu-item-text">云盘</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.hijwei.top/" title="图床"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://image.hijwei.top/favicon.ico" alt="图床"/><span class="back-menu-item-text">图床</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "/img/loading.gif" onerror="this.onerror=null,this.src=&quot;/img/image404.png&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/summarize/"><i class="anzhiyufont anzhiyu-icon-list-ul faa-tada" style="font-size: 0.9em;"></i><span> 总结</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 神秘隧道</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/copyright/"><i class="anzhiyufont anzhiyu-icon-copyright-line faa-tada" style="font-size: 0.9em;"></i><span> 版权</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CTF-Web/" style="font-size: 0.88rem;">CTF-Web<sup>13</sup></a><a href="/tags/Tools/" style="font-size: 0.88rem;">Tools<sup>1</sup></a><a href="/tags/Web-PHP/" style="font-size: 0.88rem;">Web-PHP<sup>2</sup></a><a href="/tags/Web-SQL/" style="font-size: 0.88rem;">Web-SQL<sup>4</sup></a><a href="/tags/Web-XSS/" style="font-size: 0.88rem;">Web-XSS<sup>3</sup></a><a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 0.88rem;">开发<sup>5</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><a class="tag-list" href="/tags/CTF-Web" title="CTF-Web">CTF-Web</a></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="/js/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("2023/9/19 12:50:02"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2023 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Wells 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="/js/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
